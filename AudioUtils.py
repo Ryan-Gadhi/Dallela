@@ -1,9 +1,12 @@
 import speech_recognition as sr
+import pyttsx3
+import platform
 from playsound import playsound
 
 
 skills = []
 audio_text = ''
+global_engine = None
 
 def is_in_wake_words(audio_text):
     """
@@ -56,4 +59,41 @@ def start_listening():
             return audio_text
         except:
             print("not recognized by the API")
+
+
+def findOS_Sound():
+    os_name = platform.system()
+    name = 'undefined'
+    if os_name=='Windows':
+        name = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0'
+    elif os_name == 'Darwin':
+        name = 'com.apple.speech.synthesis.voice.samantha'
+    elif os_name == 'Linux':
+        name = 'female3'
+    else:
+        print('os not recognized')
+    return name
+
+def test_audio():
+    name = findOS_Sound()
+    global global_engine
+    global_engine = pyttsx3.init()
+
+    try:
+        global_engine.setProperty('voice', name)
+        print('property has been set..')
+    except():
+        print('specified sound not found in the local system!')
+    return global_engine
+
+
+
+
+def reply(text):
+    global global_engine
+    engine = global_engine
+    engine.say(text)
+    engine.runAndWait()
+
+
 

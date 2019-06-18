@@ -1,4 +1,5 @@
 import pyttsx3
+import AudioUtils
 import random
 import os
 
@@ -17,7 +18,7 @@ def search_for_match(text):
 		line_number = readQuestionChoices(file, text)
 		if( line_number != -1):
 			answer = readAnswerChoices(file,line_number)
-			reply(answer)
+			AudioUtils.reply(answer)
 			return True
 	return False
 
@@ -51,8 +52,4 @@ def readAnswerChoices(file_name,line_number):
 	return chosen_answer
 
 
-def reply(text):
-	engine = pyttsx3.init()
-	engine.say(text)
-	engine.runAndWait()
 

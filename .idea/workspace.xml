@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Discussion/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trvial_Skills/Questions/shorts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trvial_Skills/TrivialSkills.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DomainSkills.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager/Handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/Handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager/adapt_intents.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/adapt_intents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager1/adapt_intents.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager1/adapt_intents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/task_manager1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager1/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Answers/Age" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Answers/Age" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Answers/Greetings" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Answers/Greetings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Answers/HelloWorld" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager1/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Answers/Joke" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Answers/Joke" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Answers/Personal" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Answers/Personal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Answers/shorts" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Answers/shorts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Questions/Age" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Questions/Age" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Questions/Greetings" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Questions/Greetings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Questions/HelloWorld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Questions/Joke" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Questions/Joke" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skills/Questions/Personal" beforeDir="false" afterPath="$PROJECT_DIR$/Trvial_Skills/Questions/Personal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/plan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speaking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/speaking.py" afterDir="false" />
-    </list>
+    <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,18 +59,21 @@
           <entry key="Personal" value="5" />
           <entry key="Similars" value="4" />
           <entry key="Skill1" value="1" />
+          <entry key="amazon_sound" value="1" />
           <entry key="ipynb" value="1" />
-          <entry key="plan" value="4" />
-          <entry key="py" value="42" />
+          <entry key="os_finding" value="1" />
+          <entry key="plan" value="5" />
+          <entry key="py" value="79" />
           <entry key="shorts" value="7" />
+          <entry key="voices" value="1" />
           <entry key="wav" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="1" />
-          <entry key="PLAIN_TEXT" value="48" />
-          <entry key="Python" value="42" />
+          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="Python" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -110,18 +84,19 @@
           <entry key="Personal" value="158" />
           <entry key="Similars" value="87" />
           <entry key="Skill1" value="97" />
-          <entry key="dummy" value="25" />
+          <entry key="dummy" value="31" />
           <entry key="plan" value="407" />
-          <entry key="py" value="6318" />
+          <entry key="py" value="11338" />
           <entry key="shorts" value="802" />
           <entry key="txt" value="5" />
+          <entry key="voices" value="24" />
           <entry key="wake_up_words" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1913" />
-          <entry key="Python" value="6317" />
+          <entry key="PLAIN_TEXT" value="1943" />
+          <entry key="Python" value="11337" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -130,14 +105,54 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Trvial_Skills/TrivialSkills.py">
+        <entry file="file://$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="189">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1560785235264" expanded="true" signature="41:63" ph="..." />
-                <marker date="1560785235264" expanded="true" signature="41:159" ph="..." />
+                <marker date="1560853376234" expanded="true" signature="59:81" ph="..." />
+                <marker date="1560853376234" expanded="true" signature="59:177" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1560853353854" expanded="true" signature="2473:2475" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Discussion/variables'.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <marker date="1560853052904" expanded="true" signature="4:5" ph="..." />
+                <marker date="1560853052904" expanded="true" signature="4:6" ph="..." />
+                <marker date="1560853052904" expanded="true" signature="22:24" ph="..." />
+                <marker date="1560853052904" expanded="true" signature="51:53" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,6 +177,8 @@
       <find>self</find>
       <find>==</find>
       <find>it mat</find>
+      <find>repl</find>
+      <find>global_en</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,8 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/similar_to_dallela" />
-        <option value="$PROJECT_DIR$/wake_up_words" />
         <option value="$PROJECT_DIR$/audio.py" />
         <option value="$PROJECT_DIR$/speaking.py" />
         <option value="$PROJECT_DIR$/wake_up_words.txt" />
@@ -206,16 +221,31 @@
         <option value="$PROJECT_DIR$/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/Tasks/task_manager1/adapt_intents.py" />
         <option value="$PROJECT_DIR$/Trvial_Skills/Answers/Joke" />
-        <option value="$PROJECT_DIR$/AudioUtils.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/Trvial_Skills/TrivialSkills.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Handler.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/jobs_intents.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intent_container.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/__init__.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/IntentsGrouper.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/app.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py" />
+        <option value="$PROJECT_DIR$/Discussion/google_gTTS.py" />
+        <option value="$PROJECT_DIR$/Discussion/voices" />
+        <option value="$PROJECT_DIR$/Discussion/amazon_reader.py" />
+        <option value="$PROJECT_DIR$/Discussion/os_finder.py" />
+        <option value="$PROJECT_DIR$/Discussion/variables'.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/AudioUtils.py" />
+        <option value="$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="y" value="-63" />
     <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -232,11 +262,36 @@
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skills" type="462c0819:PsiDirectoryNode" />
+              <item name="DB_Skill" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="DB_Skill" type="462c0819:PsiDirectoryNode" />
+              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="DB_Skill" type="462c0819:PsiDirectoryNode" />
+              <item name="task_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="Intents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="DB_Skill" type="462c0819:PsiDirectoryNode" />
+              <item name="task_manager1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,17 +307,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DB_Skill/task_manager/Intents" />
       <recent name="$PROJECT_DIR$/Discussion" />
       <recent name="$PROJECT_DIR$/Trvial_Skills" />
       <recent name="$PROJECT_DIR$/Tasks/task_manager" />
       <recent name="$PROJECT_DIR$/Tasks" />
-      <recent name="$PROJECT_DIR$/Skills/Answers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DB_Skill/task_manager" />
+      <recent name="$PROJECT_DIR$/DB_Skill/task_manager/Intents" />
       <recent name="$PROJECT_DIR$/Trvial_Skills/Answers" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Skills/Questions" />
-      <recent name="$PROJECT_DIR$/Skills" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,7 +334,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.audio">
-    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="AudioUtils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -286,11 +342,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_manager1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_manager1/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AudioUtils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,7 +355,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="amazon_reader" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -307,32 +363,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tasks/task_manager1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tasks/task_manager1/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="app (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Dallela" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tasks/task_manager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tasks/task_manager/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/amazon_reader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -362,7 +397,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="os_finder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -370,11 +405,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/tests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/os_finder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="variables'" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Dallela" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/variables'.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -385,18 +441,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.audio" />
-      <item itemvalue="Python.app (1)" />
-      <item itemvalue="Python.app (2)" />
-      <item itemvalue="Python.app (3)" />
-      <item itemvalue="Python.tests" />
+      <item itemvalue="Python.amazon_reader" />
+      <item itemvalue="Python.os_finder" />
+      <item itemvalue="Python.AudioUtils" />
+      <item itemvalue="Python.variables'" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.audio" />
-        <item itemvalue="Python.tests" />
-        <item itemvalue="Python.app (2)" />
-        <item itemvalue="Python.app (3)" />
-        <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.variables'" />
+        <item itemvalue="Python.AudioUtils" />
+        <item itemvalue="Python.os_finder" />
+        <item itemvalue="Python.amazon_reader" />
       </list>
     </recent_temporary>
   </component>
@@ -414,21 +470,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
+    <frame x="1440" y="-63" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15429173" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15429173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26371682" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19504951" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.139823" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.13960396" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -451,34 +506,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Python/2.7/site-packages/playsound.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/playsound.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/speaking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -496,7 +527,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/shorts">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/shorts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -518,61 +549,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/Personal">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Answers/Personal">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="50" selection-start-column="50" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1560770016632" expanded="true" signature="90:92" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/adapt_intents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/adapt/engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379">
-          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/Age">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/Age">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/Personal">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/Personal">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
@@ -593,7 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/Age">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Answers/Age">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="7" selection-start-column="5" selection-end-column="7" />
@@ -607,7 +601,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/Similars">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Answers/Similars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
@@ -617,28 +611,28 @@
     <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/HelloWorld">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/Similars">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/Similars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/shorts">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Answers/shorts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/shorts">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/shorts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/Greetings">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/Greetings">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
@@ -648,57 +642,47 @@
     <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/HelloWorld">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/adapt_intents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/Greetings">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Answers/Greetings">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/Joke">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Answers/Joke">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/Joke">
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/Questions/Joke">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ريجيكس.py">
+    <entry file="file://$PROJECT_DIR$/Discussion/ريجيكس.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DB_Skill/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/plan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="150">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
@@ -706,31 +690,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Discussion/speaking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1560770016632" expanded="true" signature="90:92" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/plan">
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intent_container.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <marker date="1560794856504" expanded="true" signature="24:25" ph="..." />
+            <marker date="1560794856504" expanded="true" signature="24:88" ph="..." />
+            <marker date="1560794856504" expanded="true" signature="24:89" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/TrivialSkills.py">
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/adapt_intents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state relative-caret-position="256">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/well_intents.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/amazon_sound">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/voices">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="38" column="7" selection-start-line="38" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/IntentsGrouper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/os_finding">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/google_gTTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/amazon_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <marker date="1560845541755" expanded="true" signature="78:89" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <marker date="1560840735421" expanded="true" signature="1004:1048" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/os_finder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/adapt/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/variables'.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <marker date="1560853052904" expanded="true" signature="4:5" ph="..." />
+            <marker date="1560853052904" expanded="true" signature="4:6" ph="..." />
+            <marker date="1560853052904" expanded="true" signature="22:24" ph="..." />
+            <marker date="1560853052904" expanded="true" signature="51:53" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1560853353854" expanded="true" signature="2473:2475" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1560785235264" expanded="true" signature="41:63" ph="..." />
-            <marker date="1560785235264" expanded="true" signature="41:159" ph="..." />
+            <marker date="1560853376234" expanded="true" signature="59:81" ph="..." />
+            <marker date="1560853376234" expanded="true" signature="59:177" ph="..." />
           </folding>
         </state>
       </provider>

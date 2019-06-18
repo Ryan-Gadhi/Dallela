@@ -1,7 +1,7 @@
 from Trvial_Skill import TrivialSkills
 from AudioUtils import *
 from Trvial_Skill import TrivialSkills
-
+from DB_Skill.task_manager1 import app
 
 def find_skill(text):
 	"""
@@ -19,9 +19,12 @@ def find_skill(text):
 	Main code
 """
 
+#todo: do adapt processing
 
-look_for_trigger()
-audio_text = start_listening()
+# look_for_trigger()
+# audio_text = start_listening()
+test_audio()
+audio_text = 'tell me a joke'
 find_skill(audio_text)
 
 

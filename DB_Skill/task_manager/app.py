@@ -1,11 +1,11 @@
 from adapt.engine import IntentDeterminationEngine
-from DB_Skill.task_manager.adapt_intents import entities, multi_regex_entities, intents
+from DB_Skill.task_manager.IntentsGrouper import all_entities_dic as entities, all_intents as intents, all_MRA as multi_regex_entities
 from DB_Skill.task_manager import Handler
 
 engine = IntentDeterminationEngine()
 
 
-# Register entities on engine
+# Register entities in engine
 for entity, keywords in entities.items():
     for keyword in keywords:
         engine.register_entity(keyword, entity)
@@ -19,7 +19,7 @@ for intent in intents:
     engine.register_intent_parser(intent)
 
 
-text1= 'Add task get milk from store'
+text1= 'what is the number of active jobs today?'
 text2= 'create assignment buy mic for john'
 
 
