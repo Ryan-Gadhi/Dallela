@@ -11,7 +11,7 @@ import os
 special_files = ['shorts','Similars']
 
 def search_for_match(text):
-	os.chdir(os.getcwd()+'/Trvial_Skill/Questions/')  # todo: questions is answers <opposite!>
+	os.chdir(os.getcwd()+'/interpeter/skills/Trvial_Skill/Questions/')  # todo: questions is answers <opposite!>
 	filesInDir = os.listdir()
 
 	for file in filesInDir:

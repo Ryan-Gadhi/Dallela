@@ -1,3 +1,3 @@
-import os
+import PySimpleGUI as sg
 
-print(os.listdir()[0])
+ents=False)

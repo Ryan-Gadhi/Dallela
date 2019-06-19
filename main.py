@@ -1,7 +1,7 @@
-from Trvial_Skill import TrivialSkills
+from interpeter.skills.Trvial_Skill import TrivialSkills
 from AudioUtils import *
-from Trvial_Skill import TrivialSkills
-from DB_Skill.task_manager1 import app
+from interpeter.skills.Trvial_Skill import TrivialSkills
+
 
 def find_skill(text):
 	"""

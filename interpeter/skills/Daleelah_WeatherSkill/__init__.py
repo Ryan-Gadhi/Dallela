@@ -42,8 +42,10 @@ def getRegexEntities():
 
 def getMap():
     return {
-        weather_intent.name : print("I'm inside weather intent")
+        weather_intent.name : printing
     }
+def printing():
+    print("I'm inside weather intent")
 
 
 def getIntents():
