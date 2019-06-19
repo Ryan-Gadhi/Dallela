@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GUI/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/bhge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GUI/tkinterTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discussion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Answers/Age" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Answers/Greetings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Answers/Joke" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Answers/Personal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Answers/Similars" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Answers/shorts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Questions/Age" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Questions/Greetings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Questions/Joke" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Questions/Personal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Questions/Similars" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/Questions/shorts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,8 +72,9 @@
           <entry key="os_finding" value="1" />
           <entry key="plan" value="5" />
           <entry key="png" value="1" />
-          <entry key="py" value="101" />
+          <entry key="py" value="110" />
           <entry key="shorts" value="7" />
+          <entry key="txt" value="1" />
           <entry key="voices" value="1" />
           <entry key="wav" value="1" />
         </counts>
@@ -98,8 +83,8 @@
         <counts>
           <entry key="IPNB" value="1" />
           <entry key="Image" value="1" />
-          <entry key="PLAIN_TEXT" value="51" />
-          <entry key="Python" value="102" />
+          <entry key="PLAIN_TEXT" value="52" />
+          <entry key="Python" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -110,9 +95,9 @@
           <entry key="Personal" value="158" />
           <entry key="Similars" value="87" />
           <entry key="Skill1" value="97" />
-          <entry key="dummy" value="31" />
+          <entry key="dummy" value="39" />
           <entry key="plan" value="407" />
-          <entry key="py" value="12420" />
+          <entry key="py" value="13712" />
           <entry key="shorts" value="802" />
           <entry key="txt" value="5" />
           <entry key="voices" value="24" />
@@ -121,20 +106,73 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1943" />
-          <entry key="Python" value="12419" />
+          <entry key="PLAIN_TEXT" value="1951" />
+          <entry key="Python" value="13711" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BHGE" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GUI/interface.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+            <state relative-caret-position="591">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1560951912716" expanded="true" signature="683:685" ph="..." />
+                <marker date="1560951912716" expanded="true" signature="706:707" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/tkinterTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <marker date="1560950377012" expanded="true" signature="25:43" ph="..." />
+                <marker date="1560950377012" expanded="true" signature="27:43" ph="..." />
+                <marker date="1560950377012" expanded="true" signature="46:60" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,7 +205,11 @@
       <find>eve</find>
       <find>listen</find>
       <find>weather</find>
+      <find>say</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,9 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Answers/Age" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Answers/Personal" />
         <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Joke" />
         <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Greetings" />
         <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Personal" />
@@ -215,25 +254,28 @@
         <option value="$PROJECT_DIR$/Discussion/amazon_reader.py" />
         <option value="$PROJECT_DIR$/Discussion/os_finder.py" />
         <option value="$PROJECT_DIR$/Discussion/variables'.py" />
-        <option value="$PROJECT_DIR$/AudioUtils.py" />
         <option value="$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_HelloSkill/__init__.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" />
         <option value="$PROJECT_DIR$/interpeter/engine.py" />
         <option value="$PROJECT_DIR$/interpeter/Trvial_Skill/TrivialSkills.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/Discussion/tests.py" />
         <option value="$PROJECT_DIR$/GUI/interface.py" />
+        <option value="$PROJECT_DIR$/GUI/tkinter.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/GUI/tkinterTest.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
+        <option value="$PROJECT_DIR$/main_app.py" />
+        <option value="$PROJECT_DIR$/AudioUtils.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1727" />
-    <option name="y" value="-40" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="y" value="-63" />
     <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -246,11 +288,6 @@
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
@@ -297,7 +334,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.interface">
+  <component name="RunManager" selected="Python.audio">
+    <configuration name="AudioUtils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Dallela" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AudioUtils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="audio" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,7 +368,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -361,7 +419,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tkinter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,32 +427,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="variables'" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Dallela" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/variables'.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/tkinterTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -405,18 +442,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.audio" />
-      <item itemvalue="Python.variables'" />
-      <item itemvalue="Python.tests" />
       <item itemvalue="Python.engine" />
       <item itemvalue="Python.interface" />
+      <item itemvalue="Python.tkinter" />
+      <item itemvalue="Python.AudioUtils" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.interface" />
         <item itemvalue="Python.audio" />
+        <item itemvalue="Python.AudioUtils" />
+        <item itemvalue="Python.tkinter" />
+        <item itemvalue="Python.interface" />
         <item itemvalue="Python.engine" />
-        <item itemvalue="Python.tests" />
-        <item itemvalue="Python.variables'" />
       </list>
     </recent_temporary>
   </component>
@@ -434,21 +471,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1727" y="-40" width="1920" height="1057" extended-state="0" />
+    <frame x="1440" y="-63" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15429173" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939686" visible="true" weight="0.08530806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.50060314" side_tool="true" visible="true" weight="0.08530806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39481866" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17920792" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.12475248" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.12289157" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -471,24 +508,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Personal">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DomainSkills.py" />
     <entry file="file://$PROJECT_DIR$/Utillties.py" />
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Age">
       <provider selected="true" editor-type-id="text-editor">
@@ -664,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -753,26 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Discussion/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -783,10 +775,64 @@
     <entry file="file://$PROJECT_DIR$/GUI/bhge.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1194">
+          <caret line="1485" column="52" selection-start-line="1485" selection-start-column="38" selection-end-line="1485" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+        <state relative-caret-position="896">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/tkinterTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <marker date="1560950377012" expanded="true" signature="25:43" ph="..." />
+            <marker date="1560950377012" expanded="true" signature="27:43" ph="..." />
+            <marker date="1560950377012" expanded="true" signature="46:60" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1560951912716" expanded="true" signature="683:685" ph="..." />
+            <marker date="1560951912716" expanded="true" signature="706:707" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
         </state>
       </provider>
     </entry>
