@@ -90,10 +90,12 @@ def test_audio():
 
 
 def reply(text):
+    print('audio')
     global global_engine
     engine = global_engine
     engine.say(text)
     engine.runAndWait()
+    print('finished audio')
 
 
 
