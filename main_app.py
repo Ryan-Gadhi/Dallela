@@ -11,13 +11,15 @@ def find_skill():
 	"""
 	answer = 'Error'
 
-	audio_text = 'tell me a joke'
+	#audio_text = 'tell me a joke'
 	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
 	if (not skill_found):
 		pass
 
 	global gui
 	gui.setBottomLabel(answer)
+	gui.setUpperLabel(audio_text)
+
 
 	# search for the Question in the DB
 	#
@@ -28,7 +30,6 @@ def find_skill():
 """
 
 if __name__ == '__main__':
-	t1 = 0
 	audio_text = 'tell me a joke'
 
 	# look_for_trigger()
@@ -39,7 +40,6 @@ if __name__ == '__main__':
 
 	root= Tk()
 	gui = GUI.GUI(root,find_skill)
-	gui.setUpperLabel(audio_text)
 	root.mainloop()
 
 

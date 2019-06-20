@@ -14,5 +14,7 @@ if len(words) > limit:
             temp += '\n'
             i=0
         i+=1
+else:
+    temp = text
 
 print(temp)

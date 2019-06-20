@@ -15,19 +15,20 @@ class GUI:
 		# frame.pack()
 		win_width = int(screen_x / 1.5)
 		win_height = int(screen_y / 1.5)
-		unit = 1
+
 
 		self.root.geometry(str(win_width) + 'x' + str(win_height))  # changes window size
 
 		self.B = Button(root, text="Start", command=cmd1, fg='red', font='Arial 25')
-		self.B.config(width=unit * 8, height=unit * 3)
+		self.B.config(width=int(win_width / 120), height=int(win_height/ 240))
 		self.B.place(x=win_width / 20, y=win_height / 4.1)
 
 		self.B2 = Button(root, text="Mute", fg='red', font = 'Arial 25')
-		self.B2.config(width=unit * 8, height=unit * 3)
+		self.B2.config(width= int(win_width / 120), height= int(win_height/ 240))
 		self.B2.place(x=win_width / 20, y=win_height / 2.8)
 
 		self.label1 = Label(root, text="This is what the user just said",font='Arial 32')
+		self.label1.pack()
 		self.label1.place(x=win_width / 2.7, y=win_height / 2)
 
 
@@ -61,6 +62,9 @@ class GUI:
 					i = 0
 					temp += " " + word
 				i += 1
+		else:
+			temp = text
+
 		text = temp
 		self.label1.config(text=text)
 
@@ -79,5 +83,8 @@ class GUI:
 					i = 0
 					temp += " " + word
 				i += 1
+		else:
+			temp = text
+
 		text = temp
 		self.label2.config(text=text)
