@@ -25,13 +25,13 @@ def drawGUI():
 
 	frame1 = Frame(root)
 
-	b1 = Button(frame, text='Red', fg='red',command=program_flow)
+	b1 = Button(frame, text='Red', fg='red', command=program_flow)
 	b1.pack()
 	root.mainloop()
 
 
 def program_flow():
-	test_audio()
+	#test_audio()
 	audio_text = 'tell me a joke'
 	find_skill(audio_text)
 
@@ -45,7 +45,7 @@ def program_flow():
 
 # look_for_trigger()
 # audio_text = start_listening()
-
+test_audio()
 drawGUI()
 
 
