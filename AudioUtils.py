@@ -5,7 +5,6 @@ from playsound import playsound
 
 
 skills = []
-audio_text = ''
 global_engine = None
 
 def is_in_wake_words(audio_text):
@@ -64,7 +63,7 @@ def start_listening():
 def findOS_Sound():
     os_name = platform.system()
     name = 'undefined'
-    if os_name=='Windows':
+    if os_name == 'Windows':
         name = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0'
     elif os_name == 'Darwin':
         name = 'com.apple.speech.synthesis.voice.samantha'
@@ -73,6 +72,7 @@ def findOS_Sound():
     else:
         print('os not recognized')
     return name
+
 
 def test_audio():
     name = findOS_Sound()
@@ -85,8 +85,6 @@ def test_audio():
     except():
         print('specified sound not found in the local system!')
     return global_engine
-
-
 
 
 def reply(text):
