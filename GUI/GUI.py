@@ -1,28 +1,83 @@
 from tkinter import *
-from main_app import *
-
-def drawGUI():
-	root = Tk()
-	frame = Frame(root)
-
-	screen_x = root.winfo_screenwidth()
-	screen_y = root.winfo_screenheight()
-
-	frame.pack()
-	root.geometry(str(int(screen_x/1.5))+'x'+str(int(screen_y/1.5)))  # changes window size
+from PIL import Image,ImageTk
 
 
-	b1 = Button(frame, text='Red', fg='red', command=program_flow)
-	b1.pack()
+class GUI:
 
-	label1 = Label(frame, text="This is what the user just said")
-	label1.pack()
+	def __init__(self,root,cmd1):
+		self.root = root
+		# frame = Frame(root)
+		#
+		screen_x = root.winfo_screenwidth()
+		screen_y = root.winfo_screenheight()
 
-	label2 = Label(frame, text="This is what Dallela is going to say")
-	label2.pack()
+		#
+		# frame.pack()
+		win_width = int(screen_x / 1.5)
+		win_height = int(screen_y / 1.5)
+		unit = 1
 
-	load = Image.open('bhge.png')
-	render = ImageTk.PhotoImage(load)
+		self.root.geometry(str(win_width) + 'x' + str(win_height))  # changes window size
 
-	root.mainloop()
+		self.B = Button(root, text="Start", command=cmd1, fg='red', font='Arial 25')
+		self.B.config(width=unit * 8, height=unit * 3)
+		self.B.place(x=win_width / 20, y=win_height / 4.1)
 
+		self.B2 = Button(root, text="Mute", fg='red', font = 'Arial 25')
+		self.B2.config(width=unit * 8, height=unit * 3)
+		self.B2.place(x=win_width / 20, y=win_height / 2.8)
+
+		self.label1 = Label(root, text="This is what the user just said",font='Arial 32')
+		self.label1.place(x=win_width / 2.7, y=win_height / 2)
+
+
+		self.label2 = Label(root, text="This is what Dallela is going to say",
+		                    font='Arial 32')
+		self.label2.pack()
+		self.label2.place(x=win_width / 2.7, y=win_height / 1.5)
+
+		self.logo = ImageTk.PhotoImage(Image.open("bhge.png"))
+		self.panel = Label(root, image=self.logo)
+		self.panel.pack(side="bottom", fill="both", expand="yes")
+		self.panel.place(x=screen_x - screen_x / 2, y=screen_y / 9, anchor='sw')
+
+
+	def event_handler(self):
+		print()
+
+
+	def setUpperLabel(self,text):
+
+		words = text.split()
+		temp = ''
+		limit = 5
+		if len(words) > limit:
+			i = 0
+			for word in words:
+				if (i < limit):
+					temp += " " + word
+				else:
+					temp += '\n'
+					i = 0
+					temp += " " + word
+				i += 1
+		text = temp
+		self.label1.config(text=text)
+
+	def setBottomLabel(self,text):
+
+		words = text.split()
+		temp = ''
+		limit = 5
+		if len(words) > limit:
+			i = 0
+			for word in words:
+				if (i < limit):
+					temp += " " + word
+				else:
+					temp += '\n'
+					i = 0
+					temp += " " + word
+				i += 1
+		text = temp
+		self.label2.config(text=text)

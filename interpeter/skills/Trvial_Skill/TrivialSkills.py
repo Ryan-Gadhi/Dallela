@@ -20,8 +20,8 @@ def search_for_match(text):
 			answer = readAnswerChoices(file, line_number)
 			print(answer)
 			AudioUtils.reply(answer)
-			return True
-	return False
+			return True,answer
+	return False,None
 
 
 def readQuestionChoices(file_name, text):

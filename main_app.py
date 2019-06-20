@@ -2,88 +2,46 @@
 from AudioUtils import *
 from interpeter.skills.Trvial_Skill import TrivialSkills
 from tkinter import *
-from PIL import Image,ImageTk
+from GUI import GUI
 
 
-def find_skill(text):
+def find_skill():
 	"""
 	checks if the skill is DB or Trivial or DuckDuckGo
 	"""
-	skill_found = TrivialSkills.search_for_match(text)  # this will say if match found
-	print('finished search for trivial')
+	answer = 'Error'
+
+	audio_text = 'tell me a joke'
+	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
 	if (not skill_found):
 		pass
+
+	global gui
+	gui.setBottomLabel(answer)
+
 	# search for the Question in the DB
 	#
-	#
-
-
-def drawGUI():
-	root = Tk()
-	# frame = Frame(root)
-	#
-	screen_x = root.winfo_screenwidth()
-	screen_y = root.winfo_screenheight()
-
-
-	#
-	# frame.pack()
-	win_width = int(screen_x/1.5)
-	win_height = int(screen_y / 1.5)
-	unit = 1
-
-	root.geometry(str(win_width)+'x'+str(win_height))  # changes window size
-
-	B = Button(root, text="Start",command=program_flow,fg='red',relief=RAISED)
-	B.config(width=unit*12,height=unit*3)
-	B.place(x=win_width/20, y=win_height/4)
-
-	B2 = Button(root, text="Mute", fg='red', relief=RAISED)
-	B2.config(width=unit * 12, height=unit * 3)
-	B2.place(x=win_width / 20, y=win_height / 2.8)
-
-
-
-	label1 = Label(root, text="This is what the user just said")
-	label1.pack()
-	label1.place(x=win_width/2.7, y=win_height/2)
-
-	label2 = Label(root, text="This is what Dallela is going to say")
-	label2.pack()
-	label2.place(x=win_width/2.7, y=win_height/1.5)
-
-	logo = ImageTk.PhotoImage(Image.open("bhge.png"))
-	panel = Label(root, image=logo)
-	panel.pack(side="bottom", fill="both", expand="yes")
-	panel.place(x=screen_x-screen_x/2, y=screen_y/9, anchor='sw')
-
-	root.mainloop()
-
-
-
-
-
-def program_flow():
-	#test_audio()
-	audio_text = 'tell me a joke'
-	find_skill(audio_text)
-
 
 
 """ 
 	Main code
 """
 
-
-#todo: do adapt processing
-
 if __name__ == '__main__':
+	t1 = 0
+	audio_text = 'tell me a joke'
 
 	# look_for_trigger()
 	# audio_text = start_listening()
 
+
 	test_audio()
-	drawGUI()
+
+	root= Tk()
+	gui = GUI.GUI(root,find_skill)
+	gui.setUpperLabel(audio_text)
+	root.mainloop()
+
 
 
 	# test_audio()

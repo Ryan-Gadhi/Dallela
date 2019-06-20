@@ -88,13 +88,13 @@ def test_audio():
 
 
 def reply(text):
-    print('audio')
+    #print('audio')
     global global_engine
     engine = global_engine
     engine.say(text)
     # engine.runAndWait()
-    print (text)
-    print('finished audio')
+    #print (text)
+    #print('finished audio')
 
 
 
