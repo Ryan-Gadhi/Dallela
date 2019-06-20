@@ -42,11 +42,8 @@ def weatherFunc():
        
 class weatherSkill(Skill):
     def __init__(self):
-        super().__init__( 
-            [Handler(weather_intent, weatherFunc, "")],
-            entities,
-            [],
-            "WeatherSkill")
+        super().__init__()
+        print(len(self.handlers))
         
 
 
@@ -57,3 +54,4 @@ class weatherSkill(Skill):
 
 def getSkill():
     return weatherSkill()
+
