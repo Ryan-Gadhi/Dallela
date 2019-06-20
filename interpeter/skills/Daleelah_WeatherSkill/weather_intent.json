@@ -1,0 +1,28 @@
+{            
+            "name" : "WeatherIntent",
+            "entities" : [
+                {
+                    "name" : "weather_keyword",
+                    "contents": ["weather"],
+                    "importance" : "require"
+                }, 
+                {
+                    "name" : "weather_types",
+                    "contents" : ["snow", "rain", "wind", "sleet", "sun"],
+                    "importance" : "optionally"
+                },
+                {
+                    "name" : "location",
+                    "contents" : ["Seattle", "San Francisco", "Tokyo"],
+                    "importance" : "require"
+                }
+            ],
+
+            "regex_entities" : [
+                {
+                    "regex_pattren": ["(?P<Location>.*)"],
+                    "apply_to" : ["in "]
+                }
+            ]
+
+}
