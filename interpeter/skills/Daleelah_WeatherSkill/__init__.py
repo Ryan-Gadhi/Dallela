@@ -2,7 +2,9 @@
 import json
 import sys
 from adapt.intent import IntentBuilder
+from base import Skill, Handler
 
+# TODO: each intent should be in a separate JOSN file
 weather_keyword = [
     "weather"
 ]
@@ -21,6 +23,12 @@ locations = [
     "Tokyo"
 ]
 
+entities = {
+            "WeatherKeyword" : weather_keyword,
+            "Location" : locations,
+            "WeatherType": weather_types
+}
+
 
 weather_intent = IntentBuilder("WeatherIntent")\
     .require("WeatherKeyword")\
@@ -29,31 +37,21 @@ weather_intent = IntentBuilder("WeatherIntent")\
     .build()
 
 
-
-def getEntities():
-    return {
-        "WeatherKeyword" : weather_keyword,
-        "Location" : locations,
-        "WeatherType": weather_types
-    }
-
-def getRegexEntities():
-    return {}
-
-def getMap():
-    return {
-        weather_intent.name : printing
-    }
-def printing():
-    print("I'm inside weather intent")
+def weatherFunc():
+    print("Weather intent function executed!")
+       
+class weatherSkill(Skill):
+    def __init__(self):
+        super().__init__()
+        print(len(self.handlers))
+        
 
 
-def getIntents():
-    return [weather_intent]
-
-def getTxt():
-    return "HEY FROM HELLO"
 
 
-if __name__ == "__main__":
-    print(getIntents())
+
+
+
+def getSkill():
+    return weatherSkill()
+

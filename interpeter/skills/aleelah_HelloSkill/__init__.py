@@ -32,6 +32,7 @@ good_keyword = [
 def hello_intent_func():
     print("Hello, i'm a function executed for a hello intendt")
 
+
 def howareyou_intent_func():
     print("I'm good what 'bout you ?: executed from howareyouintent")
 
@@ -67,4 +68,4 @@ def getIntents():
 
 
 if __name__ == "__main__":
-    print(getIntents())
+    print( getIntents() )
