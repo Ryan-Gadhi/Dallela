@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Discussion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +18,12 @@
     <session id="-886013886">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3676" />
+          <entry key="py" value="3695" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3676" />
+          <entry key="Python" value="3695" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,29 +54,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+            <state relative-caret-position="268">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
-                <marker date="1561050899626" expanded="true" signature="546:548" ph="..." />
-                <marker date="1561050899626" expanded="true" signature="547:548" ph="..." />
+                <marker date="1561146121494" expanded="true" signature="499:501" ph="..." />
+                <marker date="1561146121494" expanded="true" signature="500:501" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+            <state relative-caret-position="561">
+              <caret line="29" column="79" lean-forward="true" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1561050952036" expanded="true" signature="64:65" ph="..." />
-                <marker date="1561050952036" expanded="true" signature="64:67" ph="..." />
+                <marker date="1561058456921" expanded="true" signature="64:65" ph="..." />
+                <marker date="1561058456921" expanded="true" signature="64:67" ph="..." />
               </folding>
             </state>
           </provider>
@@ -122,10 +121,10 @@
       <find>weather</find>
       <find>say</find>
       <find>pyttsx3</find>
-      <find>red</find>
       <find>output_message</find>
       <find>Times</find>
       <find>setUpperLabel</find>
+      <find>red</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -185,9 +184,9 @@
         <option value="$PROJECT_DIR$/GUI/tkinterTest.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/AudioUtils.py" />
-        <option value="$PROJECT_DIR$/main_app.py" />
         <option value="$PROJECT_DIR$/Discussion/tests.py" />
         <option value="$PROJECT_DIR$/GUI/GUI.py" />
+        <option value="$PROJECT_DIR$/main_app.py" />
       </list>
     </option>
   </component>
@@ -512,26 +511,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app.py">
+    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+        <state relative-caret-position="561">
+          <caret line="29" column="79" lean-forward="true" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
           <folding>
-            <element signature="e#1#25#0" expanded="true" />
-            <marker date="1561050899626" expanded="true" signature="546:548" ph="..." />
-            <marker date="1561050899626" expanded="true" signature="547:548" ph="..." />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1561058456921" expanded="true" signature="64:65" ph="..." />
+            <marker date="1561058456921" expanded="true" signature="64:67" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
+    <entry file="file://$PROJECT_DIR$/main_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        <state relative-caret-position="268">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1561050952036" expanded="true" signature="64:65" ph="..." />
-            <marker date="1561050952036" expanded="true" signature="64:67" ph="..." />
+            <element signature="e#1#25#0" expanded="true" />
+            <marker date="1561146121494" expanded="true" signature="499:501" ph="..." />
+            <marker date="1561146121494" expanded="true" signature="500:501" ph="..." />
           </folding>
         </state>
       </provider>
