@@ -3,6 +3,8 @@ from AudioUtils import *
 from interpeter.skills.Trvial_Skill import TrivialSkills
 from tkinter import *
 from GUI import GUI
+import time
+from threading import Thread
 
 
 def find_skill():
@@ -11,7 +13,7 @@ def find_skill():
 	"""
 	answer = 'Error'
 
-	#audio_text = 'tell me a joke'
+
 	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
 	if (not skill_found):
 		pass
@@ -19,10 +21,19 @@ def find_skill():
 	global gui
 	gui.setBottomLabel(answer)
 	gui.setUpperLabel(audio_text)
-
+	print('gui updated')
 
 	# search for the Question in the DB
 	#
+
+def ListenButtonAction():
+	if(look_for_trigger()):
+		global audio_text
+		audio_text = start_listening()
+		find_skill()
+
+
+
 
 
 """ 
@@ -33,20 +44,20 @@ if __name__ == '__main__':
 	audio_text = 'tell me a joke'
 
 	# look_for_trigger()
-	# audio_text = start_listening()
 
 
 	test_audio()
-
 	root= Tk()
 	gui = GUI.GUI(root,find_skill)
 	root.mainloop()
 
+	#audio_text = start_listening()
 
 
-	# test_audio()
-	# audio_text = 'tell me a joke'
-	# find_skill(audio_text)
+
+
+
+
 
 
 # todo: make a method that searches through skills to find the aprioperiate one (this is before nlp)

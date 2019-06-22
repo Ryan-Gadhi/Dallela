@@ -1,20 +1,13 @@
+from tkinter import *
 
-text = 'what is the closest offset wellwhat is the closest offset wellwhat is the closest offset wellwhat is the closest offset wellwhat is the closest offset wellwhat is the closest offset wellwhat is the closest offset wellwhat is the closest offset wellwhat is the closest offset well'
+root = Tk()
+var = StringVar()
+var.set('hello')
 
+l = Label(root, textvariable = var)
+l.pack()
 
-words = text.split()
-temp = ''
-limit = 5
-if len(words) > limit:
-    i = 0
-    for word in words:
-        if(i< limit):
-            temp += " " + word
-        else:
-            temp += '\n'
-            i=0
-        i+=1
-else:
-    temp = text
+t = Entry(root, textvariable = var)
+t.pack()
 
-print(temp)
+root.mainloop() #

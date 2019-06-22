@@ -72,7 +72,7 @@ class Handler(ABC):
 
 class Skill(ABC):
     """
-    Abstract class for a skill, providing common methods and behavriour to all the skills
+    Abstract class for a skill, providing common methods and behavior to all the skills
     """
     def __init__(self, entities={}, regex_entities=[], handlers=[], skill_name=None):
         """

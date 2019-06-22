@@ -38,11 +38,13 @@ def look_for_trigger():
                 print("You said : {}".format(audio_text))
                 if is_in_wake_words(audio_text):
                     not_wakeup_word = False
-            except:
-                print("not recognized by the API")
+            except Exception as e:
+                print("not recognized by the API" + e)
 
     if not (not_wakeup_word):
         playsound('beep.wav')
+        return True
+    return False
 
 
 def start_listening():
@@ -56,8 +58,8 @@ def start_listening():
             if is_in_wake_words(audio_text):
                 not_wakeup_word = False
             return audio_text
-        except:
-            print("not recognized by the API")
+        except :
+            print("not recognized by the API :\n" + print(''))
 
 
 def findOS_Sound():

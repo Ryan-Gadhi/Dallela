@@ -8,6 +8,7 @@ import os
 # 	self.chosen_answer = []
 
 special_files = ['shorts','Similars']
+original_dir = os.getcwd()
 qst_dir = os.getcwd()+'/interpeter/skills/Trvial_Skill/Questions/'
 ans_dir = os.getcwd()+'/interpeter/skills/Trvial_Skill/Answers/'
 
@@ -52,6 +53,7 @@ def readAnswerChoices(file_name, line_number):
 	else:
 		# chosen_answer = pass
 		chosen_answer = answers[line_number]
+	os.chdir(original_dir)
 
 	return chosen_answer
 
