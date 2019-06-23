@@ -20,8 +20,10 @@ def search_for_match(text):
 		if line_number != -1:
 			answer = readAnswerChoices(file, line_number)
 			print(answer)
-			AudioUtils.reply(answer)
+			#AudioUtils.reply(answer)
+			os.chdir(original_dir)
 			return True,answer
+	os.chdir(original_dir)
 	return False,None
 
 

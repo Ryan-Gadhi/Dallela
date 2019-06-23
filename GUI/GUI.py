@@ -18,8 +18,8 @@ class GUI:
 
 		#
 		# frame.pack()
-		win_width = int(screen_x / 1.5)
-		win_height = int(screen_y / 1.5)
+		win_width = int(screen_x / 1.3)
+		win_height = int(screen_y / 1.3)
 
 
 		self.root.geometry(str(win_width) + 'x' + str(win_height))  # changes window size
@@ -56,7 +56,7 @@ class GUI:
 
 		words = text.split()
 		temp = ''
-		limit = 8
+		limit = 6
 		if len(words) > limit:
 			i = 0
 			for word in words:
@@ -78,7 +78,7 @@ class GUI:
 
 		words = text.split()
 		temp = ''
-		limit = 8
+		limit = 6
 		if len(words) > limit:
 			i = 0
 			for word in words:

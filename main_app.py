@@ -5,6 +5,7 @@ from tkinter import *
 from GUI import GUI
 import time
 from threading import Thread
+from AudioUtils import reply
 
 
 def find_skill():
@@ -23,6 +24,7 @@ def find_skill():
 	gui.setUpperLabel(audio_text)
 	print('gui updated')
 
+	reply(answer)
 	# search for the Question in the DB
 	#
 
@@ -48,7 +50,7 @@ if __name__ == '__main__':
 
 	test_audio()
 	root= Tk()
-	gui = GUI.GUI(root,find_skill)
+	gui = GUI.GUI(root,ListenButtonAction)
 	root.mainloop()
 
 	#audio_text = start_listening()
