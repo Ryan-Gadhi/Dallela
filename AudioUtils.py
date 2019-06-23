@@ -108,9 +108,9 @@ def replyHelper(text):
 
     engine.say(text)
 
-    engine.runAndWait()
+    #engine.runAndWait()
 
-    # print (text)
+    print (text)
 
     # print('finished audio')
 

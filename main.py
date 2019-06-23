@@ -14,7 +14,7 @@ def find_skill():
     if not skill_found:
         pass
 
-    gui
+    global gui
     gui.setlabel(audio_text, answer)
 
 
