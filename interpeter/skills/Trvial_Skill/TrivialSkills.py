@@ -19,10 +19,11 @@ def search_for_match(text):
 		line_number = readQuestionChoices(file, text)
 		if line_number != -1:
 			answer = readAnswerChoices(file, line_number)
-			print(answer)
-			AudioUtils.reply(answer)
+			# AudioUtils.reply(answer)
+			os.chdir(original_dir)
 			return True,answer
-	return False,None
+		os.chdir(original_dir)
+	return False, None
 
 
 def readQuestionChoices(file_name, text):
@@ -31,6 +32,7 @@ def readQuestionChoices(file_name, text):
 	questions = file.read()
 	file.close()
 	questions = questions.split('\n')
+	os.chdir(original_dir) # recently changed
 
 	line_number = 0
 	for question in questions:

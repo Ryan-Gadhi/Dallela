@@ -2,12 +2,13 @@ import speech_recognition as sr
 import pyttsx3
 import platform
 from playsound import playsound
-
+import threading
+import re
 
 skills = []
 global_engine = None
 
-def is_in_wake_words(audio_text):
+def is_in_wake_words_V1(audio_text):
     """
     this function checks if the word
     said is one of the similar words to
@@ -24,6 +25,17 @@ def is_in_wake_words(audio_text):
             return True
     return False
 
+def is_in_wake_words(audio_text):
+    """
+    this function checks if the word
+    said is one of the similar words to
+    Dalela in wake_up_words.txt
+    """
+    text = re.search("(\w+)(e|i)(\w+)(a$)", audio_text)
+    if text is not None:
+        return True
+    return False
+
 
 def look_for_trigger():
     r = sr.Recognizer()
@@ -38,8 +50,8 @@ def look_for_trigger():
                 print("You said : {}".format(audio_text))
                 if is_in_wake_words(audio_text):
                     not_wakeup_word = False
-            except Exception as e:
-                print("not recognized by the API" + e)
+            except :
+                print("not recognized by the API")
 
     if not (not_wakeup_word):
         playsound('beep.wav')
@@ -89,14 +101,18 @@ def test_audio():
     return global_engine
 
 
-def reply(text):
+def replyHelper(text,engin):
     #print('audio')
-    global global_engine
-    engine = global_engine
+    engine= engin
     engine.say(text)
-    # engine.runAndWait()
+    engine.runAndWait()
     #print (text)
     #print('finished audio')
+
+def reply(text):
+    global global_engine
+    engine = global_engine
+    x = threading.Thread(target=replyHelper,args=(text,engine,))
 
 
 

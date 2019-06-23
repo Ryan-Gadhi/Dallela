@@ -5,6 +5,7 @@ from tkinter import *
 from GUI import GUI
 import time
 from threading import Thread
+from AudioUtils import reply
 
 
 def find_skill():
@@ -15,6 +16,7 @@ def find_skill():
 
 
 	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
+
 	if (not skill_found):
 		pass
 
@@ -23,7 +25,10 @@ def find_skill():
 	gui.setUpperLabel(audio_text)
 	print('gui updated')
 
-	# search for the Question in the DB
+	reply(answer)  # from AudioUtils
+
+
+	# search for the Question in the DB after converting it using adapt
 	#
 
 def ListenButtonAction():
@@ -36,9 +41,9 @@ def ListenButtonAction():
 
 
 
-""" 
+""" """"""""""""
 	Main code
-"""
+""" """"""""""""
 
 if __name__ == '__main__':
 	audio_text = 'tell me a joke'
@@ -48,7 +53,7 @@ if __name__ == '__main__':
 
 	test_audio()
 	root= Tk()
-	gui = GUI.GUI(root,find_skill)
+	gui = GUI.GUI(root,ListenButtonAction)
 	root.mainloop()
 
 	#audio_text = start_listening()

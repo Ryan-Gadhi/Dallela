@@ -1,12 +1,13 @@
+import re
 
-x=0
 
-def change_x(y):
-	global x
-	x =y
+def is_wake_up_word(text):
+	text = re.search("(\w+)(e|i)(\w+)(a$)", text)
+	if text is not None:
+		return True
+	return False
 
-def say(x):
-	print(x)
 
-change_x(2)
-say(x)
+
+
+print(is_wake_up_word('tenida'))

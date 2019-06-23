@@ -18,8 +18,8 @@ class GUI:
 
 		#
 		# frame.pack()
-		win_width = int(screen_x / 1.5)
-		win_height = int(screen_y / 1.5)
+		win_width = int(screen_x / 1.3)
+		win_height = int(screen_y / 1.3)
 
 
 		self.root.geometry(str(win_width) + 'x' + str(win_height))  # changes window size
@@ -34,13 +34,13 @@ class GUI:
 
 		self.label1 = Label(root, text="This is what the user just said",font='Arial 32',fg="blue4")
 		self.label1.pack()
-		self.label1.place(x=win_width / 3, y=win_height / 2)
+		self.label1.place(x=win_width / 4, y=win_height / 2)
 
 
 		self.label2 = Label(root, text="This is what Dallela is going to say",
 		                    font='Arial 32',fg='dodger blue')
 		self.label2.pack()
-		self.label2.place(x=win_width / 3, y=win_height / 1.5)
+		self.label2.place(x=win_width / 4, y=win_height / 1.5)
 
 		self.logo = ImageTk.PhotoImage(Image.open("bhge.png"))
 		self.panel = Label(root, image=self.logo)
@@ -56,7 +56,7 @@ class GUI:
 
 		words = text.split()
 		temp = ''
-		limit = 8
+		limit = 6
 		if len(words) > limit:
 			i = 0
 			for word in words:
@@ -78,7 +78,7 @@ class GUI:
 
 		words = text.split()
 		temp = ''
-		limit = 8
+		limit = 6
 		if len(words) > limit:
 			i = 0
 			for word in words:
