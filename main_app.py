@@ -7,6 +7,7 @@ import time
 from threading import Thread
 from AudioUtils import *
 
+awake = False
 
 def find_skill():
 	"""
@@ -35,19 +36,28 @@ def LookForSkill():
 	audio_text = get_start_listening_text()
 	find_skill()
 
-def ButtonClicked():
+def LookForTrigger():
 	# trigger
-	t1 = start_listening()
+	t1 = start_listening(awake)
 	t2 = threading.Thread(target= waitForResponse, args=(t1,))
 	t2.start()
 
 
 def waitForResponse(t1):
+	global awake
 	while (t1.is_alive()):
 		pass
-	print(get_start_listening_text() + ' <-00->')
-	LookForSkill()  # when google responds we search for the skill
 
+	heared_word = get_start_listening_text()
+
+	if(awake):
+		LookForSkill()  # when google responds we search for the skill
+	elif(not awake):
+		if is_in_wake_words(heared_word):
+			awake = True
+			LookForTrigger()
+		else:
+			LookForTrigger()
 
 """ 
 	Main code
@@ -61,7 +71,7 @@ if __name__ == '__main__':
 
 	test_audio()
 	root= Tk()
-	gui = GUI.GUI(root,ButtonClicked)
+	gui = GUI.GUI(root,LookForTrigger)
 	root.mainloop()
 
 	#audio_text = start_listening()

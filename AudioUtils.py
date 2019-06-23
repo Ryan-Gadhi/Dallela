@@ -41,47 +41,49 @@ def is_in_wake_words(text):
 
     return False
 
+#
+# def look_for_trigger():
+#     r = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         not_wakeup_word = True
+#
+#         while not_wakeup_word:  # keep listening as long as no trigger word recognized
+#             try:
+#                 print("I am listening :")
+#                 input_audio = r.listen(source)
+#                 audio_text = r.recognize_google(input_audio)
+#                 print("You said : {}".format(audio_text))
+#                 if is_in_wake_words(audio_text):
+#                     not_wakeup_word = False
+#             except:
+#                 print("not recognized by the API")
 
-def look_for_trigger():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        not_wakeup_word = True
-
-        while not_wakeup_word:  # keep listening as long as no trigger word recognized
-            try:
-                print("I am listening :")
-                input_audio = r.listen(source)
-                audio_text = r.recognize_google(input_audio)
-                print("You said : {}".format(audio_text))
-                if is_in_wake_words(audio_text):
-                    not_wakeup_word = False
-            except:
-                print("not recognized by the API")
-
-    if not (not_wakeup_word):
-        playsound('beep.wav')
-        return True
-    return False
+    # if not (not_wakeup_word):
+    #     playsound('beep.wav')
+    #     return True
+    # return False
 
 
 
-def start_listening_Helper():
+def start_listening_Helper(awake):
     r = sr.Recognizer()
     with sr.Microphone() as source:
         try:
             print("I am listening :")
+            playsound('beep.wav')
             global start_listening_text
             inputAudio = r.listen(source)
             print("I am sending to google")
+            playsound('beep2.wav')
             start_listening_text = r.recognize_google(inputAudio)
             print("You said : {}".format(start_listening_text))
 
         except:
             print("not recognized by the API :\n")
 
-def start_listening():
+def start_listening(awake):
     global t1
-    t1 = threading.Thread(target=start_listening_Helper)
+    t1 = threading.Thread(target=start_listening_Helper,args=(awake,))
     t1.start()
     return t1
 
