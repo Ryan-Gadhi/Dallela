@@ -16,7 +16,6 @@ def find_skill():
 
 
 	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
-
 	if (not skill_found):
 		pass
 
@@ -25,10 +24,8 @@ def find_skill():
 	gui.setUpperLabel(audio_text)
 	print('gui updated')
 
-	reply(answer)  # from AudioUtils
-
-
-	# search for the Question in the DB after converting it using adapt
+	reply(answer)
+	# search for the Question in the DB
 	#
 
 def ListenButtonAction():
@@ -41,9 +38,9 @@ def ListenButtonAction():
 
 
 
-""" """"""""""""
+""" 
 	Main code
-""" """"""""""""
+"""
 
 if __name__ == '__main__':
 	audio_text = 'tell me a joke'

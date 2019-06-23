@@ -8,14 +8,15 @@ import re
 skills = []
 global_engine = None
 
-def is_in_wake_words_V1(audio_text):
+
+def is_in_wake_wordsv1(audio_text):
     """
     this function checks if the word
     said is one of the similar words to
     Dalela in wake_up_words.txt
     """
 
-    file = open('wake_up_words.txt','r')
+    file = open('wake_up_words.txt', 'r')
 
     similar_words = (file.read().split('\n'))  # making a list
     for word in similar_words:  # going over that list
@@ -25,15 +26,13 @@ def is_in_wake_words_V1(audio_text):
             return True
     return False
 
-def is_in_wake_words(audio_text):
-    """
-    this function checks if the word
-    said is one of the similar words to
-    Dalela in wake_up_words.txt
-    """
-    text = re.search("(\w+)(e|i)(\w+)(a$)", audio_text)
+
+def is_in_wake_words(text):
+    text = re.search("(\w+)(e|i)(\w+)(a$)", text)
+
     if text is not None:
         return True
+
     return False
 
 
@@ -50,7 +49,7 @@ def look_for_trigger():
                 print("You said : {}".format(audio_text))
                 if is_in_wake_words(audio_text):
                     not_wakeup_word = False
-            except :
+            except:
                 print("not recognized by the API")
 
     if not (not_wakeup_word):
@@ -70,8 +69,8 @@ def start_listening():
             if is_in_wake_words(audio_text):
                 not_wakeup_word = False
             return audio_text
-        except :
-            print("not recognized by the API :\n" + print(''))
+        except:
+            print("not recognized by the API :\n")
 
 
 def findOS_Sound():
@@ -101,18 +100,21 @@ def test_audio():
     return global_engine
 
 
-def replyHelper(text,engin):
-    #print('audio')
-    engine= engin
+def replyHelper(text):
+    # print('audio')
+    global global_engine
+
+    engine = global_engine
+
     engine.say(text)
+
     engine.runAndWait()
-    #print (text)
-    #print('finished audio')
+
+    # print (text)
+
+    # print('finished audio')
+
 
 def reply(text):
-    global global_engine
-    engine = global_engine
-    x = threading.Thread(target=replyHelper,args=(text,engine,))
-
-
-
+    x = threading.Thread(target=replyHelper, args=(text,))
+    x.start()
