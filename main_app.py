@@ -5,7 +5,7 @@ from tkinter import *
 from GUI import GUI
 import time
 from threading import Thread
-from AudioUtils import reply
+from AudioUtils import *
 
 
 def find_skill():
@@ -28,14 +28,25 @@ def find_skill():
 	# search for the Question in the DB
 	#
 
-def ListenButtonAction():
-	if(look_for_trigger()):
-		global audio_text
-		audio_text = start_listening()
-		find_skill()
+def LookForSkill():
+	# if(look_for_trigger()):
+	#t2 = threading.Thread(target=checkerThread)
+	global audio_text
+	audio_text = get_start_listening_text()
+	find_skill()
+
+def ButtonClicked():
+	# trigger
+	t1 = start_listening()
+	t2 = threading.Thread(target= waitForResponse, args=(t1,))
+	t2.start()
 
 
-
+def waitForResponse(t1):
+	while (t1.is_alive()):
+		pass
+	print(get_start_listening_text() + ' <-00->')
+	LookForSkill()  # when google responds we search for the skill
 
 
 """ 
@@ -50,7 +61,7 @@ if __name__ == '__main__':
 
 	test_audio()
 	root= Tk()
-	gui = GUI.GUI(root,ListenButtonAction)
+	gui = GUI.GUI(root,ButtonClicked)
 	root.mainloop()
 
 	#audio_text = start_listening()

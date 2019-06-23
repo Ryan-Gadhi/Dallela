@@ -24,11 +24,11 @@ class GUI:
 
 		self.root.geometry(str(win_width) + 'x' + str(win_height))  # changes window size
 
-		self.B = Button(root, text="Start", command=cmd1, fg='dodger blue', font='Arial 20')
+		self.B = Button(root, text="Wake up!", command=cmd1, fg='dodger blue', font='Arial 20')
 		self.B.config(width=int(win_width / 120), height=int(win_height/ 240))
 		self.B.place(x=win_width / 22, y=win_height / 2.05)
 
-		self.B2 = Button(root, text="Reset", fg='dodger blue', font = 'Arial 20')
+		self.B2 = Button(root, text="Sleep", fg='dodger blue', font = 'Arial 20')
 		self.B2.config(width= int(win_width / 120), height= int(win_height/ 240))
 		self.B2.place(x=win_width / 22, y=win_height / 1.7)
 

@@ -1,35 +1,25 @@
-from tkinter import *
-
+import logging
 import threading
+import time
 
 
-def look_for_trigger():
-
-    for i in range(10000):
-        x = i
-    return "dfhdfshsdfh"
+number = 0
 
 
-def sound():
-    print(look_for_trigger())
+def changeValue():
+    while(1):
+        global number
+        number +=1
+
+def printing():
+    while(1):
+        print(number)
+
+t1 = threading.Thread(target=changeValue)
+t2 = threading.Thread(target=printing)
+
+for i in range(3):
+    t1.start()
+    t2.start()
 
 
-root = Tk()
-
-var = StringVar()
-
-var.set('hello')
-
-l = Label(root, textvariable=var)
-
-l.pack()
-
-t = Entry(root, textvariable=var)
-
-t.pack()
-
-x = threading.Thread(target=sound)
-y = x.start()
-print()
-
-root.mainloop()  #

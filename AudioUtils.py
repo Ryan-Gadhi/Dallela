@@ -7,6 +7,10 @@ import re
 
 skills = []
 global_engine = None
+start_listening_text = 'who are you'
+wake_up_text = None
+t1 = None
+
 
 
 def is_in_wake_wordsv1(audio_text):
@@ -26,6 +30,8 @@ def is_in_wake_wordsv1(audio_text):
             return True
     return False
 
+def get_start_listening_text():
+    return start_listening_text
 
 def is_in_wake_words(text):
     text = re.search("(\w+)(e|i)(\w+)(a$)", text)
@@ -58,19 +64,26 @@ def look_for_trigger():
     return False
 
 
-def start_listening():
+
+def start_listening_Helper():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         try:
             print("I am listening :")
-            input_audio = r.listen(source)
-            audio_text = r.recognize_google(input_audio)
-            print("You said : {}".format(audio_text))
-            if is_in_wake_words(audio_text):
-                not_wakeup_word = False
-            return audio_text
+            global start_listening_text
+            inputAudio = r.listen(source)
+            print("I am sending to google")
+            start_listening_text = r.recognize_google(inputAudio)
+            print("You said : {}".format(start_listening_text))
+
         except:
             print("not recognized by the API :\n")
+
+def start_listening():
+    global t1
+    t1 = threading.Thread(target=start_listening_Helper)
+    t1.start()
+    return t1
 
 
 def findOS_Sound():
