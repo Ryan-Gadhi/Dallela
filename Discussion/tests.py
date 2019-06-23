@@ -2,8 +2,6 @@ from tkinter import *
 
 import threading
 
-import speech_recognition as sr
-
 
 def look_for_trigger():
 
@@ -31,7 +29,7 @@ t = Entry(root, textvariable=var)
 t.pack()
 
 x = threading.Thread(target=sound)
-y  = x.start()
+y = x.start()
 print()
 
 root.mainloop()  #
