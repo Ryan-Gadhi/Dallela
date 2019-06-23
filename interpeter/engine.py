@@ -21,6 +21,7 @@ class Engine:
         """
             Dynamically loads (imports) all the skills located in the folder Skills
         """
+        
         for folder in os.listdir("skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
             module = __import__("skills." + folder, fromlist=['']) # import a skill module
@@ -33,8 +34,13 @@ class Engine:
             Collects all entities from all skills and register them in the engine
         """
         entities = {}
+        reg_entities = []
         for skill in self.skills:
             entities.update( skill.getEntities )
+            reg_entities += skill.getRegexEntities
+
+        for reg_entity in reg_entities:
+            self.eng.register_regex_entity(reg_entity)
 
         for entity, keywords in entities.items():
             for keyword in keywords:
@@ -105,6 +111,7 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    e.compute("What is the weather in Tokyo ?")
+    e.compute("Good morning")
+
     
     

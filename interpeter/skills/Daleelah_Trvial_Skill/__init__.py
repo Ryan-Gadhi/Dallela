@@ -6,16 +6,16 @@ from base import Skill, Handler
 import os 
 
 
-def weatherFunc():
-    print("Weather intent function executed!")
+def trivialFunc():
+    print("TrivialSkills function executed")
 
 #maps intents to functions       
 mapper = {
-    "WeatherIntent" : weatherFunc
+    "TrivialIntent" : trivialFunc
 }
 
 # You can create a skill both with a json or manually
-class weatherSkill(Skill):
+class trivialSkill(Skill):
     def __init__(self):
         super().__init__()
         
@@ -31,5 +31,5 @@ class weatherSkill(Skill):
 
 
 def getSkill():
-    return weatherSkill()
+    return trivialSkill()
 

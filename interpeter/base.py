@@ -1,22 +1,36 @@
 import json
 import os
+import sys
 from abc import ABC, abstractmethod
 from adapt.intent import IntentBuilder
 
 
-def loadRawIntents():
+def load_raw_intents(path):
+    """
+        Retrive all json intents within a skill & returns a list of raw intent objects
+        Args:
+            path(str): path to the intent folder
+        Returns:
+            list: unprocessed json object intents
+    """
+    #TODO: handle file errors
     raw_intents = []
-    for f in os.listdir("skills/Daleelah_WeatherSkill/intents/"):
-        if not f.endswith(".json") : continue
-        with open("skills/Daleelah_WeatherSkill/intents/" + f) as jsonFile:
+    intents_folder = os.path.join(path, "intents") # skill_path/intents
+
+    for f in os.listdir(intents_folder):
+        if not f.endswith(".json") : continue # if file is not json then skip
+        json_path = os.path.join(intents_folder, f)
+
+        with open( json_path ) as jsonFile:
             raw_intent = json.loads( jsonFile.read() )
             raw_intents.append(raw_intent)
+
     return raw_intents
     
 
 
 
-def addEntityToIntent(intent, entity_name, importance):
+def add_entity_to_intent(intent, entity_name, importance):
         #TODO: finding a way to write this in a clean way!
         if importance == "require":
                 intent.require(entity_name)
@@ -25,7 +39,7 @@ def addEntityToIntent(intent, entity_name, importance):
         else:
                 intent.optionally(entity_name)
 
-def loadEntities(intent, entities):
+def load_entities(intent, entities):
     """
         loads entity names into an intent, and maps the entities to the names 
         Args:
@@ -42,12 +56,26 @@ def loadEntities(intent, entities):
             entity_importance = entity.get("importance")
             
             entities_map.update( {entity_name : entity_contents} )
-            addEntityToIntent(intent, entity_name, entity_importance)
+            add_entity_to_intent(intent, entity_name, entity_importance)
     return entities_map
                 
-def loadRegexEntities(intent, reg_entities):
-        #TODO: way to implement this!
-        pass
+def load_regex_entities(intent, reg_entities):
+    if not reg_entities: return []
+    print(reg_entities)
+    for reg_entity in reg_entities:
+       
+        apply_to = reg_entity.get("apply_to", []) #e.g: at, in, around
+        entity_name = reg_entity.get("entity_name") #e.g: Location
+        reg_pattren = reg_entity.get("regex_pattren") #e.g: .*
+        entity_importance = reg_entity.get("importance") #e.g: require
+        reg_pattren_named = '(?P<{}>{})'.format(entity_name, reg_pattren) #e.g: (?P<Location>.*)
+        
+        add_entity_to_intent(intent, entity_name, entity_importance)
+        
+        joined_entities = [kwd + reg_pattren_named for kwd in apply_to] #e.g: in (?P<Location>.*), at (?P<Location>.*)...
+
+    return joined_entities
+
 
 class Handler(ABC):
     """
@@ -60,9 +88,10 @@ class Handler(ABC):
     
     def execute(self):
         """
-            Executes the predefined function attached to an intent 
+            Executes the predefined function associated to an intent 
         """
-        self.func()
+        if self.func:
+            self.func() 
 
     
     def execAnswer(self, *args, **kwargs):
@@ -81,7 +110,7 @@ class Skill(ABC):
         Args:
             skill_name(str): name of the skill
             handlers(list): list of handlers used in that skill
-            entities(dict)
+            entities(dict): name of an entity that maps with a list of keywords 
             regex_entities(list)
         """
         self.skill_name = skill_name or self.__class__.__name__
@@ -94,10 +123,12 @@ class Skill(ABC):
         """
             loads and instantiate all intents from a json file
         """
-        raw_intents = loadRawIntents()
+        path = os.path.dirname(sys.modules[self.__class__.__module__].__file__ )
+        raw_intents = load_raw_intents(path)
         for raw_intent in raw_intents:
             intent = IntentBuilder( raw_intent.get("name") )
-            self.entities.update( loadEntities(intent, raw_intent.get('entities', None)) )    
+            self.entities.update( load_entities(intent, raw_intent.get('entities', None)) )  
+            self.regex_entities += load_regex_entities( intent, raw_intent.get("regex_entities", []) )
             self.handlers.append( Handler(intent.build()) )
 
     @property
@@ -116,6 +147,7 @@ class Skill(ABC):
         Returns:
                 Dict: a list of all Regular expression entities in that skill
         """
+        print(self.regex_entities)
         return self.regex_entities
     
     @property

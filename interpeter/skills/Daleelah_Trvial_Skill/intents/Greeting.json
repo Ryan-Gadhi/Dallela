@@ -1,0 +1,23 @@
+{            
+    "name" : "GreetingIntent",
+    "entities" : [
+        {
+            "name" : "hi_keyword",
+            "contents": ["hi", "hey", "hello"],
+            "importance" : "optionally"
+        },  
+        {
+            "name" : "extra",
+            "contents" : ["going", "up", "happening", "doing"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "good_keyword",
+            "contents" : ["morning", "evening"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : []
+
+}

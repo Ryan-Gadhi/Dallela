@@ -1,0 +1,13 @@
+{            
+    "name" : "PersonalIntent",
+    "entities" : [
+        {
+            "name" : "personal_keyword",
+            "contents": ["who are you", "your purpose", "birthday", "your name", "created you", "made you","about you"],
+            "importance" : "require"
+        }
+    ],
+
+    "regex_entities" : []
+
+}
