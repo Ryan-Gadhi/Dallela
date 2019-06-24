@@ -1,0 +1,23 @@
+{            
+    "name" : "AgeIntent",
+    "entities" : [
+        {
+            "name" : "age_keyword",
+            "contents": ["age", "old"],
+            "importance" : "require"
+        }, 
+        {
+            "name" : "wh_word",
+            "contents" : ["how", "what"],
+            "importance" : "require"
+        }, 
+        {
+            "name" : "you_word",
+            "contents" : ["you", "your"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : []
+
+}

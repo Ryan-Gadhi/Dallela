@@ -10,21 +10,22 @@
                     "name" : "weather_types",
                     "contents" : ["snow", "rain", "wind", "sleet", "sun"],
                     "importance" : "optionally"
-                },
-                {
-                    "name" : "location",
-                    "contents" : ["Seattle", "San Francisco", "Tokyo"],
-                    "importance" : "require"
                 }
             ],
 
             "regex_entities" : [
                 {
-                    "entity_names" : ["Location"],
-                    "regex_pattren": ["(?P<Location>.*)"],
+                    "entity_name" : "location",
+                    "regex_pattren": ".*",
                     "apply_to" : ["in "],
                     "importance" : "require"
                 }
+            ],
+
+            "answers" : [
+                "The weather in {location} is {deg}{unit}",
+                "It is {deg}{unit} in {location}",
+                "It is {deg}{unit}"
             ]
 
 }

@@ -1,0 +1,17 @@
+{            
+    "name" : "PersonalIntent",
+    "entities" : [
+        {
+            "name" : "personal_keyword",
+            "contents": ["who are you", "your purpose", "birthday", "your name", "created you", "made you","about you"],
+            "importance" : "require"
+        }
+    ],
+    "regex_entities" : [],
+    "answers" : [
+        "my name is daleela, a baker hughes voice assistant",
+        "I'm daleela",
+        "Oh come on you know me"
+    ]
+
+}
