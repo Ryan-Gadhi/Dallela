@@ -22,7 +22,6 @@ def load_raw_intents(path):
         with open( json_path ) as jsonFile:
             raw_intent = json.loads( jsonFile.read() )
             raw_intents.append(raw_intent)
-
     return raw_intents
     
 
@@ -67,7 +66,6 @@ def load_regex_entities(intent, reg_entities):
     Returns: (list): of parsed regex strings 
     """
     if not reg_entities: return []
-    print(reg_entities)
     for reg_entity in reg_entities:
        
         apply_to = reg_entity.get("apply_to", []) #e.g: at, in, around
@@ -98,8 +96,9 @@ class Answer(ABC):
         Returns:
             (str): a randomly generated response based on some variables (if any)
         """
-        random_template = random.choice(self.answers)
-        return random_template.format(**response)
+        random_template = random.choice(self.answers) #e.g: 'The weather in {location} is {deg}{unit}' 
+        print(response)
+        return random_template.format(**response) #format is a python function, google that for more info
 
 
 class Handler(ABC):
@@ -118,21 +117,18 @@ class Handler(ABC):
         if self.func:
             func_output = self.func(response) 
             response.update(func_output) # update user info with function info, to pass it to answer
-    
         print(
         self.answer.format_response(response)
         )
-    
-    def execAnswer(self, *args, **kwargs):
-        #TODO: given an output of a function, substitute that output to a predefined answer 
-        pass
+
         
 
 class Skill(ABC):
     """
     Abstract class for a skill, providing common methods and behavriour to all the skills
     """
-    def __init__(self, entities={}, regex_entities=[], handlers=[], skill_name=None):
+    def __init__(self, entities=None, regex_entities=None, handlers=None, skill_name=None):
+
         """
         Constructor
 
@@ -143,16 +139,16 @@ class Skill(ABC):
             regex_entities(list)
         """
         self.skill_name = skill_name or self.__class__.__name__
-        self.handlers = handlers
-        self.entities = entities
-        self.regex_entities = regex_entities
+        self.entities = entities or {}
+        self.regex_entities = regex_entities or []
+        self.handlers = handlers or []
         self.__initilaize()
         
     def __initilaize(self):
         """
             loads and instantiate all intents from a json file
         """
-        path = os.path.dirname(sys.modules[self.__class__.__module__].__file__ )
+        path = os.path.dirname(sys.modules[self.__class__.__module__].__file__ ) #absoulute path for a child class
         raw_intents = load_raw_intents(path)
         for raw_intent in raw_intents:
             intent = IntentBuilder( raw_intent.get("name") )
@@ -179,7 +175,6 @@ class Skill(ABC):
         Returns:
                 Dict: a list of all Regular expression entities in that skill
         """
-        print(self.regex_entities)
         return self.regex_entities
     
     @property

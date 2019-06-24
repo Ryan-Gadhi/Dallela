@@ -26,7 +26,7 @@ class Engine:
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
             module = __import__("skills." + folder, fromlist=['']) # import a skill module
             self.skills.append( getattr(module, "getSkill")() ) # getting a skill object
-        
+       
         print(str(len(self.skills)), " skills has been loaded") 
 
     def __register_eng_entities(self):
@@ -53,7 +53,6 @@ class Engine:
         """
         for skill in self.skills:
             self.handlers += ( skill.getMap )
-        
         print(str(len(self.handlers)), " handlers has been loaded")
 
 
@@ -78,7 +77,6 @@ class Engine:
             if intent.get('confidence') > 0 ] or None
 
     def __get_correct_handler(self, correct_intent):
-        print(correct_intent)
         """
         Given a correct intent searches and returns the handler of that intent
         Args:
@@ -111,7 +109,10 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    e.compute("What is the weather in Tokyo ?")
+    for handler in e.handlers:
+        print(e.compute("What is the nearest field within 5 km ?"))
+
+
 
     
     

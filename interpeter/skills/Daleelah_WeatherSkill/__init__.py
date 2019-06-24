@@ -7,7 +7,6 @@ import os
 
 
 def weatherFunc(*args, **kwargs):
-    print(args)
     print("Weather intent function executed!")
     return {'deg':'50', 'unit':'C'}
 
