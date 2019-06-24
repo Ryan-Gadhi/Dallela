@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/main_app.py" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/main_app.py" line="88" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="Merge branch 'abdo' of https://github.com/Ryan-Gadhi/Dallela into abdo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;AudioUtils.py&#10;#&#9;Discussion/tests.py&#10;#&#9;GUI/__pycache__/GUI.cpython-37.pyc&#10;#&#9;__pycache__/AudioUtils.cpython-37.pyc&#10;#&#9;interpeter/skills/Trvial_Skill/TrivialSkills.py&#10;#&#9;interpeter/skills/Trvial_Skill/__pycache__/TrivialSkills.cpython-37.pyc&#10;#&#9;main_app.py">
-      <change afterPath="$PROJECT_DIR$/beep2.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,14 +20,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Age" value="1" />
-          <entry key="py" value="7195" />
+          <entry key="py" value="9483" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="7195" />
+          <entry key="Python" value="9483" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,7 +38,7 @@
           <entry key="Personal" value="4" />
           <entry key="Similars" value="2" />
           <entry key="png" value="1" />
-          <entry key="py" value="50" />
+          <entry key="py" value="51" />
           <entry key="shorts" value="2" />
           <entry key="txt" value="3" />
           <entry key="wav" value="2" />
@@ -49,7 +48,7 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="50" />
+          <entry key="Python" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -76,28 +75,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1517">
-              <caret line="40" column="24" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="24" />
+            <state relative-caret-position="442">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
-                <marker date="1561298325103" expanded="true" signature="604:606" ph="..." />
-                <marker date="1561298325103" expanded="true" signature="928:1199" ph="..." />
-                <marker date="1561298325103" expanded="true" signature="1197:1199" ph="..." />
+                <marker date="1561402835840" expanded="true" signature="734:736" ph="..." />
+                <marker date="1561402835840" expanded="true" signature="1531:1802" ph="..." />
+                <marker date="1561402835840" expanded="true" signature="1800:1802" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1561400624185" expanded="true" signature="857:1022" ph="..." />
+                <marker date="1561400624185" expanded="true" signature="1164:1167" ph="..." />
+                <marker date="1561400624185" expanded="true" signature="2900:3158" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+        <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="474">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1561298325100" expanded="true" signature="747:781" ph="..." />
-                <marker date="1561298325100" expanded="true" signature="923:926" ph="..." />
-                <marker date="1561298325100" expanded="true" signature="2277:2394" ph="..." />
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1561403196335" expanded="true" signature="2175:2177" ph="..." />
               </folding>
             </state>
           </provider>
@@ -201,18 +213,18 @@
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Discussion/tests.py" />
-        <option value="$PROJECT_DIR$/GUI/GUI.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars" />
-        <option value="$PROJECT_DIR$/main_app.py" />
         <option value="$PROJECT_DIR$/AudioUtils.py" />
+        <option value="$PROJECT_DIR$/main_app.py" />
+        <option value="$PROJECT_DIR$/GUI/GUI.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1390" />
-    <option name="y" value="-40" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-50" />
+    <option name="y" value="143" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
@@ -242,35 +254,6 @@
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
               <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-              <item name="Answers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-              <item name="Questions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -457,7 +440,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1390" y="-40" width="1920" height="1057" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
@@ -465,13 +448,13 @@
       <window_info id="Favorites" order="2" sideWeight="0.50309026" side_tool="true" weight="0.08530806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27046633" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2699115" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.13267326" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.24690266" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -628,16 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -692,28 +665,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app.py">
+    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1517">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="24" />
+        <state relative-caret-position="203">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#1#25#0" expanded="true" />
-            <marker date="1561298325103" expanded="true" signature="604:606" ph="..." />
-            <marker date="1561298325103" expanded="true" signature="928:1199" ph="..." />
-            <marker date="1561298325103" expanded="true" signature="1197:1199" ph="..." />
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1561400624185" expanded="true" signature="857:1022" ph="..." />
+            <marker date="1561400624185" expanded="true" signature="1164:1167" ph="..." />
+            <marker date="1561400624185" expanded="true" signature="2900:3158" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+    <entry file="file://$PROJECT_DIR$/main_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        <state relative-caret-position="442">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1561298325100" expanded="true" signature="747:781" ph="..." />
-            <marker date="1561298325100" expanded="true" signature="923:926" ph="..." />
-            <marker date="1561298325100" expanded="true" signature="2277:2394" ph="..." />
+            <element signature="e#1#25#0" expanded="true" />
+            <marker date="1561402835840" expanded="true" signature="734:736" ph="..." />
+            <marker date="1561402835840" expanded="true" signature="1531:1802" ph="..." />
+            <marker date="1561402835840" expanded="true" signature="1800:1802" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1561403196335" expanded="true" signature="2175:2177" ph="..." />
           </folding>
         </state>
       </provider>

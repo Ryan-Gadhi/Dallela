@@ -12,31 +12,49 @@ awake = False
 def find_skill():
 	"""
 	checks if the skill is DB or Trivial or DuckDuckGo
+
 	"""
-	answer = 'Error'
-
-
 	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
 	if (not skill_found):
-		pass
+		print('Skill not found in find_skill()')
+
+	# or connect to the DB skill
+
+	# or connect to Duck Duck go api
 
 	global gui
 	gui.setBottomLabel(answer)
 	gui.setUpperLabel(audio_text)
 	print('gui updated')
 
-	reply(answer)
-	# search for the Question in the DB
-	#
+	reply(answer)  # say the answer out loud
+
+
 
 def LookForSkill():
+	"""
+	fetches the audio text
+	then calls find skill
+
+	"""
 	# if(look_for_trigger()):
 	#t2 = threading.Thread(target=checkerThread)
 	global audio_text
 	audio_text = get_start_listening_text()
 	find_skill()
 
+
 def LookForTrigger():
+	"""
+		this method is called after the start button
+		is clicked in the GUI. it creates 2 threads
+
+			t1: to handle the listening/server connection
+				in the background
+
+			t2: checks if t1 has finished and complete the
+				program flow
+	"""
 	# trigger
 	t1 = start_listening(awake)
 	t2 = threading.Thread(target= waitForResponse, args=(t1,))
@@ -44,6 +62,14 @@ def LookForTrigger():
 
 
 def waitForResponse(t1):
+	"""
+		checks if the thread handling the google speech recognition
+		has finished execution. It implements the wake word functionality
+		and starts to listen for skill search
+
+		t1: gets the thread t1 to check for its life
+	"""
+
 	global awake
 	while (t1.is_alive()):
 		pass
@@ -66,7 +92,6 @@ def waitForResponse(t1):
 if __name__ == '__main__':
 	audio_text = 'tell me a joke'
 
-	# look_for_trigger()
 
 
 	test_audio()
@@ -77,13 +102,6 @@ if __name__ == '__main__':
 	#audio_text = start_listening()
 
 
-
-
-
-
-
-
-# todo: make a method that searches through skills to find the aprioperiate one (this is before nlp)
 
 #
 # input_text = 'what is the closest offset well'

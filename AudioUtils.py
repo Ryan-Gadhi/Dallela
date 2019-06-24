@@ -5,14 +5,18 @@ from playsound import playsound
 import threading
 import re
 
-skills = []
 global_engine = None
 start_listening_text = 'who are you'
 wake_up_text = None
 t1 = None
 
 
-
+"""
+    # currently not used
+    
+    checks if the audio text is in the file 
+    containing words similar to Daleela
+"""
 def is_in_wake_wordsv1(audio_text):
     """
     this function checks if the word
@@ -33,6 +37,11 @@ def is_in_wake_wordsv1(audio_text):
 def get_start_listening_text():
     return start_listening_text
 
+"""
+    # this is a temporary method, should be overridden by Tenserflow
+    checks if the said word feels sound like Daleela
+
+"""
 def is_in_wake_words(text):
     text = re.search("(\w+)(e|i)(\w+)(a$)", text)
 
@@ -63,7 +72,15 @@ def is_in_wake_words(text):
     #     return True
     # return False
 
-
+"""
+    this method:
+                adds the 2 beep sounds 
+                connects to google's server 
+                for speech recognition
+    
+    awake: a boolean value that reflects weather
+    the wake word has been said or not
+"""
 
 def start_listening_Helper(awake):
     r = sr.Recognizer()
@@ -80,14 +97,26 @@ def start_listening_Helper(awake):
 
         except:
             print("not recognized by the API :\n")
+"""
+    this method makes a new thread to handle 
+    google server connection in the background 
+    
+    awake: a boolean value that reflects weather
+    the wake word has been said or not
 
+"""
 def start_listening(awake):
     global t1
     t1 = threading.Thread(target=start_listening_Helper,args=(awake,))
     t1.start()
     return t1
 
+"""
+    the following is only related to pyttsx3 package
+    it checks for woman sound in the local system
+    and choose as the default
 
+"""
 def findOS_Sound():
     os_name = platform.system()
     name = 'undefined'
@@ -101,7 +130,12 @@ def findOS_Sound():
         print('os not recognized')
     return name
 
+"""
+    the following is only related to pyttsx3 package
+    it checks for woman sound in the local system
+    and choose as the default sound output
 
+"""
 def test_audio():
     name = findOS_Sound()
     global global_engine
@@ -114,7 +148,12 @@ def test_audio():
         print('specified sound not found in the local system!')
     return global_engine
 
-
+    """
+        this method is responsible for the sound output
+        it is called by 'reply' method to make a new thread
+        text: input text to be said
+           
+    """
 def replyHelper(text):
     # print('audio')
     global global_engine
@@ -128,8 +167,12 @@ def replyHelper(text):
     print (text)
 
     # print('finished audio')
-
-
+"""
+    makes a new thread that handles the sound output 
+    in a new thread
+    
+    text: input text to be said
+"""
 def reply(text):
     x = threading.Thread(target=replyHelper, args=(text,))
     x.start()

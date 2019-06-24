@@ -10,6 +10,13 @@ class GUI:
 
 
 	def __init__(self,root,cmd1):
+		"""
+
+		GUI components with location relative to screen size
+		:param root: the main panel to put the components in.
+		:param cmd1: the command that should be executed when listen is clicked
+
+		"""
 		self.root = root
 		# frame = Frame(root)
 		#
@@ -45,7 +52,7 @@ class GUI:
 		self.logo = ImageTk.PhotoImage(Image.open("bhge.png"))
 		self.panel = Label(root, image=self.logo)
 		self.panel.pack(side="bottom", fill="both", expand="yes")
-		self.panel.place(x=screen_x - screen_x / 2, y=screen_y / 9, anchor='sw')
+		self.panel.place(x=win_width/1.2, y=screen_y / 9, anchor='sw')
 
 
 	def event_handler(self):
@@ -53,6 +60,11 @@ class GUI:
 
 
 	def setUpperLabel(self,text):
+
+		"""
+
+		:param text: text to put in the upper label
+		"""
 
 		words = text.split()
 		temp = ''
@@ -75,7 +87,10 @@ class GUI:
 		self.label1.config(text=text)
 
 	def setBottomLabel(self,text):
+		"""
+		:param text: text to put in the upper label
 
+		"""
 		words = text.split()
 		temp = ''
 		limit = 6
