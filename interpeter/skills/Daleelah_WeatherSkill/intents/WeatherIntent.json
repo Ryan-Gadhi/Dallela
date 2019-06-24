@@ -15,11 +15,17 @@
 
             "regex_entities" : [
                 {
-                    "entity_name" : "Location",
+                    "entity_name" : "location",
                     "regex_pattren": ".*",
                     "apply_to" : ["in "],
-                    "importance" : "optionally"
+                    "importance" : "require"
                 }
+            ],
+
+            "answers" : [
+                "The weather in {location} is {deg}{unit}",
+                "It is {deg}{unit} in {location}",
+                "It is {deg}{unit}"
             ]
 
 }

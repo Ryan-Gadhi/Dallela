@@ -1,9 +1,7 @@
-import json
-import os
-import sys
+import json, os, random, sys
 from abc import ABC, abstractmethod
 from adapt.intent import IntentBuilder
-
+""" this module contains Handler, Skill, Answer  classes and basic loading functions """
 
 def load_raw_intents(path):
     """
@@ -60,6 +58,14 @@ def load_entities(intent, entities):
     return entities_map
                 
 def load_regex_entities(intent, reg_entities):
+    """
+    given an intent and a list of reg_entities register them in that intent
+    and apply the regex to a list of strings 
+    Args:
+        intent(intent): the unbuilt intent
+        reg_entities(list): containing a list of reg_entities JSON objects
+    Returns: (list): of parsed regex strings 
+    """
     if not reg_entities: return []
     print(reg_entities)
     for reg_entity in reg_entities:
@@ -76,23 +82,46 @@ def load_regex_entities(intent, reg_entities):
 
     return joined_entities
 
+class Answer(ABC):
+    """
+    Abstract class used to handle answers
+    """
+    def __init__(self, answers=[]):
+        self.answers = answers
+    
+    def format_response(self, response):
+        """ 
+        randomely chooses a template and subtitute the response (variables) into that template
+        variables could be a function output or user's captured keywords
+        Args:
+            response(dict): dictionary contains variables along with their names
+        Returns:
+            (str): a randomly generated response based on some variables (if any)
+        """
+        random_template = random.choice(self.answers)
+        return random_template.format(**response)
+
 
 class Handler(ABC):
     """
     Abstract class used to glue an intent, its function and the answers
     """
-    def __init__(self, intent, func=None, answer=None):
+    def __init__(self, intent, answer=None, func=None,):
         self.intent = intent
         self.func = func
         self.answer = answer
     
-    def execute(self):
+    def execute(self, response):
         """
-            Executes the predefined function associated to an intent 
+            Executes the predefined function associated with an intent 
         """
         if self.func:
-            self.func() 
-
+            func_output = self.func(response) 
+            response.update(func_output) # update user info with function info, to pass it to answer
+    
+        print(
+        self.answer.format_response(response)
+        )
     
     def execAnswer(self, *args, **kwargs):
         #TODO: given an output of a function, substitute that output to a predefined answer 
@@ -129,7 +158,10 @@ class Skill(ABC):
             intent = IntentBuilder( raw_intent.get("name") )
             self.entities.update( load_entities(intent, raw_intent.get('entities', None)) )  
             self.regex_entities += load_regex_entities( intent, raw_intent.get("regex_entities", []) )
-            self.handlers.append( Handler(intent.build()) )
+            self.handlers.append( Handler( 
+                intent.build(), 
+                Answer( raw_intent.get("answers", None) )
+                 ) )
 
     @property
     def getEntities(self):

@@ -7,7 +7,11 @@
             "importance" : "require"
         }
     ],
-
-    "regex_entities" : []
+    "regex_entities" : [],
+    "answers" : [
+        "my name is daleela, a baker hughes voice assistant",
+        "I'm daleela",
+        "Oh come on you know me"
+    ]
 
 }

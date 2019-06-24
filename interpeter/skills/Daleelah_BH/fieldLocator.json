@@ -1,0 +1,29 @@
+{            
+    "name" : "FieldLocatorIntent",
+    "entities" : [
+        {
+            "name" : "field_keyword",
+            "contents": ["rig", "field", "well"],
+            "importance" : "require"
+        }, 
+        {
+            "name" : "distance_keyword",
+            "contents" : ["nearest", "closest"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "field_distance_keywords",
+            "regex_pattren": "[0-9]*",
+            "apply_to" : ["in ", "around", "within"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "The (closest|nearest) {field_keyword} is {well_name} {field_distance_keywords} {field_distance}"
+    ] 
+
+}
