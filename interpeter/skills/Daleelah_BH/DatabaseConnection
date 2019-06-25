@@ -1,0 +1,23 @@
+import requests
+
+def sendQuery(text):
+
+	# api-endpoint
+	URL = "localhost:3001/db"
+
+	# defining a params dict for the parameters to be sent to the API
+	PARAMS = {'q':text} # e.g.: SELECT * FROM get_well_view
+
+	# sending get request and saving the response as response object
+	r = requests.post(url = URL, params = PARAMS)
+
+	# extracting data in json format
+	data = r.json()
+	return data # dictionary needs to be handled
+
+def convertToSQL(text):
+	"""
+	changes json to SQL
+
+	"""
+	return text
