@@ -1,18 +1,20 @@
-
 import json
 import sys
 from adapt.intent import IntentBuilder
 from interpeter.base import Skill, Handler
-import os 
-
+import interpeter.skills.Daleelah_BH.DatabaseConnection
+import os
 
 def field_locator_intent_func(*args, **kwargs):
     print("field locator intent function executed!")
     return {'field_name':'Harad00', 'field_distance':'5km','field_status':'drilling'}
 
-#maps intents to functions       
+def field_status_intent_fucn():
+     sendQuery("")
+
 mapper = {
-    "FieldLocatorIntent" : field_locator_intent_func
+    "FieldLocatorIntent" : field_locator_intent_func,
+    "FieldStatusIntent" : field_status_intent_fucn
 }
 
 
