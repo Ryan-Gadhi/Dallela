@@ -9,14 +9,17 @@ from AudioUtils import *
 from interpeter.engine import Engine
 import os
 
-awake = True
+awake = False
 
 def find_skill():
 	"""
 	checks if the skill is DB or Trivial or DuckDuckGo
 
 	"""
+
+	print(audio_text)
 	skill_found,answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
+
 	if (not skill_found):
 		print('Skill not found in Trivial skills --- XXX')
 
@@ -48,6 +51,9 @@ def LookForSkill():
 	#t2 = threading.Thread(target=checkerThread)
 	global audio_text
 	audio_text = get_start_listening_text()
+
+	if(audio_text is None):
+		audio_text = 'Error_001'
 	find_skill()
 
 
@@ -62,7 +68,6 @@ def LookForTrigger():
 			t2: checks if t1 has finished and complete the
 				program flow
 	"""
-	# trigger
 	t1 = start_listening(awake)
 	t2 = threading.Thread(target= waitForResponse, args=(t1,))
 	t2.start()
@@ -100,22 +105,18 @@ if __name__ == '__main__':
 
 
 
-	audio_text = 'What is the nearest field within 5 km ?'
+	#audio_text = 'What is the nearest field within 5 km ?'
 
 
 
-	# test_audio()
+	test_audio() # change to woman audio
 	root= Tk()
 	gui = GUI.GUI(root,LookForTrigger)
 	root.mainloop()
-	find_skill()
+	#not needed #find_skill()
 
-	#audio_text = start_listening()
+	#not needed #audio_text = start_listening()
 
 
 
-#
-# input_text = 'what is the closest offset well'
-# app.put_in_engin(input_text)
-#
 

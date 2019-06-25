@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/main_app.py" line="95" />
+    <bookmark url="file://$PROJECT_DIR$/main_app.py" line="100" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="Merge branch 'abdo' of https://github.com/Ryan-Gadhi/Dallela into abdo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;AudioUtils.py&#10;#&#9;Discussion/tests.py&#10;#&#9;GUI/__pycache__/GUI.cpython-37.pyc&#10;#&#9;__pycache__/AudioUtils.cpython-37.pyc&#10;#&#9;interpeter/skills/Trvial_Skill/TrivialSkills.py&#10;#&#9;interpeter/skills/Trvial_Skill/__pycache__/TrivialSkills.cpython-37.pyc&#10;#&#9;main_app.py">
-      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,29 +22,32 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Age" value="1" />
+          <entry key="NotRecognized" value="118" />
           <entry key="json" value="130" />
-          <entry key="py" value="9878" />
+          <entry key="py" value="10163" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="130" />
-          <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="9878" />
+          <entry key="PLAIN_TEXT" value="133" />
+          <entry key="Python" value="10163" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Age" value="2" />
+          <entry key="Error" value="1" />
           <entry key="Greetings" value="3" />
           <entry key="Joke" value="1" />
+          <entry key="NotRecognized" value="2" />
           <entry key="Personal" value="4" />
           <entry key="Similars" value="2" />
           <entry key="json" value="5" />
           <entry key="png" value="1" />
-          <entry key="py" value="72" />
-          <entry key="shorts" value="2" />
+          <entry key="py" value="76" />
+          <entry key="shorts" value="3" />
           <entry key="txt" value="3" />
           <entry key="wav" value="2" />
         </counts>
@@ -56,17 +56,17 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="72" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="Python" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -84,11 +84,60 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="18" />
+            <state relative-caret-position="1475">
+              <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
-                <marker date="1561450881047" expanded="true" signature="915:917" ph="..." />
+                <marker date="1561456290809" expanded="true" signature="936:938" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12855">
+              <caret line="864" selection-start-line="864" selection-end-line="864" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1096">
+              <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1561456200416" expanded="true" signature="857:1022" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="1560">
               <caret line="104" column="43" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -107,61 +156,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
+        <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="268">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
               <folding>
-                <element signature="e#1#12#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1561403275838" expanded="true" signature="2172:2174" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#1#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="25" column="93" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -169,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="1830">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -199,7 +201,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>global_en</find>
       <find>prin</find>
       <find>print</find>
       <find>mapper.get</find>
@@ -229,6 +230,7 @@
       <find>or</find>
       <find>or</find>
       <find>answer</find>
+      <find>bee</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -240,8 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Tasks/task_manager1/__init__.py" />
-        <option value="$PROJECT_DIR$/Handler.py" />
         <option value="$PROJECT_DIR$/plan" />
         <option value="$PROJECT_DIR$/Tasks/task_manager/app.py" />
         <option value="$PROJECT_DIR$/Tasks/task_manager1/app.py" />
@@ -282,7 +282,6 @@
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars" />
-        <option value="$PROJECT_DIR$/AudioUtils.py" />
         <option value="$PROJECT_DIR$/GUI/GUI.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
@@ -290,12 +289,15 @@
         <option value="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py" />
         <option value="$PROJECT_DIR$/interpeter/base.py" />
         <option value="$PROJECT_DIR$/interpeter/engine.py" />
+        <option value="$PROJECT_DIR$/AudioUtils.py" />
         <option value="$PROJECT_DIR$/main_app.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1390" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1567" />
     <option name="y" value="-40" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
@@ -305,6 +307,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,13 +341,6 @@
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
               <item name="interpeter" type="462c0819:PsiDirectoryNode" />
               <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="aleelah_Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
               <item name="Daleelah_BH" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -354,11 +350,26 @@
               <item name="skills" type="462c0819:PsiDirectoryNode" />
               <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+              <item name="skills" type="462c0819:PsiDirectoryNode" />
+              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
+              <item name="Answers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+              <item name="skills" type="462c0819:PsiDirectoryNode" />
+              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
+              <item name="Questions" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,7 +550,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1390" y="-40" width="1920" height="1057" extended-state="0" />
+    <frame x="1440" y="-40" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
@@ -553,7 +564,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27623764" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27564767" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -597,21 +608,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="916" selection-start-line="916" selection-end-line="916" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/aleelah_HelloSkill/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Dal_Trvial_Skill/TrivialSkills.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-708" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Dal_Trvial_Skill/TrivialSkills.py" />
     <entry file="file://$PROJECT_DIR$/beep.wav">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25">
@@ -718,19 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-421">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1561400624185" expanded="true" signature="857:1022" ph="..." />
-            <marker date="1561400624185" expanded="true" signature="1164:1167" ph="..." />
-            <marker date="1561400624185" expanded="true" signature="2900:3158" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/WeatherIntent.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -753,17 +740,6 @@
     <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1561403275838" expanded="true" signature="2172:2174" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/interface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -782,13 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -812,9 +781,40 @@
     <entry file="file://$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
             <element signature="e#1#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Error" />
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/shorts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12855">
+          <caret line="864" selection-start-line="864" selection-end-line="864" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="43" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -826,33 +826,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="104" column="43" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+        <state relative-caret-position="129">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1096">
+          <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1561456200416" expanded="true" signature="857:1022" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/base.py">
+    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        <state relative-caret-position="268">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1561403275838" expanded="true" signature="2172:2174" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="18" />
+        <state relative-caret-position="1475">
+          <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
           <folding>
             <element signature="e#1#25#0" expanded="true" />
-            <marker date="1561450881047" expanded="true" signature="915:917" ph="..." />
+            <marker date="1561456290809" expanded="true" signature="936:938" ph="..." />
           </folding>
         </state>
       </provider>
