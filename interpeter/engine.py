@@ -107,6 +107,7 @@ class Engine:
         else:
             #TODO: handle unhandeled text, maybe search in duckduckgo or something
             print("I DO NOT UNDERSTAND")
+            return None
 
 
 if __name__ == "__main__":

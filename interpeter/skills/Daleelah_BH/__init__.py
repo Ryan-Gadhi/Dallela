@@ -2,7 +2,7 @@ import json
 import sys
 from adapt.intent import IntentBuilder
 from interpeter.base import Skill, Handler
-import interpeter.skills.Daleelah_BH.DatabaseConnection
+from ..Daleelah_BH.DatabaseConnection import *
 import os
 
 def field_locator_intent_func(*args, **kwargs):
@@ -10,7 +10,10 @@ def field_locator_intent_func(*args, **kwargs):
     return {'field_name':'Harad00', 'field_distance':'5km','field_status':'drilling'}
 
 def field_status_intent_fucn():
-     sendQuery("")
+    # json reslut dictionary
+    sendQuery("Select")
+
+    return {'field_name':'Harad00', 'field_distance':'5km','field_status':'drilling'}
 
 mapper = {
     "FieldLocatorIntent" : field_locator_intent_func,

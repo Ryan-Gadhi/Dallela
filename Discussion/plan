@@ -8,3 +8,7 @@ recognize text(), we have text
 call_adapt: call adapt engin over that text -> one of the intents x triggers
 we do: h1.function() -> call server
 
+-----
+read json output
+save it locally
+implement a filter over the json {date} {bigPlayer:BH}
