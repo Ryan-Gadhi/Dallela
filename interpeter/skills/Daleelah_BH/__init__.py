@@ -2,13 +2,13 @@
 import json
 import sys
 from adapt.intent import IntentBuilder
-from base import Skill, Handler
+from interpeter.base import Skill, Handler
 import os 
 
 
 def field_locator_intent_func(*args, **kwargs):
     print("field locator intent function executed!")
-    return {'field_name':'XYZ', 'field_distance':'5km'}
+    return {'field_name':'Harad00', 'field_distance':'5km','field_status':'drilling'}
 
 #maps intents to functions       
 mapper = {

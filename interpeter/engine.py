@@ -24,7 +24,8 @@ class Engine:
         
         for folder in os.listdir("skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
-            module = __import__("skills." + folder, fromlist=['']) # import a skill module
+            print("skills." + folder)
+            module = __import__("interpeter.skills." + folder, fromlist=['']) # import a skill module
             self.skills.append( getattr(module, "getSkill")() ) # getting a skill object
        
         print(str(len(self.skills)), " skills has been loaded") 
@@ -100,8 +101,9 @@ class Engine:
         if correct_intenets: # if there is intents that matches the user's text
             best_intent = max(correct_intenets, key=lambda intent: intent['confidence']) # gets the highest intent
             best_intent_handler = self.__get_correct_handler(best_intent)
-            best_intent_handler.execute(best_intent) # running handler's function
-            print(json.dumps(best_intent, indent=4))
+            return best_intent_handler.execute(best_intent) # running handler's function
+            # print(json.dumps(best_intent, indent=4))
+
         else:
             #TODO: handle unhandeled text, maybe search in duckduckgo or something
             print("I DO NOT UNDERSTAND")
@@ -109,8 +111,7 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    for handler in e.handlers:
-        print(e.compute("What is the nearest field within 5 km ?"))
+    print(e.compute("What is the nearest field within 5 km ?"))
 
 
 
