@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/main_app.py" line="100" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="Merge branch 'abdo' of https://github.com/Ryan-Gadhi/Dallela into abdo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;AudioUtils.py&#10;#&#9;Discussion/tests.py&#10;#&#9;GUI/__pycache__/GUI.cpython-37.pyc&#10;#&#9;__pycache__/AudioUtils.cpython-37.pyc&#10;#&#9;interpeter/skills/Trvial_Skill/TrivialSkills.py&#10;#&#9;interpeter/skills/Trvial_Skill/__pycache__/TrivialSkills.cpython-37.pyc&#10;#&#9;main_app.py">
-      <change afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
-    </list>
+    <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="Merge branch 'abdo' of https://github.com/Ryan-Gadhi/Dallela into abdo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;AudioUtils.py&#10;#&#9;Discussion/tests.py&#10;#&#9;GUI/__pycache__/GUI.cpython-37.pyc&#10;#&#9;__pycache__/AudioUtils.cpython-37.pyc&#10;#&#9;interpeter/skills/Trvial_Skill/TrivialSkills.py&#10;#&#9;interpeter/skills/Trvial_Skill/__pycache__/TrivialSkills.cpython-37.pyc&#10;#&#9;main_app.py" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +19,13 @@
           <entry key="NotRecognized" value="118" />
           <entry key="json" value="130" />
           <entry key="py" value="10163" />
-          <entry key="txt" value="14" />
+          <entry key="txt" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="130" />
-          <entry key="PLAIN_TEXT" value="133" />
+          <entry key="PLAIN_TEXT" value="273" />
           <entry key="Python" value="10163" />
         </counts>
       </usages-collector>
@@ -48,7 +42,7 @@
           <entry key="png" value="1" />
           <entry key="py" value="76" />
           <entry key="shorts" value="3" />
-          <entry key="txt" value="3" />
+          <entry key="txt" value="4" />
           <entry key="wav" value="2" />
         </counts>
       </usages-collector>
@@ -56,7 +50,7 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="PLAIN_TEXT" value="24" />
           <entry key="Python" value="76" />
         </counts>
       </usages-collector>
@@ -81,15 +75,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1475">
-              <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="25">
+              <caret line="1" selection-start-line="1" selection-end-line="9" selection-end-column="9" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
                 <marker date="1561456290809" expanded="true" signature="936:938" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -117,15 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
               <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12855">
-              <caret line="864" selection-start-line="864" selection-end-line="864" />
             </state>
           </provider>
         </entry>
@@ -242,8 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plan" />
-        <option value="$PROJECT_DIR$/Tasks/task_manager/app.py" />
         <option value="$PROJECT_DIR$/Tasks/task_manager1/app.py" />
         <option value="$PROJECT_DIR$/skill.py" />
         <option value="$PROJECT_DIR$/Utillties.py" />
@@ -293,6 +285,8 @@
         <option value="$PROJECT_DIR$/main_app.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" />
+        <option value="$PROJECT_DIR$/Requirements.txt" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -314,57 +308,6 @@
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="Discussion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Daleelah_BH" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-              <item name="Answers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
-              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
-              <item name="skills" type="462c0819:PsiDirectoryNode" />
-              <item name="Trvial_Skill" type="462c0819:PsiDirectoryNode" />
-              <item name="Questions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -551,20 +494,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-40" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
       <window_info id="Structure" order="1" sideWeight="0.50410676" side_tool="true" weight="0.16219063" />
       <window_info id="Favorites" order="2" sideWeight="0.50309026" side_tool="true" weight="0.08530806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26943004" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26943004" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27564767" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27564767" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -871,12 +813,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1475">
-          <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="9" selection-end-column="9" />
           <folding>
             <element signature="e#1#25#0" expanded="true" />
             <marker date="1561456290809" expanded="true" signature="936:938" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
