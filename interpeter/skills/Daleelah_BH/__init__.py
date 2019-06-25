@@ -2,21 +2,28 @@ import json
 import sys
 from adapt.intent import IntentBuilder
 from interpeter.base import Skill, Handler
-import interpeter.skills.Daleelah_BH.DatabaseConnection
 import os
 
 def field_locator_intent_func(*args, **kwargs):
     print("field locator intent function executed!")
-    return {'field_name':'Harad00', 'field_distance':'5km','field_status':'drilling'}
+    return {'field_name':'Harad00', 'field_distance':'5km'}
 
-def field_status_intent_fucn():
-     sendQuery("")
+
+def number_of_active_rigsfunc(*args, **kwargs):
+    print("active rigs intent function executed!")
+    return {"number_of_active_rig":'300'}
+
+
+def field_status_intent_func(*args, **kwargs):
+    print("field status intent function executed!")
+    return {"number_of_active_rig":'300'}
+
 
 mapper = {
-    "FieldLocatorIntent" : field_locator_intent_func,
-    "FieldStatusIntent" : field_status_intent_fucn
+    "FieldLocatorIntent": field_locator_intent_func,
+    "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
+    "FieldStatusIntent": field_status_intent_func
 }
-
 
 
 # You can create a skill both with a json or manually

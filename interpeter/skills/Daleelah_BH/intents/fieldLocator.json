@@ -2,7 +2,7 @@
     "name" : "FieldLocatorIntent",
     "entities" : [
         {
-            "name" : "field_keyword",
+            "name" : "fielda_keyword",
             "contents": ["rig", "field", "well"],
             "importance" : "require"
         }, 

@@ -1,0 +1,29 @@
+{
+    "name" : "NumberOfActiveRigsIntent",
+    "entities" : [
+        {
+            "name" : "field_keyword",
+            "contents": ["rigs", "fields", "wells", "services"],
+            "importance" : "require"
+        },
+        {
+            "name" : "active_keyword",
+            "contents": ["active", "current", "working", "operating", "drilling"],
+            "importance" : "require"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "big_player",
+            "regex_pattren": "(\\w)*",
+            "apply_to" : ["with "],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "There are {number_of_active_rig} {big_player} active rigs"
+    ]
+
+}

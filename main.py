@@ -5,8 +5,11 @@ from GUI import GUI
 import time
 from threading import Thread
 from AudioUtils import *
+from interpeter.engine import Engine
+import os
 
 awake = False
+conversatoin = []
 
 
 def find_skill():
@@ -16,18 +19,26 @@ def find_skill():
 	"""
     skill_found, answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
     if (not skill_found):
-        print('Skill not found in find_skill()')
+        print('Skill not found in Trivial skills --- XXX')
 
-    # or connect to the DB skill
+        original_dir = os.getcwd()
+        os.chdir(os.getcwd() + '/interpeter/')
+        engine = Engine()
+        os.chdir(original_dir)
+        answer = engine.compute(audio_text)
 
     # or connect to Duck Duck go api
 
+    conversatoin.append(audio_text)
     global gui
-    gui.setBottomLabel(answer)
     gui.setUpperLabel(audio_text)
+    gui.setBottomLabel(answer)
     print('gui updated')
 
     reply(answer)  # say the answer out loud
+
+
+#
 
 
 def LookForSkill():
@@ -90,12 +101,13 @@ def waitForResponse(t1):
 """
 
 if __name__ == '__main__':
-    audio_text = 'tell me a joke'
+    audio_text = 'What is the nearest field within 5 km ?'
 
     test_audio()
     root = Tk()
     gui = GUI.GUI(root, LookForTrigger)
     root.mainloop()
+    find_skill()
 
 # audio_text = start_listening()
 
