@@ -163,10 +163,10 @@ def replyHelper(text):
     global global_engine
 
     engine = global_engine
-
+    print(text+ "<<<<<<<<<")
     engine.say(text)
 
-    #engine.runAndWait()
+    engine.runAndWait()
 
     print (text)
 

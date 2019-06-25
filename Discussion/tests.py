@@ -1,25 +1,18 @@
-import logging
 import threading
-import time
+
+z = 0
+def look_for_trigger():
+    for z in range(1000000):
+        z = z
 
 
-number = 0
 
 
-def changeValue():
-    while(1):
-        global number
-        number +=1
+def sound():
+    print("im in")
+    while z < 9999:
+        print(z)
 
-def printing():
-    while(1):
-        print(number)
-
-t1 = threading.Thread(target=changeValue)
-t2 = threading.Thread(target=printing)
-
-for i in range(3):
-    t1.start()
-    t2.start()
-
-
+x = threading.Thread(target=look_for_trigger)
+x.start()
+print(x.isAlive())

@@ -112,7 +112,7 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print(e.compute("What is the nearest field within 5 km ?"))
+    print( e.compute("how many active services with bhge ?") )
 
 
 
