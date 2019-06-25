@@ -1,0 +1,7 @@
+Pillow >= 6.0.0
+PyAudio >= 0.2.11
+SpeechRecognition >= 3.8.1
+adapt-parser >=0.3.3
+pip>= 19.1.1
+pyttsx3 >= 2.71
+requests >= 2.22.0

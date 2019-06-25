@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/main_app.py" line="103" />
+  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="" />
+||||||| merged common ancestors
+    <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GUI/tkinterTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
+    </list>
+=======
+    <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="Merge branch 'abdo' of https://github.com/Ryan-Gadhi/Dallela into abdo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;AudioUtils.py&#10;#&#9;Discussion/tests.py&#10;#&#9;GUI/__pycache__/GUI.cpython-37.pyc&#10;#&#9;__pycache__/AudioUtils.cpython-37.pyc&#10;#&#9;interpeter/skills/Trvial_Skill/TrivialSkills.py&#10;#&#9;interpeter/skills/Trvial_Skill/__pycache__/TrivialSkills.cpython-37.pyc&#10;#&#9;main_app.py">
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+>>>>>>> abdo
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,81 +36,80 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-422622379">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="3" />
-          <entry key="similar_to_dallela" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="3" />
-        </counts>
-      </usages-collector>
+    <session id="-886013886">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="743" />
-          <entry key="similar_to_dallela" value="33" />
-          <entry key="wake_up_words" value="6" />
+          <entry key="Age" value="1" />
+          <entry key="DatabaseConnection" value="441" />
+          <entry key="NotRecognized" value="118" />
+          <entry key="dummy" value="4" />
+          <entry key="json" value="435" />
+          <entry key="plan" value="114" />
+          <entry key="py" value="11171" />
+          <entry key="txt" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="743" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-886013886">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="JSON" value="435" />
+          <entry key="PLAIN_TEXT" value="391" />
+          <entry key="Python" value="11612" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Age" value="5" />
-          <entry key="Greetings" value="9" />
-          <entry key="HelloWorld" value="5" />
-          <entry key="Joke" value="7" />
-          <entry key="Personal" value="5" />
-          <entry key="Similars" value="4" />
-          <entry key="Skill1" value="1" />
-          <entry key="amazon_sound" value="1" />
-          <entry key="ipynb" value="1" />
-          <entry key="os_finding" value="1" />
-          <entry key="plan" value="5" />
+          <entry key="Age" value="2" />
+          <entry key="DatabaseConnection" value="3" />
+          <entry key="Error" value="1" />
+          <entry key="Greetings" value="3" />
+          <entry key="Joke" value="1" />
+          <entry key="NotRecognized" value="2" />
+          <entry key="Personal" value="4" />
+          <entry key="Similars" value="2" />
+          <entry key="gitignore" value="1" />
+          <entry key="json" value="10" />
+          <entry key="plan" value="1" />
           <entry key="png" value="1" />
+<<<<<<< HEAD
           <entry key="py" value="110" />
           <entry key="shorts" value="7" />
           <entry key="swp" value="3" />
           <entry key="txt" value="1" />
           <entry key="voices" value="1" />
           <entry key="wav" value="1" />
+||||||| merged common ancestors
+          <entry key="py" value="110" />
+          <entry key="shorts" value="7" />
+          <entry key="txt" value="1" />
+          <entry key="voices" value="1" />
+          <entry key="wav" value="1" />
+=======
+          <entry key="py" value="88" />
+          <entry key="shorts" value="3" />
+          <entry key="txt" value="5" />
+          <entry key="wav" value="2" />
+>>>>>>> abdo
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IPNB" value="1" />
           <entry key="Image" value="1" />
+<<<<<<< HEAD
           <entry key="PLAIN_TEXT" value="55" />
           <entry key="Python" value="111" />
+||||||| merged common ancestors
+          <entry key="PLAIN_TEXT" value="52" />
+          <entry key="Python" value="111" />
+=======
+          <entry key="JSON" value="10" />
+          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="Python" value="91" />
+>>>>>>> abdo
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
+      <usages-collector id="statistics.lifecycle.project">
         <counts>
+<<<<<<< HEAD
           <entry key="Age" value="117" />
           <entry key="Greetings" value="110" />
           <entry key="Joke" value="104" />
@@ -97,13 +123,42 @@
           <entry key="txt" value="5" />
           <entry key="voices" value="24" />
           <entry key="wake_up_words" value="1" />
+||||||| merged common ancestors
+          <entry key="Age" value="117" />
+          <entry key="Greetings" value="110" />
+          <entry key="Joke" value="104" />
+          <entry key="Personal" value="158" />
+          <entry key="Similars" value="87" />
+          <entry key="Skill1" value="97" />
+          <entry key="dummy" value="39" />
+          <entry key="plan" value="407" />
+          <entry key="py" value="13712" />
+          <entry key="shorts" value="802" />
+          <entry key="txt" value="5" />
+          <entry key="voices" value="24" />
+          <entry key="wake_up_words" value="1" />
+=======
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="8" />
+>>>>>>> abdo
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
+      <usages-collector id="statistics.vcs.git.usages">
         <counts>
+<<<<<<< HEAD
           <entry key="PLAIN_TEXT" value="1951" />
           <entry key="Python" value="13713" />
           <entry key="RegExp" value="1" />
+||||||| merged common ancestors
+          <entry key="PLAIN_TEXT" value="1951" />
+          <entry key="Python" value="13711" />
+          <entry key="RegExp" value="1" />
+=======
+          <entry key="git.branch.delete.local" value="1" />
+>>>>>>> abdo
         </counts>
       </usages-collector>
     </session>
@@ -114,32 +169,158 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_app.py">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="225">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1561469650530" expanded="true" signature="37:38" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1561492020107" expanded="true" signature="324:371" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/.engine_LOCAL_34865.py.swp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interpeter/.engine_REMOTE_34865.py.swp">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/main_app.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="168">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+||||||| merged common ancestors
+            <state relative-caret-position="591">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+=======
+            <state relative-caret-position="366">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+>>>>>>> abdo
+              <folding>
+<<<<<<< HEAD
+                <element signature="e#0#21#0" expanded="true" />
+||||||| merged common ancestors
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1560951912716" expanded="true" signature="683:685" ph="..." />
+                <marker date="1560951912716" expanded="true" signature="706:707" ph="..." />
+=======
+                <element signature="e#1#25#0" expanded="true" />
+                <marker date="1561469650527" expanded="true" signature="995:997" ph="..." />
+>>>>>>> abdo
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Discussion/tests.py">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/interpeter/.engine_LOCAL_34865.py.swp">
+          <provider selected="true" editor-type-id="text-editor" />
+||||||| merged common ancestors
+        <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+=======
+        <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2691">
+              <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+            </state>
+          </provider>
+>>>>>>> abdo
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interpeter/.engine_REMOTE_34865.py.swp">
+          <provider selected="true" editor-type-id="text-editor" />
+||||||| merged common ancestors
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            </state>
+          </provider>
+>>>>>>> abdo
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/Discussion/tests.py">
+||||||| merged common ancestors
+        <entry file="file://$PROJECT_DIR$/GUI/tkinterTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <marker date="1560950377012" expanded="true" signature="25:43" ph="..." />
+                <marker date="1560950377012" expanded="true" signature="27:43" ph="..." />
+                <marker date="1560950377012" expanded="true" signature="46:60" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
+=======
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json">
+>>>>>>> abdo
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="64">
               <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+||||||| merged common ancestors
+            <state relative-caret-position="497">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+=======
+            <state relative-caret-position="33">
+              <caret line="1" column="30" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="30" />
+>>>>>>> abdo
             </state>
           </provider>
         </entry>
@@ -156,15 +337,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Skill</find>
-      <find>pyttsx</find>
-      <find>add_todo_intent</find>
-      <find>question</find>
-      <find>self</find>
-      <find>==</find>
-      <find>it mat</find>
-      <find>repl</find>
-      <find>global_en</find>
       <find>prin</find>
       <find>print</find>
       <find>mapper.get</find>
@@ -173,6 +345,28 @@
       <find>listen</find>
       <find>weather</find>
       <find>say</find>
+      <find>pyttsx3</find>
+      <find>output_message</find>
+      <find>Times</find>
+      <find>setUpperLabel</find>
+      <find>red</find>
+      <find>views</find>
+      <find>Mute</find>
+      <find>os.c</find>
+      <find>engin</find>
+      <find>threadin</find>
+      <find>get_start_listening_text</find>
+      <find>start_listening_text</find>
+      <find>beep</find>
+      <find>handler</find>
+      <find>base</find>
+      <find>getmap</find>
+      <find>skill</find>
+      <find>json</find>
+      <find>or</find>
+      <find>or</find>
+      <find>answer</find>
+      <find>bee</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -184,28 +378,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Joke" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Greetings" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Personal" />
-        <option value="$PROJECT_DIR$/quick.ipynb" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Questions/Age" />
-        <option value="$PROJECT_DIR$/ريجيكس.py" />
-        <option value="$PROJECT_DIR$/DomainSkills.py" />
-        <option value="$PROJECT_DIR$/task_manager/adapt_intents.py" />
-        <option value="$PROJECT_DIR$/task_manager/app.py" />
-        <option value="$PROJECT_DIR$/task_manager1/adapt_intents.py" />
-        <option value="$PROJECT_DIR$/task_manager1/app.py" />
-        <option value="$PROJECT_DIR$/Tasks/task_manager1/__init__.py" />
-        <option value="$PROJECT_DIR$/Handler.py" />
-        <option value="$PROJECT_DIR$/plan" />
-        <option value="$PROJECT_DIR$/Tasks/task_manager/app.py" />
-        <option value="$PROJECT_DIR$/Tasks/task_manager1/app.py" />
-        <option value="$PROJECT_DIR$/skill.py" />
-        <option value="$PROJECT_DIR$/Utillties.py" />
-        <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Answers/shorts" />
-        <option value="$PROJECT_DIR$/Trvial_Skills/Questions/shorts" />
-        <option value="$PROJECT_DIR$/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/Tasks/task_manager1/adapt_intents.py" />
         <option value="$PROJECT_DIR$/Trvial_Skills/Answers/Joke" />
         <option value="$PROJECT_DIR$/Trvial_Skills/TrivialSkills.py" />
@@ -220,32 +392,53 @@
         <option value="$PROJECT_DIR$/Discussion/voices" />
         <option value="$PROJECT_DIR$/Discussion/amazon_reader.py" />
         <option value="$PROJECT_DIR$/Discussion/os_finder.py" />
-        <option value="$PROJECT_DIR$/Discussion/variables'.py" />
         <option value="$PROJECT_DIR$/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_HelloSkill/__init__.py" />
-        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" />
-        <option value="$PROJECT_DIR$/interpeter/engine.py" />
         <option value="$PROJECT_DIR$/interpeter/Trvial_Skill/TrivialSkills.py" />
-        <option value="$PROJECT_DIR$/Discussion/tests.py" />
         <option value="$PROJECT_DIR$/GUI/interface.py" />
         <option value="$PROJECT_DIR$/GUI/tkinter.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/GUI/tkinterTest.py" />
+        <option value="$PROJECT_DIR$/ServerConnection.py" />
+        <option value="$PROJECT_DIR$/Discussion/speaking.py" />
+        <option value="$PROJECT_DIR$/wake_up_words.txt" />
+        <option value="$PROJECT_DIR$/Discussion/variables'.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
-        <option value="$PROJECT_DIR$/main_app.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Discussion/tests.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars" />
+        <option value="$PROJECT_DIR$/GUI/GUI.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py" />
+        <option value="$PROJECT_DIR$/interpeter/base.py" />
         <option value="$PROJECT_DIR$/AudioUtils.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" />
+        <option value="$PROJECT_DIR$/Requirements.txt" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/DatabaseConnection" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/tesy.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" />
+        <option value="$PROJECT_DIR$/Discussion/plan" />
+        <option value="$PROJECT_DIR$/interpeter/engine.py" />
+        <option value="$PROJECT_DIR$/main_app.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1440" />
-    <option name="y" value="-63" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="143" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -259,12 +452,60 @@
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="Discussion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BHGE" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
+||||||| merged common ancestors
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Discussion" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Daleelah_BH" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Daleelah_BH" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="intents" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+>>>>>>> abdo
             </path>
             <path>
               <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
@@ -288,13 +529,29 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/projectx/Desktop/BHGE/TrivialSkills.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+||||||| merged common ancestors
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/projectx/Desktop/BHGE/TrivialSkills.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+=======
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/projectx/Desktop/BHGE/interpeter/skills/Daleelah_BH/DatabaseConnection" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+>>>>>>> abdo
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Dallela" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Dallela" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -305,11 +562,11 @@
       <recent name="$PROJECT_DIR$/Skills/Questions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/interpeter/skills/Daleelah_BH" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Discussion" />
       <recent name="$PROJECT_DIR$/GUI" />
       <recent name="$PROJECT_DIR$/interpeter/skills" />
-      <recent name="$PROJECT_DIR$/interpeter" />
-      <recent name="$PROJECT_DIR$/DB_Skill/task_manager/Intents" />
-      <recent name="$PROJECT_DIR$/Discussion" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,7 +581,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.audio">
+  <component name="RunManager" selected="Python.engine">
     <configuration name="AudioUtils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -346,7 +603,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="audio" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -354,8 +611,29 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH" />
       <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="audio" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Dallela" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/PythonPractice/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_app.py" />
@@ -388,40 +666,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="interface" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/PythonPractice/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/interface.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tkinter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Dallela" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/tkinterTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Discussion/tests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -432,18 +689,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.audio" />
-      <item itemvalue="Python.engine" />
-      <item itemvalue="Python.interface" />
-      <item itemvalue="Python.tkinter" />
       <item itemvalue="Python.AudioUtils" />
+      <item itemvalue="Python.tests" />
+      <item itemvalue="Python.engine" />
+      <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.audio" />
-        <item itemvalue="Python.AudioUtils" />
-        <item itemvalue="Python.tkinter" />
-        <item itemvalue="Python.interface" />
         <item itemvalue="Python.engine" />
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.audio" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.AudioUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -460,27 +717,87 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="143" width="1920" height="1057" extended-state="0" />
+||||||| merged common ancestors
+    <frame x="1440" y="-63" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+=======
+    <frame x="0" y="143" width="1920" height="1057" extended-state="0" />
+    <editor active="true" />
+>>>>>>> abdo
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939686" visible="true" weight="0.16219063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50060314" side_tool="true" weight="0.08530806" />
+||||||| merged common ancestors
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939686" visible="true" weight="0.08530806" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.50060314" side_tool="true" visible="true" weight="0.08530806" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
+      <window_info id="Structure" order="1" sideWeight="0.50410676" side_tool="true" weight="0.16219063" />
+      <window_info id="Favorites" order="2" sideWeight="0.50309026" side_tool="true" weight="0.08530806" />
+>>>>>>> abdo
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.17920792" />
+||||||| merged common ancestors
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17920792" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26943004" />
+>>>>>>> abdo
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29844558" />
+||||||| merged common ancestors
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.12289157" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27564767" />
+>>>>>>> abdo
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970297" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="430" height="1000" id="Documentation" order="3" side_tool="true" weight="0.32960597" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
+      <window_info id="Structure" order="1" sideWeight="0.50410676" side_tool="true" weight="0.16219063" />
+      <window_info id="Favorites" order="2" sideWeight="0.50309026" side_tool="true" weight="0.08530806" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25841585" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.13267326" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="430" height="1000" id="Documentation" order="3" side_tool="true" weight="0.32960597" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -497,280 +814,412 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Similars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Questions/HelloWorld" />
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/shorts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Greetings">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/Utillties.py" />
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Age">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <caret column="7" selection-start-column="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trvial_Skills/Answers/HelloWorld" />
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Greetings">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Joke">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Joke">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/ريجيكس.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/__init__.py">
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Similars">
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/aleelah_HelloSkill/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/plan">
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Dal_Trvial_Skill/TrivialSkills.py" />
+    <entry file="file://$PROJECT_DIR$/beep.wav">
+>>>>>>> abdo
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="-25">
+          <caret line="240" column="22" selection-start-line="240" selection-start-column="22" selection-end-line="240" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/bhge.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Discussion/speaking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intent_container.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager1/adapt_intents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/well_intents.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/amazon_sound" />
-    <entry file="file://$PROJECT_DIR$/Discussion/voices">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/os_finding" />
-    <entry file="file://$PROJECT_DIR$/Discussion/google_gTTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/amazon_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/os_finder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/adapt/engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="43">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Discussion/variables'.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="180">
+          <caret line="12" column="30" selection-start-line="12" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py">
+    <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py">
+    <entry file="file://$PROJECT_DIR$/Discussion/tests.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="1294" column="28" lean-forward="true" selection-start-line="1294" selection-end-line="1295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Personal">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Joke">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Greetings">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Age">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Greetings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Personal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/WeatherIntent.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/tkinterTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Error" />
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/shorts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12855">
+          <caret line="864" selection-start-line="864" selection-end-line="864" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1096">
+          <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1140">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
+||||||| merged common ancestors
+        <state relative-caret-position="1140">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="1800">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+>>>>>>> abdo
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Discussion/pak/__init__.py" />
     <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/adapt/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.2/python_stubs/830385957/builtins.py">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/Discussion/pak/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/adapt/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.2/python_stubs/830385957/builtins.py">
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/tesy.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+>>>>>>> abdo
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="2865" column="8" selection-start-line="2865" selection-start-column="8" selection-end-line="2865" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/IntentsGrouper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/app.py">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/DB_Skill/task_manager/IntentsGrouper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-653">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#1#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="14" column="74" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="74" />
+        <state relative-caret-position="608">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_HelloSkill/__init__.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> abdo
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Discussion/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/bhge.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/PythonPractice/venv/lib/python3.7/site-packages/PySimpleGUI/PySimpleGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1194">
-          <caret line="1485" column="52" selection-start-line="1485" selection-start-column="38" selection-end-line="1485" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/tkinterTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+<<<<<<< HEAD
+        <state relative-caret-position="262">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="43" />
+||||||| merged common ancestors
+        <state relative-caret-position="262">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="43" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="270">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+          </folding>
+>>>>>>> abdo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Discussion/plan">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-653">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+          </folding>
+||||||| merged common ancestors
+        <state relative-caret-position="-653">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+            <marker date="1560931215823" expanded="true" signature="680:722" ph="..." />
+          </folding>
+=======
+        <state relative-caret-position="352">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+>>>>>>> abdo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+            <marker date="1561469650527" expanded="true" signature="995:997" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="412">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+||||||| merged common ancestors
+        <state relative-caret-position="412">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+            <marker date="1560930763723" expanded="true" signature="1036:1041" ph="..." />
+          </folding>
+=======
+        <state relative-caret-position="225">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <marker date="1561469650530" expanded="true" signature="37:38" ph="..." />
+          </folding>
+>>>>>>> abdo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="64">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+||||||| merged common ancestors
+        <state relative-caret-position="66">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+=======
+        <state relative-caret-position="2691">
+          <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+>>>>>>> abdo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="210">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+||||||| merged common ancestors
+        <state relative-caret-position="210">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <marker date="1560950377012" expanded="true" signature="25:43" ph="..." />
+            <marker date="1560950377012" expanded="true" signature="27:43" ph="..." />
+            <marker date="1560950377012" expanded="true" signature="46:60" ph="..." />
+          </folding>
+=======
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-end-line="29" />
+>>>>>>> abdo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -785,20 +1234,59 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app.py">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app.py">
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+>>>>>>> abdo
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="168">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
+||||||| merged common ancestors
+        <state relative-caret-position="591">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+=======
+        <state relative-caret-position="340">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+>>>>>>> abdo
           <folding>
+<<<<<<< HEAD
             <element signature="e#0#21#0" expanded="true" />
+||||||| merged common ancestors
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1560951912716" expanded="true" signature="683:685" ph="..." />
+            <marker date="1560951912716" expanded="true" signature="706:707" ph="..." />
+=======
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1561492020107" expanded="true" signature="324:371" ph="..." />
+>>>>>>> abdo
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/interpeter/.engine_LOCAL_34865.py.swp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/.engine_REMOTE_34865.py.swp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/AudioUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> abdo
   </component>
 </project>

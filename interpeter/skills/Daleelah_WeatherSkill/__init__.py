@@ -2,48 +2,27 @@
 import json
 import sys
 from adapt.intent import IntentBuilder
-from base import Skill, Handler
+from interpeter.base import Skill, Handler
+import os 
 
-# TODO: each intent should be in a separate JOSN file
-weather_keyword = [
-    "weather"
-]
 
-weather_types = [
-    "snow",
-    "rain",
-    "wind",
-    "sleet",
-    "sun"
-]
+def weatherFunc(*args, **kwargs):
+    print("Weather intent function executed!")
+    return {'deg':'50', 'unit':'C'}
 
-locations = [
-    "Seattle",
-    "San Francisco",
-    "Tokyo"
-]
-
-entities = {
-            "WeatherKeyword" : weather_keyword,
-            "Location" : locations,
-            "WeatherType": weather_types
+#maps intents to functions       
+mapper = {
+    "WeatherIntent" : weatherFunc
 }
 
-
-weather_intent = IntentBuilder("WeatherIntent")\
-    .require("WeatherKeyword")\
-    .optionally("WeatherType")\
-    .require("Location")\
-    .build()
-
-
-def weatherFunc():
-    print("Weather intent function executed!")
-       
+# You can create a skill both with a json or manually
 class weatherSkill(Skill):
     def __init__(self):
         super().__init__()
-        print(len(self.handlers))
+        
+        #load functions from dictionary to handler
+        for handler in self.handlers:
+            handler.func = mapper.get(handler.intent.name, None) #if it has no function set None
         
 
 

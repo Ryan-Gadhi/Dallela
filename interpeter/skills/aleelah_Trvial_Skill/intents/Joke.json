@@ -1,0 +1,13 @@
+{            
+    "name" : "JokeIntent",
+    "entities" : [
+        {
+            "name" : "joke_keyword",
+            "contents": ["joke", "something funny"],
+            "importance" : "require"
+        }
+    ],
+
+    "regex_entities" : []
+
+}

@@ -1,0 +1,34 @@
+{
+    "name" : "ProductionIntent",
+    "entities" : [
+        {
+            "name" : "product_keyword",
+            "contents": ["production", "output", "yield"],
+            "importance" : "require"
+        },
+        {
+            "name" : "failure_keyword",
+            "contents": ["none", "not","loss","failure"],
+            "importance" : "require"
+        },
+        {
+            "name" : "time_keyword",
+            "contents": ["time", "period","times"],
+            "importance" : "require"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "big_player",
+            "regex_pattren": ".*",
+            "apply_to" : ["by "],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "the total {failure_keyword} {product_keyword} by {regex_entities} is {x}"
+    ]
+
+}
