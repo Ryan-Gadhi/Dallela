@@ -111,7 +111,7 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print( e.compute("how many active services with bhge ?") )
+    print( e.compute("what is the today operating hours for com.") )
 
 
 

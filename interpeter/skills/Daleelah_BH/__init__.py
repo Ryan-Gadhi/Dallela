@@ -19,10 +19,16 @@ def field_status_intent_func(*args, **kwargs):
     return {"number_of_active_rig":'300'}
 
 
+def operating_hours_func(*args, **kwargs):
+    print("operating hours intent function executed!")
+    return {"time": '10'}
+
+
 mapper = {
     "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
-    "FieldStatusIntent": field_status_intent_func
+    "FieldStatusIntent": field_status_intent_func,
+    "TimeOfOperationIntent": operating_hours_func
 }
 
 
