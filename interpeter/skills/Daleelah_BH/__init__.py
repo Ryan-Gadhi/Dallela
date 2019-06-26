@@ -20,11 +20,15 @@ def production_Intent_func(*args,**kwargs):
 
 def number_of_active_rigsfunc(*args, **kwargs):
     print("active rigs intent function executed!")
-    import datetime
-
-    date = datetime.datetime.now()  # the format of this needs to be changed
-    result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
-
+    # import datetime
+    engine_answer = args[0]
+    sql_query = \
+    "SELECT COUNT(*) FROM {table_name} \
+      WHERE Date >= '{}' AND Date < '{}'".format()
+   
+    query_res = sendQuery(sql_query)
+    # date = datetime.datetime.now()  # the format of this needs to be changed
+    # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
 	# todo: format the sql output to match the answer format
     return {"number_of_active_rig":'300'}
 
@@ -53,16 +57,15 @@ mapper = {
 }
 
 
-def sendQuery(text):
+def sendQuery(sql_string):
 
 	# api-endpoint
-	URL = "localhost:3001/db"
+	URL = "localhost/d/sql.php"
 
 	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
 
-	sql = text
 	# defining a params dict for the parameters to be sent to the API
-	PARAMS = {'q':sql} # e.g.: SELECT * FROM get_well_view
+	PARAMS = {'q' : sql_string} # e.g.: SELECT * FROM get_well_view
 
 	# sending get request and saving the response as response object
 	r = requests.post(url = URL, params = PARAMS)
