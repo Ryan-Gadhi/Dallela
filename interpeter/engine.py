@@ -111,9 +111,5 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print( e.compute("what is the today operating hours for com.") )
+    print(e.compute("most active rigs"))
 
-
-
-    
-    

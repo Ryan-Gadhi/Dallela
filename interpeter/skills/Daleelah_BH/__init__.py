@@ -23,12 +23,17 @@ def operating_hours_func(*args, **kwargs):
     print("operating hours intent function executed!")
     return {"time": '10'}
 
+def most_active_rig_func(*args, **kwargs):
+    print("most active rig intent function executed!")
+    return {"big_player2": 'BHGE'}
+
 
 mapper = {
     "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": field_status_intent_func,
-    "TimeOfOperationIntent": operating_hours_func
+    "TimeOfOperationIntent": operating_hours_func,
+    "MostActiveIntent": most_active_rig_func
 }
 
 
