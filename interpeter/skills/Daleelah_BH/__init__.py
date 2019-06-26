@@ -9,6 +9,7 @@ import os
 
 
 
+table = 'oph_table_v0'
 
 def field_locator_intent_func(*args, **kwargs):
     print("field locator intent function executed!")
@@ -21,10 +22,16 @@ def production_Intent_func(*args,**kwargs):
 def number_of_active_rigsfunc(*args, **kwargs):
     print("active rigs intent function executed!")
     # import datetime
-    engine_answer = args[0]
+    engine_answer = args[0].get('field_keyword', None)
+    print(engine_answer)
     sql_query = \
-    "SELECT COUNT(*) FROM {table_name} \
-      WHERE Date >= '{}' AND Date < '{}'".format()
+    "SELECT COUNT(DISTINCT well) FROM {table_name} \
+      WHERE Date >= '{first_date}' AND Date < '{second_date}'".format(** 
+      {
+          'table_name' : table,
+          'first_date' : '20181220 00:00:00.000',
+          'second_date': '20181220 23:59:59.999',
+      })
    
     query_res = sendQuery(sql_query)
     # date = datetime.datetime.now()  # the format of this needs to be changed
@@ -60,7 +67,7 @@ mapper = {
 def sendQuery(sql_string):
 
 	# api-endpoint
-	URL = "localhost/d/sql.php"
+	URL = "http://localhost/d/sql.php"
 
 	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
 
