@@ -6,9 +6,9 @@ import requests
 import datetime
 import os
 
-table = 'pb_0'
-today = datetime.datetime.now()  	# todo: reformat the time to match time in the db table
-
+table = 'oph_table_v0'
+#today = datetime.datetime.now()  # todo: reformat the time to match time in the db table
+today ='2017-12-08T21:00:00.000Z' # temporary
 
 
 
@@ -43,8 +43,19 @@ def number_of_active_rigsfunc(*args, **kwargs):
 def product_line_intent_func(*args, **kwargs):
 	field = 'taken from json question' #todo: how to figure this out?
 
-	sql = 'select ProdLine from {table} where name={field} and '
+	field = args[0].get("field_name", None) # todo: should be tested
+
+	column = 'field'
+
+	if(field):
+		pass
+	else:
+		pass
+
+
+	sql = 'select ProdLine from {table} where {column} = {field} and '.format(table,column,field)
 	sql+= 'date = {today}'.format(today)
+
 	result = sendQuery(sql)
 
 	print("field status intent function executed!")
@@ -99,7 +110,6 @@ def sendQuery(text):
 class fieldLocatorSkill(Skill):
     def __init__(self):
         super().__init__()
-
         #load functions from dictionary to handler
         for handler in self.handlers:
             handler.func = mapper.get(handler.intent.name, None) #if it has no function set None
@@ -109,3 +119,6 @@ class fieldLocatorSkill(Skill):
 def getSkill():
     return fieldLocatorSkill()
 
+if __name__ == '__main__':
+	print(today)
+	pass

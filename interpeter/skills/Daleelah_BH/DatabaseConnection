@@ -1,0 +1,24 @@
+import requests
+
+def sendQuery(text):
+
+	# api-endpoint
+	URL = "https://en.wikipedia.org/wiki/PRISM_(surveillance_program)"
+
+	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
+
+	sql = text
+	# defining a params dict for the parameters to be sent to the API
+	PARAMS = {'q': sql} # e.g.: SELECT * FROM get_well_view
+
+	# sending get request and saving the response as response object
+	r = requests.get(url = URL)
+	# extracting data in json format
+
+	print(r.cookies)
+	#data = r.json()
+
+	return ''  # dictionary needs to be handled
+
+result = sendQuery("https://en.wikipedia.org/wiki/PRISM_(surveillance_program)")
+print(result)
