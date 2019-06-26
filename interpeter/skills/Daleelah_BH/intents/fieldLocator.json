@@ -22,7 +22,7 @@
         {
             "entity_name" : "field_distance_keywords",
             "regex_pattren": "[0-9]*",
-            "apply_to" : ["in ", "around ", "within "],
+            "apply_to" : ["in ", "around ", "within ", "from"],
             "importance" : "require"
         }
     ],
