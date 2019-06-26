@@ -1,5 +1,6 @@
 import os 
 import json
+import interpeter.skills.aleelah_HelloSkill
 from adapt.engine import IntentDeterminationEngine
 
 class Engine:
@@ -21,10 +22,10 @@ class Engine:
         """
             Dynamically loads (imports) all the skills located in the folder Skills
         """
-        
-        for folder in os.listdir("skills"):
+        print("my path is ", os.getcwd() )
+        for folder in os.listdir("interpeter/skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
-            module = __import__("skills." + folder, fromlist=['']) # import a skill module
+            module = __import__("interpeter.skills." + folder, fromlist=['']) # import a skill module
             self.skills.append( getattr(module, "getSkill")() ) # getting a skill object
        
         print(str(len(self.skills)), " skills has been loaded") 

@@ -2,7 +2,7 @@
 import json
 import sys
 from adapt.intent import IntentBuilder
-from base import Skill, Handler
+from interpeter.base import Skill, Handler
 import os 
 
 
