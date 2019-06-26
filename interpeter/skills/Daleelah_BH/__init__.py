@@ -14,12 +14,21 @@ today = datetime.datetime.now()  	# todo: reformat the time to match time in the
 
 
 def field_locator_intent_func(*args, **kwargs):
+	#sql = ('select operatingHours from {table} where '.format(table))
+	#sql += ('date={today}'.format(today))
+	#result = sendQuery(sql)
+
+	print("field locator intent function executed!")
+	return {'field_ans':'Harad00'}
+
+
+def field_locator_intent_d_func(*args, **kwargs):
 	sql = ('select operatingHours from {table} where '.format(table))
 	sql += ('date={today}'.format(today))
 	result = sendQuery(sql)
 
 	print("field locator intent function executed!")
-	return {'field_name':'Harad00', 'field_distance':'5km'}
+	return {'field_distance':'5km'}
 
 
 def production_Intent_func(*args,**kwargs):
@@ -66,6 +75,7 @@ def most_active_rig_func(*args, **kwargs):
 
 mapper = {
     "FieldLocatorIntent": field_locator_intent_func,
+	"FieldLocatorDIntent": field_locator_intent_d_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,

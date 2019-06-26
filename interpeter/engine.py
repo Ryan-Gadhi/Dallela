@@ -112,11 +112,6 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-<<<<<<< HEAD
-    print(e.compute("what is the company having most active rigs"))
-||||||| merged common ancestors
-    print(e.compute("most active rigs"))
-=======
-    print(e.compute("what is production loss time for baker hughes"))
->>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
+    print(e.compute("how colse "))
+
 
