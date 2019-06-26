@@ -1,0 +1,28 @@
+{
+    "name" : "MostActiveIntent",
+    "entities" : [
+        {
+            "name" : "most_keyword1",
+            "contents": ["most", "least", "highest", "lowest", "max",  "min"],
+            "importance" : "require"
+        },
+        {
+            "name" : "active1_keyword3",
+            "contents": ["active", "current", "working", "operating", "drilling"],
+            "importance" : "require"
+        },
+        {
+            "name" : "day_keyword1",
+            "contents": ["today", "yestrday", "last day"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : [
+    ],
+
+    "answers" : [
+        "The {most_keyword1} {active1_keyword3} is {big_player2}"
+    ]
+
+}

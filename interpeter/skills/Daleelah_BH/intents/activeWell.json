@@ -10,6 +10,11 @@
             "name" : "active_keyword",
             "contents": ["active", "current", "working", "operating", "drilling"],
             "importance" : "require"
+        },
+        {
+            "name" : "quntity_keyword",
+            "contents": ["number", "many"],
+            "importance" : "require"
         }
     ],
 
@@ -23,7 +28,7 @@
     ],
 
     "answers" : [
-        "There are {number_of_active_rig} {big_player} active rigs"
+        "There are {number_of_active_rig} active rigs"
     ]
 
 }

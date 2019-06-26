@@ -2,6 +2,11 @@
     "name" : "FieldLocatorIntent",
     "entities" : [
         {
+            "name" : "qustion_keyword",
+            "contents": ["where", "what", "how"],
+            "importance" : "require"
+        },
+        {
             "name" : "fielda_keyword",
             "contents": ["rig", "field", "well"],
             "importance" : "require"
@@ -18,7 +23,7 @@
             "entity_name" : "field_distance_keywords",
             "regex_pattren": "[0-9]*",
             "apply_to" : ["in ", "around ", "within "],
-            "importance" : "optionally"
+            "importance" : "require"
         }
     ],
 

@@ -10,32 +10,10 @@ class Engine:
     def __init__(self):
         if not Engine.eng:
             self.eng = IntentDeterminationEngine()
-<<<<<<< HEAD
-            self.__loadSkills()     
-            self.__loadHandlers()   
-            self.__registerEngEntities()
-            self.__registerEngIntents()
-||||||| merged common ancestors
-<<<<<<<<< Temporary merge branch 1
-            for folder in os.listdir("skills"):
-                if not folder.startswith("Daleelah_"): continue
-                self.skills.append(__import__("skills." + folder, fromlist=['']) )
-||||||||| merged common ancestors
-            for folder in os.listdir("skills"):
-                if not folder.startswith("Daleelah_"): continue
-                self.skills.append( __import__("skills." + folder, fromlist=['']) )
-=========
-            self.__loadSkills()     
-            self.__loadHandlers()   
->>>>>>>>> Temporary merge branch 2
-            self.__registerEngEntities()
-            self.__registerEngIntents()
-=======
             self.__load_skills()     
             self.__load_handlers()   
             self.__register_eng_entities()
             self.__register_eng_intents()
->>>>>>> abdo
 
 
     
@@ -60,15 +38,10 @@ class Engine:
         reg_entities = []
         for skill in self.skills:
             entities.update( skill.getEntities )
-<<<<<<< HEAD
-||||||| merged common ancestors
->>>>>>>>> Temporary merge branch 2
-=======
             reg_entities += skill.getRegexEntities
 
         for reg_entity in reg_entities:
             self.eng.register_regex_entity(reg_entity)
->>>>>>> abdo
 
         for entity, keywords in entities.items():
             for keyword in keywords:
@@ -134,33 +107,9 @@ class Engine:
         else:
             #TODO: handle unhandeled text, maybe search in duckduckgo or something
             print("I DO NOT UNDERSTAND")
-<<<<<<< HEAD
-||||||| merged common ancestors
->>>>>>>>> Temporary merge branch 2
-=======
-            return None
->>>>>>> abdo
 
 
 if __name__ == "__main__":
     e = Engine()
-<<<<<<< HEAD
-    e.compute("What is the weather in Tokyo ?")
-||||||| merged common ancestors
-<<<<<<<<< Temporary merge branch 1
-    e.compute("What is the weather in Tokyo? ")
+    print(e.compute("most active rigs"))
 
-||||||||| merged common ancestors
-    e.compute("What is the weather in Dammam ? ")
-    
-    
-=========
-    e.compute("What is the weather in Tokyo ?")
-=======
-    print( e.compute("how many active services with bhge ?") )
-
-
-
->>>>>>> abdo
-    
-    
