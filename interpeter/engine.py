@@ -107,9 +107,11 @@ class Engine:
         else:
             #TODO: handle unhandeled text, maybe search in duckduckgo or something
             print("I DO NOT UNDERSTAND")
+            return None
 
 
 if __name__ == "__main__":
     e = Engine()
-    print(e.compute("what is the company having most active rigs"))
+    print(e.compute("how colse "))
+
 

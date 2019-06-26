@@ -3,7 +3,7 @@
     "entities" : [
         {
             "name" : "qustion_keyword",
-            "contents": ["where", "what", "how"],
+            "contents": ["where", "what"],
             "importance" : "require"
         },
         {
@@ -14,30 +14,21 @@
         {
             "name" : "distance_keyword",
             "contents" : ["nearest", "closest"],
-            "importance" : "optionally"
+            "importance" : "require"
         }
     ],
 
     "regex_entities" : [
         {
-            "entity_name" : "field_distance_keywords",
-            "regex_pattren": "[0-9]*",
-            "apply_to" : ["in ", "around ", "within ", "from"],
+            "entity_name" : "field_name",
+            "regex_pattren": ".*",
+            "apply_to" : ["from ", "around ", "within "],
             "importance" : "require"
-        },
-      {
-        "entity_name": "field_name",
-        "regex_pattren": ".*",
-        "apply_to": [
-          "to ",
-          "from "
-        ],
-        "importance": "require"
         }
     ],
 
     "answers" : [
-      "The closest {field_keyword} from {field_name} is {field_name_ans}"
+        "The closest {fielda_keyword} from {field_name} is {field_ans}"
     ] 
 
 }
