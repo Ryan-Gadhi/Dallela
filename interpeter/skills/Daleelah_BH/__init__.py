@@ -23,9 +23,9 @@ def field_locator_intent_func(*args, **kwargs):
 
 
 def production_Intent_func(*args,**kwargs):
-	sql = 'Select (operatingHours-24) from {table} where '.format(table)
-	sql+= 'date = {today}'.format(today)
-	result = sendQuery(sql)
+	sql = 'Select (operatingHours-24) from {table} where '.format(table=table)
+	sql+= 'date = {today}'.format(today=today)
+	#result = sendQuery(sql)
 
 	return {'hours':'66'}
 
@@ -44,8 +44,8 @@ def number_of_active_rigsfunc(*args, **kwargs):
 def product_line_intent_func(*args, **kwargs):
 	#field_name = 'taken from json question' #todo: how to figure this out?
 	print(args,' is args')
-	field_name = args[0].get("field_name",None) # todo: should be tested
-	#field_name = 'dammam' # dynamic insert not working
+	#field_name = args[0].get("field_name",None) # todo: should be tested
+	field_name = 'dammam' # dynamic insert not working
 
 	selection = "ProdLine"
 

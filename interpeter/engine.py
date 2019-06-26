@@ -112,5 +112,6 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
+
     print(e.compute("production loss period"))
 
