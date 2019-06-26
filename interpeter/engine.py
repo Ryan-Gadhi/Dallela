@@ -112,5 +112,5 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print(e.compute("what is production loss time for baker hughes"))
+    print(e.compute("production loss period"))
 

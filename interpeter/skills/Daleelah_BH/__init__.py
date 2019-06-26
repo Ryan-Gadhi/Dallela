@@ -28,12 +28,13 @@ def production_Intent_func(*args,**kwargs):
 	result = sendQuery(sql)
 
 	return {'hours':'66'}
+
 	#result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
 
 
 def number_of_active_rigsfunc(*args, **kwargs):
 	sql = 'select count(distinct name) from {table} where '.format(table)
-	sql+= 'date = {today}'.format(today)
+	sql += 'date = {today}'.format(today)
 	result = sendQuery(sql)
 
 	print("active rigs intent function executed!")
@@ -41,36 +42,52 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 
 def product_line_intent_func(*args, **kwargs):
-	field = 'taken from json question' #todo: how to figure this out?
+	#field_name = 'taken from json question' #todo: how to figure this out?
+	print(args,' is args')
+	field_name = args[0].get("field_name",None) # todo: should be tested
+	#field_name = 'dammam' # dynamic insert not working
 
-	field = args[0].get("field_name", None) # todo: should be tested
+	selection = "ProdLine"
 
-	column = 'field'
-
-	if(field):
+	if(field_name):
 		pass
 	else:
 		pass
 
+	entries = {'selection': 'ProductLine',
+				'table': table,
+				'field':field_name,
+				'column':'field'}
 
-	sql = 'select ProdLine from {table} where {column} = {field} and '.format(table,column,field)
-	sql+= 'date = {today}'.format(today)
+	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
+	sql += 'date = {today}'.format(today=today)
 
-	result = sendQuery(sql)
 
+	# result = sendQuery(sql)
 	print("field status intent function executed!")
-	return {"status_situation" :"not good due to difficulty"}
+	#return {"status_situation" :"not good due to difficulty"}
+	return sql
 
 
 def operating_hours_func(*args, **kwargs):
-	sql = ('select operatingHours from {table} where '.format(table))
-	sql += ('date={today}'.format(today))
-	result = sendQuery(sql)
+	field_name = 'dammam' # dynamic insert not working
+
+	entries = {'selection': 'OperatingHours',
+				'table': table,
+				'field': field_name,
+				'column': 'field'}
+
+	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
+	sql += 'date = {today}'.format(today=today)
+
+	#result = sendQuery(sql)
 
 	print("operating hours intent function executed!")
-	return {"time": '10'}
+	return sql
+	#return {"time": '10'}
 
 def most_active_rig_func(*args, **kwargs):
+
     print("most active rig intent function executed!")
     return {"big_player2": 'BHGE'}
 
@@ -86,22 +103,19 @@ mapper = {
 
 
 def sendQuery(text):
-
 	# api-endpoint
-	URL = "localhost:3001/db"
+	URL = 'http://localhost:3001/db'
+	sql = "select * from oph_table_v0 limit 10"
 
-	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
-
-	sql = text
 	# defining a params dict for the parameters to be sent to the API
-	PARAMS = {'q': sql} # e.g.: SELECT * FROM get_well_view
+	PARAMS =    {'q':sql}
 
 	# sending get request and saving the response as response object
-	r = requests.post(url = URL, params = PARAMS)
-
+	r = requests.post(URL,data=PARAMS)
 	# extracting data in json format
 	data = r.json()
-	return data  # dictionary needs to be handled
+
+	return data
 
 
 
@@ -122,3 +136,6 @@ def getSkill():
 if __name__ == '__main__':
 	print(today)
 	pass
+
+result = product_line_intent_func()
+print(result)

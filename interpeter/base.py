@@ -114,8 +114,10 @@ class Handler(ABC):
         """
             Executes the predefined function associated with an intent 
         """
+        print(response, ' is response')
+
         if self.func:
-            func_output = self.func(response) 
+            func_output = self.func(response)
             response.update(func_output) # update user info with function info, to pass it to answer
         return( # printable
         self.answer.format_response(response)
