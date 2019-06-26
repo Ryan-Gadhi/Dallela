@@ -2,7 +2,12 @@ import json
 import sys
 from adapt.intent import IntentBuilder
 from interpeter.base import Skill, Handler
+from interpeter.skills.Daleelah_BH import sendQuery
+import requests
 import os
+
+
+
 
 
 
@@ -36,6 +41,26 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": field_status_intent_func
 }
+
+
+def sendQuery(text):
+
+	# api-endpoint
+	URL = "localhost:3001/db"
+
+	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
+
+	sql = text
+	# defining a params dict for the parameters to be sent to the API
+	PARAMS = {'q':sql} # e.g.: SELECT * FROM get_well_view
+
+	# sending get request and saving the response as response object
+	r = requests.post(url = URL, params = PARAMS)
+
+	# extracting data in json format
+	data = r.json()
+	return data  # dictionary needs to be handled
+
 
 
 # You can create a skill both with a json or manually
