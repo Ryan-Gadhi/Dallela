@@ -20,7 +20,7 @@
 
     "regex_entities" : [
         {
-            "entity_name" : "big_player",
+            "entity_name" : "big_player11",
             "regex_pattren": ".*",
             "apply_to" : ["by "],
             "importance" : "optionally"
@@ -28,7 +28,7 @@
     ],
 
     "answers" : [
-        "the total {failure_keyword} {product_keyword} by {regex_entities} is {x}"
+        "the total {failure_keyword} {product_keyword} is {hours}"
     ]
 
 }

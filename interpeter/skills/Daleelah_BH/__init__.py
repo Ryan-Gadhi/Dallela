@@ -2,7 +2,6 @@ import json
 import sys
 from adapt.intent import IntentBuilder
 from interpeter.base import Skill, Handler
-from interpeter.skills.Daleelah_BH import sendQuery
 import requests
 import os
 
@@ -13,11 +12,11 @@ import os
 
 def field_locator_intent_func(*args, **kwargs):
     print("field locator intent function executed!")
-
     return {'field_name':'Harad00', 'field_distance':'5km'}
 
 def production_Intent_func(*args,**kwargs):
-	result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
+	return {'hours':'20',}
+	#result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
 
 def number_of_active_rigsfunc(*args, **kwargs):
     print("active rigs intent function executed!")
@@ -33,8 +32,7 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 def field_status_intent_func(*args, **kwargs):
     print("field status intent function executed!")
-    return {"number_of_active_rig":'300'}
-
+    return {"status_situation" :"not good due to difficulty"}
 
 def operating_hours_func(*args, **kwargs):
     print("operating hours intent function executed!")
@@ -50,7 +48,8 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": field_status_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "MostActiveIntent": most_active_rig_func
+    "MostActiveIntent": most_active_rig_func,
+	"ProductionIntent":production_Intent_func
 }
 
 
@@ -82,10 +81,6 @@ class fieldLocatorSkill(Skill):
         #load functions from dictionary to handler
         for handler in self.handlers:
             handler.func = mapper.get(handler.intent.name, None) #if it has no function set None
-
-
-
-
 
 
 

@@ -111,5 +111,5 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print(e.compute("most active rigs"))
+    print(e.compute("production loss time"))
 

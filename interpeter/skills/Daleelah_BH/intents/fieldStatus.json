@@ -23,7 +23,7 @@
     ],
 
     "answers" : [
-        "The {status_keyword} of {field_keyword} is {field_distance_keywords} {field_distance}"
+        "The {status_keyword} of {field_keyword} is {status_situation}"
     ]
 
 }
