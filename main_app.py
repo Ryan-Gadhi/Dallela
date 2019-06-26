@@ -29,7 +29,7 @@ def find_skill():
 		os.chdir(original_dir)
 		answer = engine.compute(audio_text)
 
-		if(answer is None): # not found in the database
+		if(answer is None):  # not found in the database
 			pass
 
 

@@ -2,23 +2,23 @@
     "name" : "FieldStatusIntent",
     "entities" : [
         {
-            "name" : "fieldx_keyword",
+            "name" : "field_keyword11",
             "contents": ["rig", "field", "well"],
             "importance" : "require"
         },
         {
-            "name" : "status_keyword",
-            "contents" : ["status", "situation","progress"],
+            "name" : "product_line_keyword",
+            "contents" : ["product line"],
             "importance" : "require"
         }
     ],
 
     "regex_entities" : [
         {
-            "entity_name" : "field_status_keywords",
-            "regex_pattren": "[0-9]*",
-            "apply_to" : ["in ", "around ", "within "],
-            "importance" : "optionally"
+            "entity_name" : "field_name",
+            "regex_pattren": ".*",
+            "apply_to" : ["in "],
+            "importance" : "require"
         }
     ],
 
