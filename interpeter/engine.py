@@ -1,6 +1,5 @@
 import os 
 import json
-import interpeter.skills.aleelah_HelloSkill
 from adapt.engine import IntentDeterminationEngine
 
 class Engine:
@@ -22,7 +21,6 @@ class Engine:
         """
             Dynamically loads (imports) all the skills located in the folder Skills
         """
-        print("my path is ", os.getcwd() )
         for folder in os.listdir("interpeter/skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
             module = __import__("interpeter.skills." + folder, fromlist=['']) # import a skill module
@@ -101,8 +99,9 @@ class Engine:
         if correct_intenets: # if there is intents that matches the user's text
             best_intent = max(correct_intenets, key=lambda intent: intent['confidence']) # gets the highest intent
             best_intent_handler = self.__get_correct_handler(best_intent)
-            best_intent_handler.execute(best_intent) # running handler's function
-            print(json.dumps(best_intent, indent=4))
+            return best_intent_handler.execute(best_intent) # running handler's function
+            # print(json.dumps(best_intent, indent=4))
+
         else:
             #TODO: handle unhandeled text, maybe search in duckduckgo or something
             print("I DO NOT UNDERSTAND")
@@ -110,10 +109,5 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    for handler in e.handlers:
-        print(e.compute("What is the nearest field within 5 km ?"))
+    print(e.compute("production loss time"))
 
-
-
-    
-    

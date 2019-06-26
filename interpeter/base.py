@@ -46,7 +46,7 @@ def load_entities(intent, entities):
             dict: mapping names and content of an entity
     """
     entities_map = {}
-    if not entities : return entities_map # if there are no entities then don't continue 
+    if not entities : return entities_map # if there are no entities then don't continue
     for entity in entities:
             entity_name = entity.get("name")
             entity_contents = entity.get("contents")
@@ -117,7 +117,7 @@ class Handler(ABC):
         if self.func:
             func_output = self.func(response) 
             response.update(func_output) # update user info with function info, to pass it to answer
-        print(
+        return( # printable
         self.answer.format_response(response)
         )
 
@@ -125,7 +125,7 @@ class Handler(ABC):
 
 class Skill(ABC):
     """
-    Abstract class for a skill, providing common methods and behavriour to all the skills
+    Abstract class for a skill, providing common methods and behavior to all the skills
     """
     def __init__(self, entities=None, regex_entities=None, handlers=None, skill_name=None):
 

@@ -1,0 +1,29 @@
+{
+    "name" : "FieldStatusIntent",
+    "entities" : [
+        {
+            "name" : "fieldx_keyword",
+            "contents": ["rig", "field", "well"],
+            "importance" : "require"
+        },
+        {
+            "name" : "status_keyword",
+            "contents" : ["status", "situation","progress"],
+            "importance" : "require"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "field_status_keywords",
+            "regex_pattren": "[0-9]*",
+            "apply_to" : ["in ", "around ", "within "],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "The {status_keyword} of {field_keyword} is {status_situation}"
+    ]
+
+}
