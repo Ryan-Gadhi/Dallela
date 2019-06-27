@@ -1,6 +1,7 @@
-import os 
-import json
+import os
+
 from adapt.engine import IntentDeterminationEngine
+
 
 class Engine:
     eng = None  # engine object (singleton)
@@ -117,6 +118,4 @@ if __name__ == "__main__":
     e = Engine()
 
     print(e.compute("what are the active hours for baker hughes"))
-    print(e.compute("what is the product line "))
-
-
+    print(e.compute("what rigs in   h"))

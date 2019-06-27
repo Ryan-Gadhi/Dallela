@@ -24,11 +24,20 @@
             "regex_pattren": "[0-9]*",
             "apply_to" : ["in ", "around ", "within "],
             "importance" : "require"
+        },
+      {
+        "entity_name": "field_name",
+        "regex_pattren": ".*",
+        "apply_to": [
+          "to ",
+          "from "
+        ],
+        "importance": "require"
         }
     ],
 
     "answers" : [
-        "The closest {field_keyword} from {field_name} is {field_distance_keywords} {field_distance}"
+      "The closest {field_keyword} from {field_name} is {field_name_ans}"
     ] 
 
 }
