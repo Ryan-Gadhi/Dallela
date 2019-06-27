@@ -15,7 +15,7 @@
         "fields",
         "wells"
       ],
-      "importance": "require",
+      "importance": "require"
     }
   ],
   "regex_entities": [

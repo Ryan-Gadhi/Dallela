@@ -1,6 +1,7 @@
-import os 
-import json
+import os
+
 from adapt.engine import IntentDeterminationEngine
+
 
 class Engine:
     eng = None  # engine object (singleton)
@@ -112,6 +113,4 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print(e.compute("how colse "))
-
-
+    print(e.compute("what rigs in nnnd "))
