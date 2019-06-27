@@ -36,8 +36,16 @@ def rig_lister_func(*args, **kwargs):
     sql = 'select {selection} from {table} where {column} = {target} and limit 3 and '.format(**entries)
     sql += 'date = {today}'.format(today=today)
 
+    rig_name = ""
+    query_res = sendQuery(sql)
+    count_of_rigs = query_res['rowcount']
+    for value in query_res['rows']:
+        rig_names += value['Rig'] + " and"
+
+    rig_names = rig_name[:-4]
+
     print("active rigs intent function executed!")
-    return {'rig_names': 'ggg'}
+    return {'rig_names': rig_names, 'count_of_rigs': count_of_rigs}
 
 
 def production_Intent_func(*args, **kwargs):
