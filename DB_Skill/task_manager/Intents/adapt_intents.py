@@ -1,18 +1,3 @@
-import json
-import sys
-from adapt.intent import IntentBuilder
-from adapt.engine import IntentDeterminationEngine
-
-engine = IntentDeterminationEngine()
-
-
-
-def weatherFun():
-    print("Weather!")
-
-def helloFun():
-    print("Hello!")
-
 
 
 weather_keyword = [

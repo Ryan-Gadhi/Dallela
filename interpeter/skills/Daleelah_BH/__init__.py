@@ -42,20 +42,27 @@ def production_Intent_func(*args,**kwargs):
 
 
 def number_of_active_rigsfunc(*args, **kwargs):
-	sql = 'select count(distinct name) from {table} where '.format(table)
-	sql += 'date = {today}'.format(today)
-	result = sendQuery(sql)
+    print("active rigs intent function executed!")
+    # import datetime
+    engine_answer = args[0].get('field_keyword', None)
+    print(engine_answer)
+    sql_query = \
+    "SELECT COUNT(DISTINCT well) FROM {table_name} \
+      WHERE Date >= '{first_date}' AND Date < '{second_date}'".format(**
+      {
+          'table_name' : table,
+          'first_date' : '20181220 00:00:00.000',
+          'second_date': '20181220 23:59:59.999',
+      })
 
-	entries = {'selection': 'ProductLine',
-	           'table': table,
-	           'field': 'HMYM',
-	           'column': 'field'}
+    query_res = sendQuery(sql_query)
 
-	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
-	sql += 'date = {today}'.format(today=today)
+    # date = datetime.datetime.now()  # the format of this needs to be changed
+    # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
+	# todo: format the sql output to match the answer format
+    count = query_res.get("rows")[0]["count"]
+    return {"number_of_active_rig":count}
 
-	# print("active rigs intent function executed!")
-	return {"number_of_active_rig":'300'}
 
 
 def product_line_intent_func(*args, **kwargs):
@@ -122,13 +129,13 @@ mapper = {
 }
 
 
-def sendQuery(sql):
+def sendQuery(sql_string):
 	# api-endpoint
 	URL = 'http://localhost:3001/db'
 	#sql = "select * from oph_table_v0 limit 10"
 
 	# defining a params dict for the parameters to be sent to the API
-	PARAMS = {'q':sql}
+	PARAMS = {'q':sql_string}
 
 	# sending get request and saving the response as response object
 	r = requests.post(URL,data=PARAMS)
