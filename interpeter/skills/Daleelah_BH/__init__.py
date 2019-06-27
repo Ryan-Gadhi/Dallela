@@ -10,7 +10,10 @@ table = 'oph_table_v0'
 #today = datetime.datetime.now()  # todo: reformat the time to match time in the db table
 today ='2017-12-08T21:00:00.000Z' # temporary
 
-
+BigPlayerDic = {
+	'baker hughes' : 'BH',
+	'schlumberger' : 'SG'  # todo: find correct short name
+}
 
 
 def field_locator_intent_func(*args, **kwargs):
@@ -56,17 +59,12 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 
 def product_line_intent_func(*args, **kwargs):
-	#field_name = 'taken from json question' #todo: how to figure this out?
-	print(args,' is args')
-	field_name = args[0].get("field_name",None) # todo: should be tested
-	#field_name = 'dammam' # dynamic insert not working
-	print(field_name, ' is field name')
-	selection = "ProdLine"
-
+	field_name = args[0].get("field_name",None)
+	print(field_name, ' is field_name')
 	if(field_name):
 		pass
 	else:
-		pass
+		field_name = 'dammam' # todo: should be changed to shortcuts only
 
 
 
@@ -79,35 +77,40 @@ def product_line_intent_func(*args, **kwargs):
 	sql += 'date = {today}'.format(today=today)
 
 
+	result = {'ProdLine':'drilling'} # todo: should be replaced with bottom 2 lines
 	# result = sendQuery(sql)
-	print("field status intent function executed!")
-	#return {"status_situation" :"not good due to difficulty"}
-	#return sql
-	return {'status_keyword':'ay shay','status_situation':'f'}
+	# result = json.loads(result)
 
+	prodLine_keyword = result['ProdLine']
+
+	return {'product_line':prodLine_keyword,'field_name':field_name}
 
 
 def operating_hours_func(*args, **kwargs):
-	field_name = 'dammam'  # dynamic insert not working
+	field_name = args[0].get("field_name", None)
+	BigPlayer = args[0].get("big_player", None)
+
+
+	if (field_name is not None):
+		pass
+	else:
+		field_name = 'dammam'  # default val. todo: should be changed to shortcuts only
 
 	entries = {'selection': 'OperatingHours',
 				'table': table,
 				'field': field_name,
-				'column': 'field'}
+				'column': 'field',
+	           'BigPlayer': BigPlayerDic[BigPlayer]}
 
-	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
+	sql = 'select {selection} from {table} where {column} = {field} and ' \
+	      '{BigPlayer}'.format(**entries)
 	sql += 'date = {today}'.format(today=today)
 
-	#result = sendQuery(sql)
+	result = {'temporary':'well'}  # todo: should be replaced with bottom 2 lines
+	# result = sendQuery(sql)
+	# result = json.loads(result)
 
-	print("operating hours intent function executed!")
-	return sql
-	#return {"time": '10'}
-
-def most_active_rig_func(*args, **kwargs):
-
-    print("most active rig intent function executed!")
-    return {"big_player2": 'BHGE'}
+	return {"time": '10'}
 
 
 mapper = {

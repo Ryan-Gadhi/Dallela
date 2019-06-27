@@ -23,7 +23,7 @@
     ],
 
     "answers" : [
-        "The {status_keyword} of {field_keyword11} is {status_situation}"
+        "The {product_line_keyword} of {field_name} is {product_line}"
     ]
 
 }
