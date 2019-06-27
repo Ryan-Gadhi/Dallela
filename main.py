@@ -1,12 +1,8 @@
-from AudioUtils import *
-from interpeter.skills.Trvial_Skill import TrivialSkills
-from tkinter import *
-from GUI import GUI
-import time
-from threading import Thread
+import os
+
 from AudioUtils import *
 from interpeter.engine import Engine
-import os
+from interpeter.skills.Trvial_Skill import TrivialSkills
 
 awake = False
 conversatoin = []
@@ -30,20 +26,19 @@ def find_skill():
     # or connect to Duck Duck go api
 
     conversatoin.append(audio_text)
-    global gui
-    gui.setUpperLabel(audio_text)
-    gui.setBottomLabel(answer)
-    print('gui updated')
+    # global gui
+    # gui.setUpperLabel(audio_text)
+    # gui.setBottomLabel(answer)
+    # print('gui updated')
 
-    reply(answer)  # say the answer out loud
-
-
-#
+    x = threading.Thread(target=reply, args=(answer,))
+    x.start()  # say the answer out loud
+    x.rais
 
 
 def LookForSkill():
     """
-	fetches the audio text
+    fetches the audio text
 	then calls find skill
 
 	"""
@@ -66,9 +61,12 @@ def LookForTrigger():
 				program flow
 	"""
     # trigger
-    t1 = start_listening(awake)
+
+    t1 = threading.Thread(target=start_listening, args=(awake,))
+    t1.start()  # start listening at {AudioUtils.py}
+
     t2 = threading.Thread(target=waitForResponse, args=(t1,))
-    t2.start()
+    t2.start()  # wait for listen thread to finish at {AudioUtils.py}
 
 
 def waitForResponse(t1):
@@ -81,19 +79,17 @@ def waitForResponse(t1):
 	"""
 
     global awake
-    while (t1.is_alive()):
+    while t1.is_alive():
         pass
 
     heared_word = get_start_listening_text()
 
-    if (awake):
+    if awake:
+        awake = False  # next time you ask you need to say daleelah
         LookForSkill()  # when google responds we search for the skill
-    elif (not awake):
-        if is_in_wake_words(heared_word):
+    elif is_in_wake_words(heared_word):
             awake = True
-            LookForTrigger()
-        else:
-            LookForTrigger()
+    LookForTrigger()
 
 
 """ 
@@ -103,11 +99,12 @@ def waitForResponse(t1):
 if __name__ == '__main__':
     audio_text = 'What is the nearest field within 5 km ?'
 
-    test_audio()
-    root = Tk()
-    gui = GUI.GUI(root, LookForTrigger)
-    root.mainloop()
-    find_skill()
+    test_audio()  # set the config for the OS system for the engine at {AudioUtils.py}
+    # root = Tk()
+    # gui = GUI.GUI(root, LookForTrigger)
+    # root.mainloop()
+    LookForTrigger()  # wait for sound
+    # find_skill()
 
 # audio_text = start_listening()
 

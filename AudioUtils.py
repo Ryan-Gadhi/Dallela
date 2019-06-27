@@ -1,9 +1,9 @@
-import speech_recognition as sr
-import pyttsx3
 import platform
-from playsound import playsound
-import threading
 import re
+
+import pyttsx3
+import speech_recognition as sr
+from playsound import playsound
 
 global_engine = None
 start_listening_text = 'who are you'
@@ -73,7 +73,7 @@ def is_in_wake_words(text):
     # return False
 
 
-def start_listening_Helper(awake):
+def start_listening(awake):
     """
         this method:
                     adds the 2 beep sounds
@@ -109,11 +109,11 @@ def start_listening_Helper(awake):
     the wake word has been said or not
 
 """
-def start_listening(awake):
-    global t1
-    t1 = threading.Thread(target=start_listening_Helper,args=(awake,))
-    t1.start()
-    return t1
+# def start_listening(awake):
+#     global t1
+#     t1 = threading.Thread(target=start_listening_Helper,args=(awake,))
+#     t1.start()
+#     return t1
 
 """
     the following is only related to pyttsx3 package
@@ -158,17 +158,18 @@ def test_audio():
         text: input text to be said
            
     """
-def replyHelper(text):
+
+
+def reply(text):
     # print('audio')
     global global_engine
 
     engine = global_engine
-    print(text+ "<<<<<<<<<")
+    # print(text+ "<<<<<<<<<")
     engine.say(text)
 
     engine.runAndWait()
-
-    print (text)
+    print(text + "#from engine")
 
     # print('finished audio')
 """
@@ -177,6 +178,6 @@ def replyHelper(text):
     
     text: input text to be said
 """
-def reply(text):
-    x = threading.Thread(target=replyHelper, args=(text,))
-    x.start()
+# def reply(text):
+#     x = threading.Thread(target=replyHelper, args=(text,))
+#     x.start()
