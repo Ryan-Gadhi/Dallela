@@ -1,0 +1,35 @@
+
+{
+    "name" : "FieldLocatorDIntent",
+    "entities" : [
+        {
+            "name" : "qustion_keyword1",
+            "contents": ["how"],
+            "importance" : "require"
+        },
+        {
+            "name" : "fieldb_keyword1",
+            "contents": ["rig", "field", "well"],
+            "importance" : "require"
+        },
+        {
+            "name" : "distance_keyword1",
+            "contents" : ["near", "close", "far"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "field_name_keywords1",
+            "regex_pattren": "[0-9]*",
+            "apply_to" : ["around ", "from ", "to "],
+            "importance" : "require"
+        }
+    ],
+
+    "answers" : [
+        "The closest {field_keyword1} from {field_name_keywords1} is {field_distance} "
+    ]
+
+}

@@ -8,7 +8,12 @@
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="" />
 ||||||| merged common ancestors
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
+<<<<<<< HEAD
+||||||| merged common ancestors
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json" afterDir="false" />
+=======
       <change afterPath="$PROJECT_DIR$/GUI/tkinterTest.py" afterDir="false" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/interface.py" afterDir="false" />
@@ -23,10 +28,17 @@
       <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Discussion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interpeter/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/engine.py" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" afterDir="false" />
+||||||| merged common ancestors
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
     </list>
 >>>>>>> abdo
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,11 +180,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+||||||| merged common ancestors
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection">
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="231">
+              <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+||||||| merged common ancestors
+            <state relative-caret-position="256">
+              <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+=======
             <state relative-caret-position="225">
               <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
               <folding>
                 <marker date="1561469650530" expanded="true" signature="37:38" ph="..." />
               </folding>
@@ -183,12 +211,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-252">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+||||||| merged common ancestors
+            <state relative-caret-position="36">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+=======
             <state relative-caret-position="340">
               <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <marker date="1561492020107" expanded="true" signature="324:371" ph="..." />
               </folding>
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
             </state>
           </provider>
         </entry>
@@ -247,8 +283,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AudioUtils.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="339">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+||||||| merged common ancestors
+            <state relative-caret-position="54">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="7" selection-end-column="10" />
+=======
             <state relative-caret-position="332">
               <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
             </state>
           </provider>
         </entry>
@@ -269,8 +313,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="252">
+              <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+||||||| merged common ancestors
+            <state relative-caret-position="360">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="38" />
+=======
             <state relative-caret-position="356">
               <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
             </state>
           </provider>
 >>>>>>> abdo
@@ -293,13 +345,27 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+||||||| merged common ancestors
+      <file pinned="false" current-in-tab="false">
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py">
 =======
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="306">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+||||||| merged common ancestors
+            <state relative-caret-position="270">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+=======
             <state relative-caret-position="345">
               <caret line="23" lean-forward="true" selection-end-line="29" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
             </state>
           </provider>
         </entry>
@@ -309,11 +375,19 @@
 >>>>>>> abdo
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="-93">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+||||||| merged common ancestors
+            <state relative-caret-position="414">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+=======
+<<<<<<< HEAD
             <state relative-caret-position="64">
               <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
 ||||||| merged common ancestors
             <state relative-caret-position="497">
               <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -421,6 +495,16 @@
         <option value="$PROJECT_DIR$/DatabaseConnection" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/tesy.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/numberOfNearstOffset.josn" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.josn" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json" />
+||||||| merged common ancestors
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/numberOfNearstOffset.josn" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.josn" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json" />
+=======
         <option value="$PROJECT_DIR$/Discussion/plan" />
         <option value="$PROJECT_DIR$/interpeter/engine.py" />
         <option value="$PROJECT_DIR$/main_app.py" />
@@ -428,7 +512,19 @@
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json" />
+        <option value="$PROJECT_DIR$/interpeter/engine.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" />
+||||||| merged common ancestors
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" />
+        <option value="$PROJECT_DIR$/interpeter/engine.py" />
+=======
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       </list>
     </option>
   </component>
@@ -714,9 +810,72 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560325286933</updated>
+<<<<<<< HEAD
+      <workItem from="1561456509254" duration="10877000" />
+      <workItem from="1561479810834" duration="1713000" />
+      <workItem from="1561482920274" duration="3833000" />
+      <workItem from="1561525420620" duration="4570000" />
     </task>
+    <task id="LOCAL-00001" summary="added some intent">
+      <created>1561469979606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561469979606</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added operating hours intent">
+      <created>1561481499367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561481499367</updated>
+||||||| merged common ancestors
+      <workItem from="1561456509254" duration="10877000" />
+      <workItem from="1561479810834" duration="1713000" />
+      <workItem from="1561482920274" duration="3833000" />
+      <workItem from="1561525420620" duration="754000" />
+    </task>
+    <task id="LOCAL-00001" summary="added some intent">
+      <created>1561469979606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561469979606</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added operating hours intent">
+      <created>1561481499367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561481499367</updated>
+=======
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
+    </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00003" summary="added most active intent">
+      <created>1561526432516</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561526432517</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+||||||| merged common ancestors
+    <option name="localTasksCounter" value="3" />
+=======
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
     <servers />
   </component>
+<<<<<<< HEAD
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20993000" />
+  </component>
+||||||| merged common ancestors
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17177000" />
+  </component>
+=======
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -738,6 +897,11 @@
 >>>>>>> abdo
     <layout>
 <<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.17024128" />
+||||||| merged common ancestors
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.17024128" />
+=======
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939686" visible="true" weight="0.16219063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50060314" side_tool="true" weight="0.08530806" />
@@ -747,11 +911,17 @@
       <window_info id="Favorites" order="2" sideWeight="0.50060314" side_tool="true" visible="true" weight="0.08530806" />
 =======
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.16219063" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <window_info id="Structure" order="1" sideWeight="0.50410676" side_tool="true" weight="0.16219063" />
       <window_info id="Favorites" order="2" sideWeight="0.50309026" side_tool="true" weight="0.08530806" />
 >>>>>>> abdo
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33521923" />
+||||||| merged common ancestors
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33663365" />
+=======
 <<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.17920792" />
 ||||||| merged common ancestors
@@ -759,10 +929,20 @@
 =======
       <window_info anchor="bottom" id="Run" order="2" weight="0.26943004" />
 >>>>>>> abdo
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20509194" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067025" side_tool="true" weight="0.27439886" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932975" visible="true" weight="0.27439886" />
+||||||| merged common ancestors
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20509194" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27439886" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+=======
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
 <<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29844558" />
@@ -772,6 +952,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27564767" />
 >>>>>>> abdo
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -799,8 +980,27 @@
       <window_info anchor="right" x="0" y="0" width="430" height="1000" id="Documentation" order="3" side_tool="true" weight="0.32960597" />
     </layout-to-restore>
   </component>
+<<<<<<< HEAD
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added some intent" />
+    <MESSAGE value="added operating hours intent" />
+    <MESSAGE value="added most active intent" />
+    <option name="LAST_COMMIT_MESSAGE" value="added most active intent" />
+||||||| merged common ancestors
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added some intent" />
+    <MESSAGE value="added operating hours intent" />
+    <option name="LAST_COMMIT_MESSAGE" value="added operating hours intent" />
+=======
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,6 +1013,16 @@
       </default-breakpoints>
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Dallela$engine.coverage" NAME="engine Coverage Results" MODIFIED="1561526765938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interpeter" />
+  </component>
+||||||| merged common ancestors
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Dallela$engine.coverage" NAME="engine Coverage Results" MODIFIED="1561526043269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interpeter" />
+  </component>
+=======
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
   <component name="editorHistoryManager">
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Similars">
@@ -1087,6 +1297,18 @@
       <provider selected="true" editor-type-id="text-editor" />
 >>>>>>> abdo
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/decoder.py">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/decoder.py">
+=======
     <entry file="file://$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -1109,6 +1331,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Discussion/plan">
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="-653">
@@ -1163,8 +1386,21 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json">
+=======
     <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-252">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+||||||| merged common ancestors
+        <state relative-caret-position="360">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="38" />
+=======
 <<<<<<< HEAD
         <state relative-caret-position="64">
           <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
@@ -1175,25 +1411,61 @@
         <state relative-caret-position="2691">
           <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
 >>>>>>> abdo
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json">
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="256">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+||||||| merged common ancestors
+        <state relative-caret-position="414">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="252">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+||||||| merged common ancestors
+        <state relative-caret-position="54">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="7" selection-end-column="10" />
+=======
         <state relative-caret-position="356">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json">
+    <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="231">
+          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+||||||| merged common ancestors
+        <state relative-caret-position="270">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+=======
 <<<<<<< HEAD
         <state relative-caret-position="210">
           <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1209,16 +1481,39 @@
         <state relative-caret-position="345">
           <caret line="23" lean-forward="true" selection-end-line="29" />
 >>>>>>> abdo
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json">
+=======
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json">
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-93">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+||||||| merged common ancestors
+        <state relative-caret-position="256">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+=======
         <state relative-caret-position="33">
           <caret line="1" column="30" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="30" />
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
+||||||| merged common ancestors
+    <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/GUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1245,7 +1540,25 @@
 =======
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
 >>>>>>> abdo
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="339">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+||||||| merged common ancestors
+        <state relative-caret-position="256">
+          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+=======
 <<<<<<< HEAD
         <state relative-caret-position="168">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
@@ -1268,6 +1581,7 @@
             <marker date="1561492020107" expanded="true" signature="324:371" ph="..." />
 >>>>>>> abdo
           </folding>
+>>>>>>> bc3400579753743478712d4f2d0feb5e28fb7a26
         </state>
       </provider>
     </entry>
