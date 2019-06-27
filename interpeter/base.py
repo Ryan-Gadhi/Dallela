@@ -119,12 +119,11 @@ class Handler(ABC):
             Executes the predefined function associated with an intents
             @Ryan, returns one of answers randomly
         """
-        print(response, ' *** *** ***')
         if self.func:
-            func_output = self.func(response)
+            func_output = self.func(response) # @Ryan, it gives the function the engine output in case you need it
             response.update(func_output) # update user info with function info, to pass it to answer
-        return( # printable
-        self.answer.format_response(response)
+        return(  # printable
+        self.answer.format_response(response) # @Ryan, returns a dic
         )
 
         
