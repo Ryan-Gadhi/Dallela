@@ -1,4 +1,5 @@
 import os
+import threading
 
 from AudioUtils import *
 from interpeter.engine import Engine
@@ -14,7 +15,7 @@ def find_skill():
 
 	"""
     skill_found, answer = TrivialSkills.search_for_match(audio_text)  # this will say if match found
-    if (not skill_found):
+    if not skill_found:
         print('Skill not found in Trivial skills --- XXX')
 
         original_dir = os.getcwd()
@@ -33,7 +34,6 @@ def find_skill():
 
     x = threading.Thread(target=reply, args=(answer,))
     x.start()  # say the answer out loud
-    x.rais
 
 
 def LookForSkill():
@@ -88,7 +88,7 @@ def waitForResponse(t1):
         awake = False  # next time you ask you need to say daleelah
         LookForSkill()  # when google responds we search for the skill
     elif is_in_wake_words(heared_word):
-            awake = True
+        awake = True
     LookForTrigger()
 
 
@@ -99,7 +99,7 @@ def waitForResponse(t1):
 if __name__ == '__main__':
     audio_text = 'What is the nearest field within 5 km ?'
 
-    test_audio()  # set the config for the OS system for the engine at {AudioUtils.py}
+    # test_audio()  # set the config for the OS system for the engine at {AudioUtils.py}
     # root = Tk()
     # gui = GUI.GUI(root, LookForTrigger)
     # root.mainloop()

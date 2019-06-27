@@ -5,11 +5,10 @@ import pyttsx3
 import speech_recognition as sr
 from playsound import playsound
 
-global_engine = None
+# global_engine = None
 start_listening_text = 'who are you'
 wake_up_text = None
 t1 = None
-
 
 """
     # currently not used
@@ -17,6 +16,8 @@ t1 = None
     checks if the audio text is in the file 
     containing words similar to Daleela
 """
+
+
 def is_in_wake_wordsv1(audio_text):
     """
     this function checks if the word
@@ -34,14 +35,18 @@ def is_in_wake_wordsv1(audio_text):
             return True
     return False
 
+
 def get_start_listening_text():
     return start_listening_text
+
 
 """
     # this is a temporary method, should be overridden by Tenserflow
     checks if the said word feels sound like Daleela
 
 """
+
+
 def is_in_wake_words(text):
     text = re.search("(\w+)(e|i)(\w+)(a$)", text)
 
@@ -49,6 +54,7 @@ def is_in_wake_words(text):
         return True
 
     return False
+
 
 #
 # def look_for_trigger():
@@ -67,10 +73,10 @@ def is_in_wake_words(text):
 #             except:
 #                 print("not recognized by the API")
 
-    # if not (not_wakeup_word):
-    #     playsound('beep.wav')
-    #     return True
-    # return False
+# if not (not_wakeup_word):
+#     playsound('beep.wav')
+#     return True
+# return False
 
 
 def start_listening(awake):
@@ -101,6 +107,8 @@ def start_listening(awake):
         except:
             print("not recognized by the API :\n")
             start_listening_text = 'Error_001'
+
+
 """
     this method makes a new thread to handle 
     google server connection in the background 
@@ -121,6 +129,8 @@ def start_listening(awake):
     and choose as the default
 
 """
+
+
 def findOS_Sound():
     os_name = platform.system()
     name = 'undefined'
@@ -134,21 +144,21 @@ def findOS_Sound():
         print('os not recognized')
     return name
 
+
 """
     the following is only related to pyttsx3 package
     it checks for woman sound in the local system
     and choose as the default sound output
 
 """
-def test_audio():
-    name = findOS_Sound()
-    global global_engine
-    global_engine = pyttsx3.init()
 
+
+def test_audio():
+    global_engine = pyttsx3.init()
     try:
-        global_engine.setProperty('voice', name)
+        global_engine.setProperty('voice', findOS_Sound())
         print('property has been set..')
-    except():
+    except:
         print('specified sound not found in the local system!')
     return global_engine
 
@@ -162,9 +172,9 @@ def test_audio():
 
 def reply(text):
     # print('audio')
-    global global_engine
+    # global global_engine
 
-    engine = global_engine
+    engine = test_audio()
     # print(text+ "<<<<<<<<<")
     engine.say(text)
 
@@ -172,6 +182,8 @@ def reply(text):
     print(text + "#from engine")
 
     # print('finished audio')
+
+
 """
     makes a new thread that handles the sound output 
     in a new thread
