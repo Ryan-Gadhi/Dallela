@@ -22,20 +22,19 @@
             "entity_name" : "field_name",
             "regex_pattren": "([a-z]|[A-Z])*",
             "apply_to" : ["in "],
-            "importance" : "require"
+            "importance" : "optionally"
         },
 
         {
             "entity_name" : "big_player1",
-            "regex_pattren": "(([a-z]|[A-Z])*)|(([a-z]|[A-Z])* ([a-z]|[A-Z])*)",
+            "regex_pattren": "([a-z]|[A-Z])* ([a-z]|[A-Z])*",
             "apply_to" : ["for "],
             "importance" : "require"
         }
     ],
 
     "answers" : [
-        "The {active1_keyword1} {time_unit} for {big_player1} are {time} {time_unit}",
-        "{time} {time_unit}"
+        "The {active1_keyword1} {time_unit} for {big_player1} are {time} {time_unit}"
     ]
 
 }

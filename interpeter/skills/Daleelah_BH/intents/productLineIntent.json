@@ -4,7 +4,7 @@
         {
             "name" : "field_keyword11",
             "contents": ["rig", "field", "well"],
-            "importance" : "require"
+            "importance" : "optionally"
         },
         {
             "name" : "product_line_keyword",
@@ -16,9 +16,9 @@
     "regex_entities" : [
         {
             "entity_name" : "field_name",
-            "regex_pattren": ".*",
+            "regex_pattren": "([a-z]|[A-Z])",
             "apply_to" : ["in "],
-            "importance" : "require"
+            "importance" : "optionally"
         }
     ],
 

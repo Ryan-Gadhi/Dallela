@@ -12,7 +12,7 @@ today ='2017-12-08T21:00:00.000Z' # temporary
 
 BigPlayerDic = {
 	'baker hughes' : 'BH',
-	'schlumberger' : 'SG'  # todo: find correct short name
+	'baker' : 'BH'  # todo: find correct short name
 }
 
 
@@ -21,7 +21,7 @@ def field_locator_intent_func(*args, **kwargs):
 	sql += ('date={today}'.format(today))
 	result = sendQuery(sql)
 
-	print("field locator intent function executed!")
+	#print("field locator intent function executed!")
 	return {'field_name':'Harad00', 'field_distance':'5km'}
 
 
@@ -48,23 +48,23 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 	entries = {'selection': 'ProductLine',
 	           'table': table,
-	           'field': 'dammam',
+	           'field': 'HMYM',
 	           'column': 'field'}
 
 	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
 	sql += 'date = {today}'.format(today=today)
 
-	print("active rigs intent function executed!")
+	# print("active rigs intent function executed!")
 	return {"number_of_active_rig":'300'}
 
 
 def product_line_intent_func(*args, **kwargs):
 	field_name = args[0].get("field_name",None)
-	print(field_name, ' is field_name')
+	#print(field_name, ' is field_name')
 	if(field_name):
 		pass
 	else:
-		field_name = 'dammam' # todo: should be changed to shortcuts only
+		field_name = 'HMYM' # todo: should be changed to shortcuts only
 
 
 
@@ -88,29 +88,29 @@ def product_line_intent_func(*args, **kwargs):
 
 def operating_hours_func(*args, **kwargs):
 	field_name = args[0].get("field_name", None)
-	BigPlayer = args[0].get("big_player", None)
-
+	BigPlayer = args[0].get("big_player1", None)
 
 	if (field_name is not None):
 		pass
 	else:
-		field_name = 'dammam'  # default val. todo: should be changed to shortcuts only
+		field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
 
-	entries = {'selection': 'OperatingHours',
+	entries = {'selection': '(OperatingHours-24)',
 				'table': table,
 				'field': field_name,
 				'column': 'field',
 	           'BigPlayer': BigPlayerDic[BigPlayer]}
 
 	sql = 'select {selection} from {table} where {column} = {field} and ' \
-	      '{BigPlayer}'.format(**entries)
+	      '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
 	sql += 'date = {today}'.format(today=today)
 
-	result = {'temporary':'well'}  # todo: should be replaced with bottom 2 lines
+	result = '15'  # todo: should be replaced with bottom 2 lines
 	# result = sendQuery(sql)
 	# result = json.loads(result)
-
-	return {"time": '10'}
+	time  = int(result)  # the query returns a number
+	#print(sql, ' is sql')
+	return {"time": time}
 
 
 mapper = {
@@ -118,7 +118,6 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "MostActiveIntent": most_active_rig_func,
 	"ProductionIntent":production_Intent_func
 }
 

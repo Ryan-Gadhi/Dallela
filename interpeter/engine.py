@@ -116,5 +116,7 @@ class Engine:
 if __name__ == "__main__":
     e = Engine()
 
-    print(e.compute("active hours for baker hughes in dammam"))
+    print(e.compute("what are the active hours for baker hughes"))
+    print(e.compute("what is the product line "))
+
 
