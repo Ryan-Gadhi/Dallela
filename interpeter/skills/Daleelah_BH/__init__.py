@@ -33,7 +33,7 @@ def rig_lister_func(*args, **kwargs):
                'column': 'field',
                'target': field_name}
 
-    sql = 'select {selection} from {table} where {column} = {target} and '.format(**entries)
+    sql = 'select {selection} from {table} where {column} = {target} and limit 3 and '.format(**entries)
     sql += 'date = {today}'.format(today=today)
 
     print("active rigs intent function executed!")
