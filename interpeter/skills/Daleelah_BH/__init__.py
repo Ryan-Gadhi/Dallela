@@ -12,7 +12,7 @@ today ='2017-12-08T21:00:00.000Z' # temporary
 
 BigPlayerDic = {
 	'baker hughes' : 'BH',
-	'schlumberger' : 'SG'  # todo: find correct short name
+	'baker' : 'BH'  # todo: find correct short name
 }
 
 
@@ -21,7 +21,7 @@ def field_locator_intent_func(*args, **kwargs):
 	sql += ('date={today}'.format(today))
 	result = sendQuery(sql)
 
-	print("field locator intent function executed!")
+	#print("field locator intent function executed!")
 	return {'field_name':'Harad00', 'field_distance':'5km'}
 
 
@@ -42,29 +42,36 @@ def production_Intent_func(*args,**kwargs):
 
 
 def number_of_active_rigsfunc(*args, **kwargs):
-	sql = 'select count(distinct name) from {table} where '.format(table)
-	sql += 'date = {today}'.format(today)
-	result = sendQuery(sql)
+    print("active rigs intent function executed!")
+    # import datetime
+    engine_answer = args[0].get('field_keyword', None)
+    print(engine_answer)
+    sql_query = \
+    "SELECT COUNT(DISTINCT well) FROM {table_name} \
+      WHERE Date >= '{first_date}' AND Date < '{second_date}'".format(**
+      {
+          'table_name' : table,
+          'first_date' : '20181220 00:00:00.000',
+          'second_date': '20181220 23:59:59.999',
+      })
 
-	entries = {'selection': 'ProductLine',
-	           'table': table,
-	           'field': 'dammam',
-	           'column': 'field'}
+    query_res = sendQuery(sql_query)
 
-	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
-	sql += 'date = {today}'.format(today=today)
+    # date = datetime.datetime.now()  # the format of this needs to be changed
+    # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
+	# todo: format the sql output to match the answer format
+    count = query_res.get("rows")[0]["count"]
+    return {"number_of_active_rig":count}
 
-	print("active rigs intent function executed!")
-	return {"number_of_active_rig":'300'}
 
 
 def product_line_intent_func(*args, **kwargs):
 	field_name = args[0].get("field_name",None)
-	print(field_name, ' is field_name')
+	#print(field_name, ' is field_name')
 	if(field_name):
 		pass
 	else:
-		field_name = 'dammam' # todo: should be changed to shortcuts only
+		field_name = 'HMYM' # todo: should be changed to shortcuts only
 
 
 
@@ -88,29 +95,29 @@ def product_line_intent_func(*args, **kwargs):
 
 def operating_hours_func(*args, **kwargs):
 	field_name = args[0].get("field_name", None)
-	BigPlayer = args[0].get("big_player", None)
-
+	BigPlayer = args[0].get("big_player1", None)
 
 	if (field_name is not None):
 		pass
 	else:
-		field_name = 'dammam'  # default val. todo: should be changed to shortcuts only
+		field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
 
-	entries = {'selection': 'OperatingHours',
+	entries = {'selection': '(OperatingHours-24)',
 				'table': table,
 				'field': field_name,
 				'column': 'field',
 	           'BigPlayer': BigPlayerDic[BigPlayer]}
 
 	sql = 'select {selection} from {table} where {column} = {field} and ' \
-	      '{BigPlayer}'.format(**entries)
+	      '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
 	sql += 'date = {today}'.format(today=today)
 
-	result = {'temporary':'well'}  # todo: should be replaced with bottom 2 lines
+	result = '15'  # todo: should be replaced with bottom 2 lines
 	# result = sendQuery(sql)
 	# result = json.loads(result)
-
-	return {"time": '10'}
+	time  = int(result)  # the query returns a number
+	#print(sql, ' is sql')
+	return {"time": time}
 
 
 mapper = {
@@ -118,18 +125,17 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "MostActiveIntent": most_active_rig_func,
 	"ProductionIntent":production_Intent_func
 }
 
 
-def sendQuery(sql):
+def sendQuery(sql_string):
 	# api-endpoint
 	URL = 'http://localhost:3001/db'
 	#sql = "select * from oph_table_v0 limit 10"
 
 	# defining a params dict for the parameters to be sent to the API
-	PARAMS = {'q':sql}
+	PARAMS = {'q':sql_string}
 
 	# sending get request and saving the response as response object
 	r = requests.post(URL,data=PARAMS)

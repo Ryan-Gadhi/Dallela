@@ -28,7 +28,7 @@ def find_skill():
 		engine = Engine()
 		os.chdir(original_dir)
 		answer = engine.compute(audio_text)
-
+		answer+= '. Sorry for taking so long to answer. The network is slow in this building'
 		if(answer is None):  # not found in the database
 			pass
 
