@@ -1,18 +1,11 @@
-import threading
+class animal:
+    def __init__(self,name):
+        self.name = name
 
-z = 0
-def look_for_trigger():
-    for z in range(1000000):
-        z = z
-
-
+    def printt(self):
+        print(self.name)
 
 
-def sound():
-    print("im in")
-    while z < 9999:
-        print(z)
 
-x = threading.Thread(target=look_for_trigger)
-x.start()
-print(x.isAlive())
+a = animal()
+a.printt()

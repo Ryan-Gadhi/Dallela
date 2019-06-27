@@ -20,7 +20,7 @@ def load_raw_intents(path):
         json_path = os.path.join(intents_folder, f)
 
         with open( json_path ) as jsonFile:
-            raw_intent = json.loads( jsonFile.read() )
+            raw_intent = json.loads( jsonFile.read() )  # @Ryan raw intent = json file
             raw_intents.append(raw_intent)
     return raw_intents
     
@@ -38,7 +38,9 @@ def add_entity_to_intent(intent, entity_name, importance):
 
 def load_entities(intent, entities):
     """
-        loads entity names into an intent, and maps the entities to the names 
+        loads entity names into an intent, and maps the entities to the names
+        @Ryan, loads entity names into an intent, and maps the entities data to the intent
+
         Args:
             intent(intent): the intent 
             entities(list[dict]): list of dictionaries contains meta-data about an entity 
@@ -48,13 +50,13 @@ def load_entities(intent, entities):
     entities_map = {}
     if not entities : return entities_map # if there are no entities then don't continue
     for entity in entities:
-            entity_name = entity.get("name")
+            entity_name = entity.get("name")  # @Ryan, each entity is a json object. Check json files
             entity_contents = entity.get("contents")
             entity_importance = entity.get("importance")
             
-            entities_map.update( {entity_name : entity_contents} )
+            entities_map.update( {entity_name : entity_contents} )  # @Ryan, update method for dic
             add_entity_to_intent(intent, entity_name, entity_importance)
-    return entities_map
+    return entities_map # @Ryan, each entity now belongs to an intent
                 
 def load_regex_entities(intent, reg_entities):
     """
@@ -83,39 +85,41 @@ def load_regex_entities(intent, reg_entities):
 class Answer(ABC):
     """
     Abstract class used to handle answers
+    @Ryan, violates abstract structure. should be normal class {delete ABC}
+
     """
     def __init__(self, answers=[]):
         self.answers = answers
     
     def format_response(self, response):
         """ 
-        randomely chooses a template and subtitute the response (variables) into that template
+        randomly chooses a template and subtitute the response (variables) into that template
         variables could be a function output or user's captured keywords
         Args:
             response(dict): dictionary contains variables along with their names
         Returns:
             (str): a randomly generated response based on some variables (if any)
         """
-        random_template = random.choice(self.answers) #e.g: 'The weather in {location} is {deg}{unit}' 
-        print(response)
-        return random_template.format(**response) #format is a python function, google that for more info
+        random_template = random.choice(self.answers) # e.g: 'The weather in {location} is {deg}{unit}'
+        return random_template.format(**response) # format is a python function, google that for more info
 
 
 class Handler(ABC):
     """
     Abstract class used to glue an intent, its function and the answers
+    @Ryan, violates abstract structure. should be normal class {delete ABC}
     """
     def __init__(self, intent, answer=None, func=None,):
         self.intent = intent
         self.func = func
         self.answer = answer
     
-    def execute(self, response):
+    def execute(self, response): # @Ryan, response is the Adapt engine output
         """
-            Executes the predefined function associated with an intent 
+            Executes the predefined function associated with an intents
+            @Ryan, returns one of answers randomly
         """
-        print(response, ' is response')
-
+        print(response, ' *** *** ***')
         if self.func:
             func_output = self.func(response)
             response.update(func_output) # update user info with function info, to pass it to answer
@@ -128,6 +132,8 @@ class Handler(ABC):
 class Skill(ABC):
     """
     Abstract class for a skill, providing common methods and behavior to all the skills
+    @Ryan, violates abstract structure. should be normal class {delete ABC}
+
     """
     def __init__(self, entities=None, regex_entities=None, handlers=None, skill_name=None):
 
@@ -146,20 +152,20 @@ class Skill(ABC):
         self.handlers = handlers or []
         self.__initilaize()
         
-    def __initilaize(self):
+    def __initilaize(self): # @Ryan recom: redundant method. same as __init__
         """
             loads and instantiate all intents from a json file
         """
-        path = os.path.dirname(sys.modules[self.__class__.__module__].__file__ ) #absoulute path for a child class
+        path = os.path.dirname(sys.modules[self.__class__.__module__].__file__ ) # absolute path for a child class
         raw_intents = load_raw_intents(path)
         for raw_intent in raw_intents:
-            intent = IntentBuilder( raw_intent.get("name") )
-            self.entities.update( load_entities(intent, raw_intent.get('entities', None)) )  
+            intent = IntentBuilder( raw_intent.get("name") ) # @Ryan, getting json 'name' element, now we have an intent
+            self.entities.update( load_entities(intent, raw_intent.get('entities', None)) ) # @Ryan, returns a dic: entites->intent
             self.regex_entities += load_regex_entities( intent, raw_intent.get("regex_entities", []) )
             self.handlers.append( Handler( 
                 intent.build(), 
                 Answer( raw_intent.get("answers", None) )
-                 ) )
+                 ) ) # @Ryan, making a new object of Handler to connect intents to answers, fun = None for now
 
     @property
     def getEntities(self):

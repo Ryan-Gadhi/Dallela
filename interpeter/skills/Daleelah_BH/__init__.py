@@ -25,9 +25,15 @@ def field_locator_intent_func(*args, **kwargs):
 def production_Intent_func(*args,**kwargs):
 	sql = 'Select (operatingHours-24) from {table} where '.format(table=table)
 	sql+= 'date = {today}'.format(today=today)
-	#result = sendQuery(sql)
 
-	return {'hours':'66'}
+	return {'hours':'اي شي'}
+	# entries = {'selection': 'ProductLine',
+	# 			'table': table,
+	# 			'field':field_name,
+	# 			'column':'field'}
+
+	#result = sendQuery(sql)
+	#return {'hours':'66'}
 
 	#result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
 
@@ -37,6 +43,14 @@ def number_of_active_rigsfunc(*args, **kwargs):
 	sql += 'date = {today}'.format(today)
 	result = sendQuery(sql)
 
+	entries = {'selection': 'ProductLine',
+	           'table': table,
+	           'field': 'dammam',
+	           'column': 'field'}
+
+	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
+	sql += 'date = {today}'.format(today=today)
+
 	print("active rigs intent function executed!")
 	return {"number_of_active_rig":'300'}
 
@@ -44,15 +58,17 @@ def number_of_active_rigsfunc(*args, **kwargs):
 def product_line_intent_func(*args, **kwargs):
 	#field_name = 'taken from json question' #todo: how to figure this out?
 	print(args,' is args')
-	#field_name = args[0].get("field_name",None) # todo: should be tested
-	field_name = 'dammam' # dynamic insert not working
-
+	field_name = args[0].get("field_name",None) # todo: should be tested
+	#field_name = 'dammam' # dynamic insert not working
+	print(field_name, ' is field name')
 	selection = "ProdLine"
 
 	if(field_name):
 		pass
 	else:
 		pass
+
+
 
 	entries = {'selection': 'ProductLine',
 				'table': table,
@@ -66,11 +82,13 @@ def product_line_intent_func(*args, **kwargs):
 	# result = sendQuery(sql)
 	print("field status intent function executed!")
 	#return {"status_situation" :"not good due to difficulty"}
-	return sql
+	#return sql
+	return {'status_keyword':'ay shay','status_situation':'f'}
+
 
 
 def operating_hours_func(*args, **kwargs):
-	field_name = 'dammam' # dynamic insert not working
+	field_name = 'dammam'  # dynamic insert not working
 
 	entries = {'selection': 'OperatingHours',
 				'table': table,
@@ -102,40 +120,42 @@ mapper = {
 }
 
 
-def sendQuery(text):
+def sendQuery(sql):
 	# api-endpoint
 	URL = 'http://localhost:3001/db'
-	sql = "select * from oph_table_v0 limit 10"
+	#sql = "select * from oph_table_v0 limit 10"
 
 	# defining a params dict for the parameters to be sent to the API
-	PARAMS =    {'q':sql}
+	PARAMS = {'q':sql}
 
 	# sending get request and saving the response as response object
 	r = requests.post(URL,data=PARAMS)
 	# extracting data in json format
 	data = r.json()
 
-	return data
+	#return data
+	return {}
+
 
 
 
 # You can create a skill both with a json or manually
 
-class fieldLocatorSkill(Skill):
+class fieldLocatorSkill(Skill): # @Ryan, recom: having a skill passed is confusing. since it is not used
     def __init__(self):
         super().__init__()
-        #load functions from dictionary to handler
+        # load functions from dictionary to handler
         for handler in self.handlers:
-            handler.func = mapper.get(handler.intent.name, None) #if it has no function set None
+            handler.func = mapper.get(handler.intent.name, None)  # if it has no function set None
 
 
 
 def getSkill():
-    return fieldLocatorSkill()
+    return fieldLocatorSkill()  # @Ryan, returns a skill object that was just assigned a bunch of functions
 
 if __name__ == '__main__':
 	print(today)
 	pass
-
-result = product_line_intent_func()
-print(result)
+#
+# result = product_line_intent_func()
+# print(result)
