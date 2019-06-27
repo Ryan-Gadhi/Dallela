@@ -34,10 +34,12 @@ def number_of_active_rigsfunc(*args, **kwargs):
       })
    
     query_res = sendQuery(sql_query)
+
     # date = datetime.datetime.now()  # the format of this needs to be changed
     # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
 	# todo: format the sql output to match the answer format
-    return {"number_of_active_rig":'300'}
+    count = query_res.get("rows")[0]["count"]
+    return {"number_of_active_rig":count}
 
 
 
@@ -71,7 +73,7 @@ def sendQuery(sql_string):
 
 	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
 
-	# defining a params dict for the parameters to be sent to the API
+	# defining a paramsgit reset --hard origin/<branch_name> dict for the parameters to be sent to the API
 	PARAMS = {'q' : sql_string} # e.g.: SELECT * FROM get_well_view
 
 	# sending get request and saving the response as response object
