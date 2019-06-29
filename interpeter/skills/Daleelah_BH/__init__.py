@@ -7,13 +7,28 @@ import datetime
 import os
 
 table = 'oph_table_v0'
-#today = datetime.datetime.now()  # todo: reformat the time to match time in the db table
-today ='2017-12-08T21:00:00.000Z' # temporary
+
+dCast = 'CAST (\"Date\" AS TEXT)'  # inside the select statement
+
+date = str(datetime.datetime.now())
+date = date[:10]  # like: "2019-06-27"
+
+today = date
+
 
 BigPlayerDic = {
-	'baker hughes' : 'BH',
-	'baker' : 'BH'  # todo: find correct short name
+	'baker hughes': 'BH',
+	'baker': 'BH'  # todo: find correct short name
 }
+
+cityDecoder = {
+	'DMMM':"Dammam"
+}
+operationDecoder = {
+	'OTH' : "Other"
+}
+
+
 
 
 def field_locator_intent_func(*args, **kwargs):
@@ -30,13 +45,6 @@ def production_Intent_func(*args,**kwargs):
 	sql+= 'date = {today}'.format(today=today)
 
 	return {'hours':'اي شي'}
-	# entries = {'selection': 'ProductLine',
-	# 			'table': table,
-	# 			'field':field_name,
-	# 			'column':'field'}
-
-	#result = sendQuery(sql)
-	#return {'hours':'66'}
 
 	#result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
 
@@ -66,25 +74,38 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 
 def product_line_intent_func(*args, **kwargs):
+
 	field_name = args[0].get("field_name",None)
-	#print(field_name, ' is field_name')
+	BigPlayer = args[0].get("BigPlayer",None)
+	BigPlayer = 'baker hughes'
+
 	if(field_name):
 		pass
 	else:
-		field_name = 'HMYM' # todo: should be changed to shortcuts only
+		field_name = 'DMMM' # todo: should be changed to shortcuts only
 
+	if(BigPlayer):
+		try:
+			BigPlayer = BigPlayerDic[BigPlayer]
+		except:
+			BigPlayer = 'BH'
+	else:
+		BigPlayer = "BH"
 
-
-	entries = {'selection': 'ProductLine',
+	entries = {'selection': dCast+', \"BigPlayer\",\"ProdLine\"',
 				'table': table,
-				'field':field_name,
-				'column':'field'}
-
-	sql = 'select {selection} from {table} where {column} = {field} and '.format(**entries)
-	sql += 'date = {today}'.format(today=today)
+	            'where': '\"Date\" ='+ '\''+today+'\'' + 'and' + ' \"BigPlayer\" = '+BigPlayer + " and ",
+				'field': field_name}
 
 
-	result = {'ProdLine':'drilling'} # todo: should be replaced with bottom 2 lines
+	sql = 'select {selection} from {table} where {where} fieled = {field}'.format(**entries)
+
+	resultDic = sendQuery(sql)
+	for row in resultDic:
+		print(row)
+
+	ProdLine = 'drilling'
+	result = {'ProdLine':ProdLine} # todo: should be replaced with bottom 2 lines
 	# result = sendQuery(sql)
 	# result = json.loads(result)
 

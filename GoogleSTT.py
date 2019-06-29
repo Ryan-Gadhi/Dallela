@@ -1,35 +1,32 @@
 import speech_recognition as sr
 from playsound import playsound
+import threading
+import time
 
+t1 = None
 
+def speach():
 
-def start_listening_Helper():
-    """
-        this method:
-                    adds the 2 beep sounds
-                    connects to google's server
-                    for speech recognition
-
-        awake: a boolean value that reflects weather
-        the wake word has been said or not
-    """
     global start_listening_text
     start_listening_text = None
 
     r = sr.Recognizer()
+
     with sr.Microphone() as source:
         try:
-            print("I am listening :")
-            playsound('beep.wav')
-            # global start_listening_text
+            # print("I am listening :")
+            # playsound('beep.wav')
             inputAudio = r.listen(source)
-            print("I am sending to google")
-            playsound('beep2.wav')
+            # print("I am sending to google")
+            # playsound('beep2.wav')
+            threading.Thread(target=speach).start()
             start_listening_text = r.recognize_google(inputAudio)
-            print("You said : {}".format(start_listening_text))
+            print(start_listening_text)
 
         except:
             print("not recognized by the API :\n")
             start_listening_text = 'Error_001'
 
-start_listening_Helper()
+t1 = threading.Thread(target=speach)
+t1.start()
+
