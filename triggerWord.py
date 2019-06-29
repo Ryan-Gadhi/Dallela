@@ -4,6 +4,7 @@ from playsound import playsound
 import threading
 import time
 import re
+import AudioUtils
 i=0
 class TriggerWord:
 
@@ -27,6 +28,7 @@ class TriggerWord:
         with file as source:
             # global wakeUpWordRecognized
             if not self.wakeUpWordRecognized:
+                audio = r.record(source)
 
                 t = threading.Thread(target=self.recognize)
                 t.start()
@@ -44,9 +46,13 @@ class TriggerWord:
                     print(' - NOT RECOGNIZED - ')
 
     def is_in_wake_words(self,text):
-        text = re.search("(\w+)(e|i)(\w+)(a$)", text)
-        if text is not None:
+
+        modified = re.search("(\w+)(e|i)(\w+)(a$)", text)
+        if modified is not None:
             return True  # add deliver, delhi and driver file and combine with the old file
+        elif AudioUtils.is_in_wake_wordsV1(text):
+            return True
+
         return False
 
     def is_awake(self):
