@@ -1,7 +1,6 @@
-import os
-
+import os 
+import json
 from adapt.engine import IntentDeterminationEngine
-
 
 class Engine:
     eng = None  # engine object (singleton)
@@ -22,14 +21,17 @@ class Engine:
         """
             Dynamically loads (imports) all the skills located in the folder Skills
         """
-        
+
         for folder in os.listdir("skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
-            print("skills." + folder)
-            module = __import__("interpeter.skills." + folder, fromlist=['']) # import a skill module
+
+            # @Ryan,import a skill module and automaticly executes __init__.py
+            module = __import__("interpeter.skills." + folder, fromlist=[''])# import a skill module
+
+            # @Ryan, adding skills objects to the list and assigning functions to mapper dic. check any __init__.py
             self.skills.append( getattr(module, "getSkill")() ) # getting a skill object
-       
-        print(str(len(self.skills)), " skills has been loaded") 
+
+        print(str(len(self.skills)), " skills has been loaded")
 
     def __register_eng_entities(self):
         """ 
@@ -38,13 +40,13 @@ class Engine:
         entities = {}
         reg_entities = []
         for skill in self.skills:
-            entities.update( skill.getEntities )
+            entities.update( skill.getEntities )  # @Ryan, saving entities in a dic
             reg_entities += skill.getRegexEntities
 
         for reg_entity in reg_entities:
-            self.eng.register_regex_entity(reg_entity)
+            self.eng.register_regex_entity(reg_entity) # @Ryan, registering regex(es) in Adapt engine
 
-        for entity, keywords in entities.items():
+        for entity, keywords in entities.items(): # @Ryan, keyword like: 'rigs', entity like: 'field_keyword'
             for keyword in keywords:
                 self.eng.register_entity(keyword, entity)
     
@@ -54,7 +56,7 @@ class Engine:
             Collects all handlers from Skill modules
         """
         for skill in self.skills:
-            self.handlers += ( skill.getMap )
+            self.handlers += skill.getMap # @Ryan, each skill's intent has a handler that is fetched
         print(str(len(self.handlers)), " handlers has been loaded")
 
 
@@ -113,4 +115,8 @@ class Engine:
 
 if __name__ == "__main__":
     e = Engine()
-    print(e.compute("what rigs in nnnd "))
+
+    print(e.compute("what are the active hours for baker hughes"))
+    #print(e.compute("what is the product line "))
+
+
