@@ -26,28 +26,7 @@ class AudioUtils:
     def set_trials(self,int):
         self.max_trials = int
 
-    def is_in_wake_wordsv1(audio_text):
-        """
-            # currently not used
 
-            checks if the audio text is in the file
-            containing words similar to Daleela
-
-            this function checks if the word
-            said is one of the similar words to
-            Dalela in wake_up_words.txt
-
-        """
-        print(' should not be used')
-        file = open('wake_up_words.txt', 'r')
-
-        similar_words = (file.read().split('\n'))  # making a list
-        for word in similar_words:  # going over that list
-            if word.lower() in audio_text.lower():
-                not_wakeup_word = False
-                # print('it matches ' + word)
-                return True
-        return False
 
     def get_listening_text(self,):
         return self.listening_text
@@ -192,3 +171,24 @@ class AudioUtils:
         self.replyHelper(text)
         # x = threading.Thread(target=replyHelper, args=(text,))
         # x.start()
+
+def is_in_wake_wordsV1(audio_text):
+    """
+        # currently used
+
+        checks if the audio text is in the file
+        containing words similar to Daleela
+
+        this function checks if the word
+        said is one of the similar words to
+        Dalela in wake_up_words.txt
+
+    """
+    print(' should not be used')
+    file = open('wake_up_words.txt', 'r')
+
+    similar_words = (file.read().split('\n'))  # making a list
+    for word in similar_words:  # going over that list
+        if word.lower() in audio_text.lower():
+            return True
+    return False
