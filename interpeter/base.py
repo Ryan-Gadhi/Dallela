@@ -48,7 +48,7 @@ def load_entities(intent, entities):
     entities_map = {}
     if not entities : return entities_map # if there are no entities then don't continue
     for entity in entities:
-            entity_name = entity.get("name")
+            entity_name = intent.name + "_" + entity.get("name")
             entity_contents = entity.get("contents")
             entity_importance = entity.get("importance")
             
@@ -69,15 +69,17 @@ def load_regex_entities(intent, reg_entities):
     for reg_entity in reg_entities:
        
         apply_to = reg_entity.get("apply_to", []) #e.g: at, in, around
-        entity_name = reg_entity.get("entity_name") #e.g: Location
+        apply_to_right = reg_entity.get("apply_to_right", []) #e.g: at, in, around
+
+        entity_name = intent.name + "_" + reg_entity.get("entity_name") #e.g: intentName_Location
         reg_pattren = reg_entity.get("regex_pattren") #e.g: .*
         entity_importance = reg_entity.get("importance") #e.g: require
-        reg_pattren_named = '(?P<{}>{})'.format(entity_name, reg_pattren) #e.g: (?P<Location>.*)
+        reg_pattren_named = '(?P<{}>{})'.format(entity_name, reg_pattren) #e.g: (?P<intentName_Location>.*)
         
         add_entity_to_intent(intent, entity_name, entity_importance)
         
         joined_entities = [kwd + reg_pattren_named for kwd in apply_to] #e.g: in (?P<Location>.*), at (?P<Location>.*)...
-
+        joined_entities += [reg_pattren_named + kwd for kwd in apply_to_right] #e.g (?P<Location>[0-9]*) Days, Weeks...
     return joined_entities
 
 class Answer(ABC):
@@ -97,7 +99,7 @@ class Answer(ABC):
             (str): a randomly generated response based on some variables (if any)
         """
         random_template = random.choice(self.answers) #e.g: 'The weather in {location} is {deg}{unit}' 
-        print(response)
+
         return random_template.format(**response) #format is a python function, google that for more info
 
 
@@ -114,11 +116,23 @@ class Handler(ABC):
         """
             Executes the predefined function associated with an intent 
         """
+        # remove the intent name from the beginning of each keyword
+        modified_response = {}
+        for key, val in response.items():
+            original_key = key.replace(self.intent.name + "_", '')
+            modified_response[original_key]  = val
+
         if self.func:
-            func_output = self.func(response) 
-            response.update(func_output) # update user info with function info, to pass it to answer
+            func_output = self.func(modified_response)
+            modified_response.update(func_output) # update user info with function info, to pass it to answer
+        else:
+            print("NO FUNCTION ?..................")
+    
+
+
+
         return( # printable
-        self.answer.format_response(response)
+        self.answer.format_response(modified_response)
         )
 
         
