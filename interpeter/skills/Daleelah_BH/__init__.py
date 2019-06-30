@@ -84,12 +84,12 @@ def number_of_active_rigsfunc(*args, **kwargs):
       WHERE \"Date\" >= '{first_date}' AND \"Date\" < '{second_date}'".format(** 
       {
           'table_name' : table,
-          'first_date' : '20181220',
-          'second_date': '20181221',
+          'first_date' : start_date,
+          'second_date': end_date,
       })
 
-    #query_res = sendQuery(sql_query)
-    
+    #query_res = sendQuery(sql_query)end_date
+    print("start date is: ", start_date, ", end date=", end_date)    
     # date = datetime.datetime.now()  # the format of this needs to be changed
     # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
 	# todo: format the sql output to match the answer format
