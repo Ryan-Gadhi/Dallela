@@ -3,7 +3,7 @@
     "entities" : [
         {
             "name" : "field_keyword",
-            "contents": ["rigs", "fields", "wells", "services"],
+            "contents": ["rig", "fields", "well", "services"],
             "importance" : "require"
         },
         {

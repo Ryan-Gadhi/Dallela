@@ -6,7 +6,7 @@ import requests
 import datetime
 import os
 
-table = 'oph_table_v0'
+table = 'interns_view'
 
 dCast = 'CAST (\"Date\" AS TEXT)'  # inside the select statement
 
@@ -15,38 +15,41 @@ date = date[:10]  # like: "2019-06-27"
 
 today = date
 
-
 BigPlayerDic = {
-	'baker hughes': 'BH',
-	'baker': 'BH'  # todo: find correct short name
+    'baker hughes': '\'BH\'',
+    'baker': '\'BH\'',  # todo: find correct short name
+    'BH' : 'baker hughes',
+    '\"BH\"' : 'baker hughes'
 }
 
 cityDecoder = {
-	'DMMM':"Dammam"
+    "Dammam":'\'DMMM\'',
+    "dammam":'\'DMMM\''
+
 }
 operationDecoder = {
-	'OTH' : "Other"
+    'OTH' : "Other"
 }
 
 
 
 
 def field_locator_intent_func(*args, **kwargs):
-	sql = ('select operatingHours from {table} where '.format(table))
-	sql += ('date={today}'.format(today))
-	result = sendQuery(sql)
+    sql = ('select operatingHours from {table} where '.format(table))
+    sql += ('date={today}'.format(today))
+    result = sendQuery(sql)
 
-	#print("field locator intent function executed!")
-	return {'field_name':'Harad00', 'field_distance':'5km'}
+    #print("field locator intent function executed!")
+    return {'field_name':'Harad00', 'field_distance':'5km'}
 
 
 def production_Intent_func(*args,**kwargs):
-	sql = 'Select (operatingHours-24) from {table} where '.format(table=table)
-	sql+= 'date = {today}'.format(today=today)
+    sql = 'Select (operatingHours-24) from {table} where '.format(table=table)
+    sql+= 'date = {today}'.format(today=today)
 
-	return {'hours':'اي شي'}
+    return {'hours':'اي شي'}
 
-	#result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
+    #result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
 
 
 def number_of_active_rigsfunc(*args, **kwargs):
@@ -67,78 +70,99 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
     # date = datetime.datetime.now()  # the format of this needs to be changed
     # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
-	# todo: format the sql output to match the answer format
+    # todo: format the sql output to match the answer format
     count = query_res.get("rows")[0]["count"]
     return {"number_of_active_rig":count}
 
 
 
 def product_line_intent_func(*args, **kwargs):
-
-	field_name = args[0].get("field_name",None)
-	BigPlayer = args[0].get("BigPlayer",None)
-	BigPlayer = 'baker hughes'
-
-	if(field_name):
-		pass
-	else:
-		field_name = 'DMMM' # todo: should be changed to shortcuts only
-
-	if(BigPlayer):
-		try:
-			BigPlayer = BigPlayerDic[BigPlayer]
-		except:
-			BigPlayer = 'BH'
-	else:
-		BigPlayer = "BH"
-
-	entries = {'selection': dCast+', \"BigPlayer\",\"ProdLine\"',
-				'table': table,
-	            'where': '\"Date\" ='+ '\''+today+'\'' + 'and' + ' \"BigPlayer\" = '+BigPlayer + " and ",
-				'field': field_name}
+    field_name = args[0].get("field_name", None)
+    BigPlayer_name = args[0].get("BigPlayer", None)
 
 
-	sql = 'select {selection} from {table} where {where} fieled = {field}'.format(**entries)
 
-	resultDic = sendQuery(sql)
-	for row in resultDic:
-		print(row)
+    date_1 = ' \"Date\" >= \'2019-06-30\' AND \"Date\" < \'2019-07-01\''
 
-	ProdLine = 'drilling'
-	result = {'ProdLine':ProdLine} # todo: should be replaced with bottom 2 lines
-	# result = sendQuery(sql)
-	# result = json.loads(result)
+    if field_name is not None:
+        print(field_name + ' is field name')
+    else:
+        #field_name = '\'DMMM\''  # default todo: should be changed to shortcuts only
+        field_name = 'dammam' # default for now
 
-	prodLine_keyword = result['ProdLine']
+    if BigPlayer_name is not None:
+        print(BigPlayer_name)
+    else:
+        BigPlayer_name = 'baker hughes'
 
-	return {'product_line':prodLine_keyword,'field_name':field_name}
+    # if BigPlayer is not None:
+    #     try:
+    #         BigPlayer = BigPlayerDic[BigPlayer]
+    #     except:
+    #         BigPlayer = "\'BH\'"
+    # else:
+    #     BigPlayer = "\'BH\'"
+
+    BigPlayer_name = 'baker hughes' # default for now
+    BigPlayer = BigPlayerDic[BigPlayer_name]
+    short_name = cityDecoder[field_name]
+
+    entries = {'selection':'\"BigPlayer\",\"CategoryName\" , \"Name_new\", well',
+               'table': table,
+               'where': date_1 + 'and' + ' \"BigPlayer\" = ' + BigPlayer + " and",
+               'field': short_name}
+
+    sql = 'select {selection} from {table} where {where} field = {field} limit 3'.format(**entries)
+
+    print(sql)
+    print("&&&")
+    resultDic = sendQuery(sql)
+    print(resultDic)
+
+    answer = ' here are sample wells in ' + field_name + ', ' + BigPlayer_name + ' are working on the following wells: '
+
+    for row in resultDic['rows']:
+        short_name = row['well']
+        well_id = short_name.split('_')[1] # the numbers
+        well_name = field_name + " " + well_id
+        process = row['CategoryName']
+
+        if well_name == '':
+            well_name = 'unknown'
+        if process == '':
+            process = 'unknown'
+
+
+        answer += well_name+ ' is doing ' + process + ". "
+    
+    return {"answer": answer}
 
 
 def operating_hours_func(*args, **kwargs):
-	field_name = args[0].get("field_name", None)
-	BigPlayer = args[0].get("big_player1", None)
+    field_name = args[0].get("field_name", None)
+    BigPlayer = args[0].get("big_player1", None)
 
-	if (field_name is not None):
-		pass
-	else:
-		field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
+    if (field_name is not None):
+        pass
+    else:
+        field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
 
-	entries = {'selection': '(OperatingHours-24)',
-				'table': table,
-				'field': field_name,
-				'column': 'field',
-	           'BigPlayer': BigPlayerDic[BigPlayer]}
+    entries = {'selection': '(OperatingHours-24)',
+                'table': table,
+                'field': field_name,
+                'column': 'field',
+               'BigPlayer': BigPlayerDic[BigPlayer]}
 
-	sql = 'select {selection} from {table} where {column} = {field} and ' \
-	      '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
-	sql += 'date = {today}'.format(today=today)
+    sql = 'select {selection} from {table} where {column} = {field} and ' \
+          '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
+    sql += 'date = {today}'.format(today=today)
 
-	result = '15'  # todo: should be replaced with bottom 2 lines
-	# result = sendQuery(sql)
-	# result = json.loads(result)
-	time  = int(result)  # the query returns a number
-	#print(sql, ' is sql')
-	return {"time": time}
+    result = '15'  # todo: should be replaced with bottom 2 lines
+    # result = sendQuery(sql)
+    # result = json.loads(result)
+    time  = int(result)  # the query returns a number
+    #print(sql, ' is sql')
+    return {"time": time}
 
 
 mapper = {
@@ -146,25 +170,25 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-	"ProductionIntent":production_Intent_func
+    "ProductionIntent":production_Intent_func
 }
 
 
 def sendQuery(sql_string):
-	# api-endpoint
-	URL = 'http://localhost:3001/db'
-	#sql = "select * from oph_table_v0 limit 10"
+    # api-endpoint
+    URL = 'http://localhost:3001/db'
+    #sql = "select * from oph_table_v0 limit 10"
 
-	# defining a params dict for the parameters to be sent to the API
-	PARAMS = {'q':sql_string}
+    # defining a params dict for the parameters to be sent to the API
+    PARAMS = {'q':sql_string}
 
-	# sending get request and saving the response as response object
-	r = requests.post(URL,data=PARAMS)
-	# extracting data in json format
-	data = r.json()
+    # sending get request and saving the response as response object
+    r = requests.post(URL,data=PARAMS)
+    # extracting data in json format
+    data = r.json()
 
-	#return data
-	return {}
+    #return data
+    return data
 
 
 
@@ -184,8 +208,8 @@ def getSkill():
     return fieldLocatorSkill()  # @Ryan, returns a skill object that was just assigned a bunch of functions
 
 if __name__ == '__main__':
-	print(today)
-	pass
+    print(today)
+    pass
 #
 # result = product_line_intent_func()
 # print(result)

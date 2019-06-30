@@ -38,12 +38,13 @@ def find_skill(text):
 
         answer = engine.compute(text)
 
-        if answer is not None or answer != '':  # not found in the database
-            return 'Error_101'   # this should be Error_102 skill not found
-
+        if answer is not None and answer != '':  # not found in the database
+            return answer   
+      
         else:
             text = 'Error_101'  # question not found: either not recognized correctly or not actually implemented
             found, answer = TrivialSkills.search_for_match(text)
+            return 'Error_101'
 
     # or connect to Duck Duck go api
 
@@ -168,6 +169,7 @@ if __name__ == '__main__':
 
                 else:
                     answer = find_skill(input_text)
+                    print('entered')
                     if answer == 'Error_101':
                         counter += 1
                         output_text = find_skill(answer)

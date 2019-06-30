@@ -23,7 +23,7 @@
     ],
 
     "answers" : [
-        "The {product_line_keyword} of {field_name} is {product_line}"
+        "{answer}"
     ]
 
 }
