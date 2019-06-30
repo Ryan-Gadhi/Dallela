@@ -3,23 +3,48 @@ import sys
 from adapt.intent import IntentBuilder
 from interpeter.base import Skill, Handler
 import requests
+import datetime
 import os
 import datetime
 from dateutil.relativedelta import relativedelta
 
+table = 'interns_view'
+
+dCast = 'CAST (\"Date\" AS TEXT)'  # inside the select statement
+
+date = str(datetime.datetime.now())
+date = date[:10]  # like: "2019-06-27"
+
+today = date
+
+BigPlayerDic = {
+    'baker hughes': '\'BH\'',
+    'baker': '\'BH\'',  # todo: find correct short name
+    'BH' : 'baker hughes',
+    '\"BH\"' : 'baker hughes'
+}
+
+cityDecoder = {
+    "Dammam":'\'DMMM\'',
+    "dammam":'\'DMMM\''
+
+}
+operationDecoder = {
+    'OTH' : "Other"
+}
 
 
 
-table = 'oph_table_v0'
 
 
 def field_locator_intent_func(*args, **kwargs):
-    print("field locator intent function executed!")
+    sql = ('select operatingHours from {table} where '.format(table))
+    sql += ('date={today}'.format(today))
+    result = sendQuery(sql)
+
+    #print("field locator intent function executed!")
     return {'field_name':'Harad00', 'field_distance':'5km'}
 
-def production_Intent_func(response):
-	return {'hours':'20',}
-	#result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
 def time_period_calc(response):
     print(response)
     monthes = {
@@ -73,6 +98,15 @@ def time_period_calc(response):
     print(start_date, end_date)
     return str(start_date), str(end_date)
 
+def production_Intent_func(*args,**kwargs):
+    sql = 'Select (operatingHours-24) from {table} where '.format(table=table)
+    sql+= 'date = {today}'.format(today=today)
+
+    return {'hours':'اي شي'}
+
+    #result = sendQuery('select operating_hours from tablename where date = {date}') # loss = 24 - result
+
+
 def number_of_active_rigsfunc(*args, **kwargs):
     print("active rigs intent function executed!")
     # import datetime
@@ -98,59 +132,140 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 
 
-def field_status_intent_func(*args, **kwargs):
-    print("field status intent function executed!")
-    return {"status_situation" :"not good due to difficulty"}
+def product_line_intent_func(*args, **kwargs):
+    field_name = args[0].get("field_name", None)
+    BigPlayer_name = args[0].get("BigPlayer", None)
+
+
+
+    date_1 = ' \"Date\" >= \'2019-06-30\' AND \"Date\" < \'2019-07-01\''
+
+    if field_name is not None:
+        print(field_name + ' is field name')
+    else:
+        #field_name = '\'DMMM\''  # default todo: should be changed to shortcuts only
+        field_name = 'dammam' # default for now
+
+    if BigPlayer_name is not None:
+        print(BigPlayer_name)
+    else:
+        BigPlayer_name = 'baker hughes'
+
+    # if BigPlayer is not None:
+    #     try:
+    #         BigPlayer = BigPlayerDic[BigPlayer]
+    #     except:
+    #         BigPlayer = "\'BH\'"
+    # else:
+    #     BigPlayer = "\'BH\'"
+
+    BigPlayer_name = 'baker hughes' # default for now
+    BigPlayer = BigPlayerDic[BigPlayer_name]
+    short_name = cityDecoder[field_name]
+
+    entries = {'selection':'\"BigPlayer\",\"CategoryName\" , \"Name_new\", well',
+               'table': table,
+               'where': date_1 + 'and' + ' \"BigPlayer\" = ' + BigPlayer + " and",
+               'field': short_name}
+
+    sql = 'select {selection} from {table} where {where} field = {field} limit 3'.format(**entries)
+
+    print(sql)
+    print("&&&")
+    resultDic = sendQuery(sql)
+    print(resultDic)
+
+    answer = ' here are sample wells in ' + field_name + ', ' + BigPlayer_name + ' are working on the following wells: '
+
+    for row in resultDic['rows']:
+        short_name = row['well']
+        well_id = short_name.split('_')[1] # the numbers
+        well_name = field_name + " " + well_id
+        process = row['CategoryName']
+
+        if well_name == '':
+            well_name = 'unknown'
+        if process == '':
+            process = 'unknown'
+
+
+        answer += well_name+ ' is doing ' + process + ". "
+    
+    return {"answer": answer}
+
 
 def operating_hours_func(*args, **kwargs):
-    print("operating hours intent function executed!")
-    return {"time": '10'}
+    field_name = args[0].get("field_name", None)
+    BigPlayer = args[0].get("big_player1", None)
 
-def most_active_rig_func(*args, **kwargs):
-    print("most active rig intent function executed!")
-    return {"big_player2": 'BHGE'}
+    if (field_name is not None):
+        pass
+    else:
+        field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
+
+    entries = {'selection': '(OperatingHours-24)',
+                'table': table,
+                'field': field_name,
+                'column': 'field',
+               'BigPlayer': BigPlayerDic[BigPlayer]}
+
+    sql = 'select {selection} from {table} where {column} = {field} and ' \
+          '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
+    sql += 'date = {today}'.format(today=today)
+
+    result = '15'  # todo: should be replaced with bottom 2 lines
+    # result = sendQuery(sql)
+    # result = json.loads(result)
+    time  = int(result)  # the query returns a number
+    #print(sql, ' is sql')
+    return {"time": time}
 
 
 mapper = {
     "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
-    "FieldStatusIntent": field_status_intent_func,
+    "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "MostActiveIntent": most_active_rig_func,
-	"ProductionIntent":production_Intent_func
+    "ProductionIntent":production_Intent_func
 }
 
 
 def sendQuery(sql_string):
+    # api-endpoint
+    URL = 'http://localhost:3001/db'
+    #sql = "select * from oph_table_v0 limit 10"
 
-	# api-endpoint
-	URL = "http://localhost/d/sql.php"
+    # defining a params dict for the parameters to be sent to the API
+    PARAMS = {'q':sql_string}
 
-	#filter = 'Level_0,category,company,operatinghours,personnelonLocHrs,date,well,wellbore,depart,Rig,field,Longitude,Latituide,BigPlayer,ProdLine'
+    # sending get request and saving the response as response object
+    r = requests.post(URL,data=PARAMS)
+    # extracting data in json format
+    data = r.json()
 
-	# defining a paramsgit reset --hard origin/<branch_name> dict for the parameters to be sent to the API
-	PARAMS = {'q' : sql_string} # e.g.: SELECT * FROM get_well_view
+    #return data
+    return data
 
-	# sending get request and saving the response as response object
-	r = requests.post(url = URL, params = PARAMS)
-
-	# extracting data in json format
-	data = r.json()
-	return data  # dictionary needs to be handled
 
 
 
 # You can create a skill both with a json or manually
-class fieldLocatorSkill(Skill):
+
+class fieldLocatorSkill(Skill): # @Ryan, recom: having a skill passed is confusing. since it is not used
     def __init__(self):
         super().__init__()
-
-        #load functions from dictionary to handler
+        # load functions from dictionary to handler
         for handler in self.handlers:
-            handler.func = mapper.get(handler.intent.name, None) #if it has no function set None
+            handler.func = mapper.get(handler.intent.name, None)  # if it has no function set None
 
 
 
 def getSkill():
-    return fieldLocatorSkill()
+    return fieldLocatorSkill()  # @Ryan, returns a skill object that was just assigned a bunch of functions
 
+if __name__ == '__main__':
+    print(today)
+    pass
+#
+# result = product_line_intent_func()
+# print(result)

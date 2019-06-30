@@ -1,0 +1,29 @@
+{
+    "name" : "FieldStatusIntent",
+    "entities" : [
+        {
+            "name" : "field_keyword11",
+            "contents": ["rig", "field", "well"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "product_line_keyword",
+            "contents" : ["product line"],
+            "importance" : "require"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "field_name",
+            "regex_pattren": "([a-z]|[A-Z])",
+            "apply_to" : ["in "],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "{answer}"
+    ]
+
+}

@@ -1,18 +1,16 @@
+# Python program creating
+# three threads
+
 import threading
+import time
 
-z = 0
-def look_for_trigger():
-    for z in range(1000000):
-        z = z
+# counts from 1 to 9
+def func(number):
+    for i in range(1, 10):
+        time.sleep(0.01)
+        print('Thread ' + str(number) + ': prints ' + str(number*i))
 
-
-
-
-def sound():
-    print("im in")
-    while z < 9999:
-        print(z)
-
-x = threading.Thread(target=look_for_trigger)
-x.start()
-print(x.isAlive())
+# creates 3 threads
+for i in range(0, 3):
+    thread = threading.Thread(target=func, args=(i,))
+    thread.start()

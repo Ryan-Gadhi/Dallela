@@ -3,33 +3,38 @@
     "entities" : [
         {
             "name" : "active1_keyword1",
-            "contents": ["active", "current", "working", "operating", "drilling"],
+            "contents": ["active", "current", "working", "operating"],
             "importance" : "require"
         },
         {
             "name" : "time_unit",
-            "contents": ["seconds", "minuts", "hours"],
+            "contents": ["hours","minutes","time"],
             "importance" : "require"
         },
         {
             "name" : "day_keyword1",
-            "contents": ["today", "yestrday", "last day"],
-            "importance" : "require"
-        }
-    ],
+            "contents": ["today", "yesterday", "last day"],
+            "importance" : "optionally"
+        }],
 
-    "regex_entities" : [
+        "regex_entities" : [
+        {
+            "entity_name" : "field_name",
+            "regex_pattren": "([a-z]|[A-Z])*",
+            "apply_to" : ["in "],
+            "importance" : "optionally"
+        },
+
         {
             "entity_name" : "big_player1",
-            "regex_pattren": ".*",
+            "regex_pattren": "([a-z]|[A-Z])* ([a-z]|[A-Z])*",
             "apply_to" : ["for "],
             "importance" : "require"
         }
     ],
 
     "answers" : [
-        "The {active1_keyword1} {time_unit} for {big_player1} are {time} {time_unit}",
-        "{time} {time_unit}"
+        "The {active1_keyword1} {time_unit} for {big_player1} are {time} {time_unit}"
     ]
 
 }
