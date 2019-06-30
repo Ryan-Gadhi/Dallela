@@ -6,7 +6,7 @@ import threading
 import re
 from speaking import Speaking
 from interpeter.skills.Trvial_Skill import TrivialSkills
-
+print('all 123')
 
 global_engine = None
 wake_up_text = None

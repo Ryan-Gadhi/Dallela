@@ -21,7 +21,7 @@ class Engine:
         """
             Dynamically loads (imports) all the skills located in the folder Skills
         """
-
+      
         for folder in os.listdir("skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
 
@@ -88,7 +88,7 @@ class Engine:
         Returns:
             handler: the matched handler with a specific intent
         """
-        return next( h for h in self.handlers 
+        return next( h for h in self.handlers
         if h.intent.name == correct_intent["intent_type"] )
 
     def compute(self, txt):
@@ -116,7 +116,9 @@ class Engine:
 if __name__ == "__main__":
     e = Engine()
 
-    print(e.compute("what are the active hours for baker hughes"))
-    #print(e.compute("what is the product line "))
+    # print(e.compute("what are the active hours for baker hughes"))
+    # print(e.compute("what is the product line "))
 
+    #  print(e.compute('what is the product line in dammam wells'))
+    print(e.compute('what is the number of active rigs'))
 
