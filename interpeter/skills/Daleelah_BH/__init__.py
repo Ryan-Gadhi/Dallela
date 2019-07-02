@@ -9,6 +9,7 @@ import datetime
 from dateutil.relativedelta import relativedelta
 
 table = 'interns_view'
+loss_table = 'npt_table_v0'
 
 dCast = 'CAST (\"Date\" AS TEXT)'  # inside the select statement
 
@@ -116,6 +117,7 @@ def production_Intent_func(*args,**kwargs):
 
 
 def number_of_active_rigsfunc(*args, **kwargs):
+
     print("active rigs intent function executed!")
     # import datetime
     engine_answer = args[0].get('field_keyword', None)
@@ -144,11 +146,40 @@ def number_of_active_rigsfunc(*args, **kwargs):
 
 
 def non_productive_time_func(*args, **kwargs):
-    pass
+    response = args[0]
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    date = '\"Date\" >= \'' +start_date+ '\' AND \"Date\" < \''+ end_date + '\''
+
+
+    failure_kwd = response.get('failure_kwd',"")
+    BigPlayer_name = response.get("BigPlayer", "baker hughes")
+    time_kwd = response.get("time_kwd", "time")
+    total_kwd = response.get("time_kwd", "total") # may be changed
+
+    BigPlayerID = BigPlayerDic.get(BigPlayer_name,"BH") # default BH
+
+    q = "\""
+    selection = "select "+"SUM("+q+"Hrs"+q+") "
+    formation = "from "+loss_table+ " "
+    wheration = "where "+q+"BigPlayer"+q+"="+BigPlayerID+" and " + date
+
+    sql = selection + formation + wheration
+    #loss_number = sendQuery(sql)
+    loss_number = "2 hours"
+
+    print(sql)
+
+
+    return {"big_player":BigPlayer_name,"failure_kwd":failure_kwd,
+            "time_kwd":time_kwd,"total_kwd" : total_kwd,"loss_number":loss_number}
+
+
+
 def product_line_intent_func(*args, **kwargs):
     field_name = args[0].get("field_name", None)
     BigPlayer_name = args[0].get("BigPlayer", None)
     start_date, end_date, tail_answer = time_period_calc(args[0])
+
 
 
     #date_1 = ' \"Date\" >= \'2019-06-01\' AND \"Date\" < \'2019-07-02\''
@@ -240,7 +271,8 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "ProductionIntent":production_Intent_func
+    "ProductionIntent":production_Intent_func,
+    "NoneProductiveTimeIntent":non_productive_time_func
 }
 
 
