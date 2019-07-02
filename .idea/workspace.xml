@@ -445,11 +445,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.AudioUtils" />
       <item itemvalue="Python.audio" />
+      <item itemvalue="Python.AudioUtils" />
+      <item itemvalue="Python.tests" />
       <item itemvalue="Python.engine" />
       <item itemvalue="Python.main_engine_expermental" />
-      <item itemvalue="Python.tests" />
     </list>
     <recent_temporary>
       <list>
