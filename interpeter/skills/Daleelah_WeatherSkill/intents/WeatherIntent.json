@@ -16,7 +16,7 @@
             "regex_entities" : [
                 {
                     "entity_name" : "location",
-                    "regex_pattren": ".*",
+                    "regex_pattren": "\\w*",
                     "apply_to" : ["in "],
                     "importance" : "require"
                 }

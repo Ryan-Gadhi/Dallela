@@ -1,4 +1,4 @@
 from interpeter.engine import Engine
 
 eng = Engine()
-print( eng.compute("How many active rigs ?") )
+print( eng.compute("How many active rigs 2 weeks ago") )

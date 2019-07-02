@@ -36,7 +36,7 @@ def readQuestionChoices(file_name, text):
 
     line_number = 0
     for question in questions:
-        if text.lower() == question.lower():
+        if question.lower() in text.lower() :
             return line_number
         line_number += 1
     return -1

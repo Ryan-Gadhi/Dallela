@@ -6,7 +6,7 @@ import threading
 import re
 from speaking import Speaking
 from interpeter.skills.Trvial_Skill import TrivialSkills
-
+print('all 123')
 
 global_engine = None
 wake_up_text = None
@@ -67,7 +67,7 @@ class AudioUtils:
 
                 self.listening_text = r.recognize_google(input_audio)
 
-                print("You said : {}".format(self.listening_text))
+                #print("You said : {}".format(self.listening_text))
                 # self.current_trial = self.max_trials  # stopping the method from re-executing
 
             except:

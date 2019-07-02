@@ -1,7 +1,7 @@
 import sounddevice as sd
 from scipy.io.wavfile import write
 import numpy as np
-#from playsound import playsound
+from playsound import playsound
 
 '''
     records audio and writes it on the same Dir
@@ -10,7 +10,7 @@ import numpy as np
 
 def record(file_name='output.wav'):
     fs = 44100  # Sample rate
-    seconds = 2  # Duration of recording
+    seconds = 3  # Duration of recording
 
     myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
     sd.wait()  # Wait until recording is finished
@@ -20,4 +20,5 @@ def record(file_name='output.wav'):
     except:
         print('error occured in recorder.py')
     write(file_name, fs, y)  # Save as WAV file
+    #file_name.close() # newly
     # playsound(file_name) # for debuggig
