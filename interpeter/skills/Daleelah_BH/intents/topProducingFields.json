@@ -1,0 +1,48 @@
+{
+    "name" : "TopProducingFieldsIntent",
+    "entities" : [
+        {
+            "name" : "field_keyword",
+            "contents": ["field", "fields"],
+            "importance" : "require"
+        },
+        {
+            "name" : "producing_keyword",
+            "contents": ["producing", "working", "operating"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "quntity_keyword",
+            "contents": ["most", "top", "highest", "upper","upmost","topmost", "maximum"],
+            "importance" : "require"
+        }, 
+        {
+            "name" : "period_kwd",
+            "contents" : ["yesterday",
+                "week", " weeks", "month",
+                "months", "day", "days", "year", "years"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "month_kwd",
+            "contents" : ["january", "february",
+                "march", "april", "may",
+                "june", "july", "august", "september", "october", "november", "december"],
+            "importance" : "optionally"
+        }
+    ],
+    
+    "regex_entities" : [
+        {
+            "entity_name" : "n_kwd",
+            "regex_pattren": "\\d*",
+            "apply_to" : ["in ", ""],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "{optional}"
+    ]
+
+}

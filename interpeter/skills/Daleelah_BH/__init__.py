@@ -66,36 +66,13 @@ def time_period_calc(response):
    
     start_date = datetime.date.today() #today's date
     end_date = start_date + datetime.timedelta(days=1)
-<<<<<<< HEAD
-
-=======
     answer = "today"
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
     if "month_kwd" in response:
         print('Month detected')
         month = monthes.get(response.get("month_kwd"))
         year = int(response.get("n_kwd", start_date.year)) #graps the year, if not mentioned assumes it is the current year
         start_date = datetime.datetime(year, month, 1)
         end_date = start_date + relativedelta(months=+1)
-<<<<<<< HEAD
-    period = response.get('period_kwd', None)
-    
-    if period: # going back in date
-        end_date = start_date
-        n_period = int(response.get('n_kwd', 1))
-
-    if period == 'yesterday':
-        start_date = start_date - datetime.timedelta(days=1) 
-    elif period in ['week','weeks']:
-        start_date = start_date - relativedelta(weeks=+n_period)
-    elif period in ['month','months']:
-        start_date = start_date - relativedelta(months=+n_period)
-    elif period in ['year','years']:
-        start_date = start_date - relativedelta(years=+n_period)
-    elif period in ['day', 'days']:
-        start_date = start_date - relativedelta(days=+n_period)
-
-=======
         answer = "in " + str(month) + " " + str(year)
     
     period = response.get('period_kwd', None)
@@ -121,18 +98,13 @@ def time_period_calc(response):
         answer = str(n_period) + " " + period + " ago"
     
     end_date = start_date + datetime.timedelta(days=1)
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
 
          
     
 
 
     print(start_date, end_date)
-<<<<<<< HEAD
-    return str(start_date), str(end_date)
-=======
     return str(start_date), str(end_date), answer
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
 
 def production_Intent_func(*args,**kwargs):
     sql = 'Select (operatingHours-24) from {table} where '.format(table=table)
@@ -148,11 +120,7 @@ def number_of_active_rigsfunc(*args, **kwargs):
     # import datetime
     engine_answer = args[0].get('field_keyword', None)
     print(engine_answer)
-<<<<<<< HEAD
-    start_date, end_date = time_period_calc(args[0])
-=======
     start_date, end_date, answer = time_period_calc(args[0])
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
     sql_query = \
     "SELECT COUNT(DISTINCT well) FROM {table_name} \
       WHERE \"Date\" >= '{first_date}' AND \"Date\" < '{second_date}'".format(** 
@@ -162,45 +130,48 @@ def number_of_active_rigsfunc(*args, **kwargs):
           'second_date': end_date,
       })
 
-<<<<<<< HEAD
-    #query_res = sendQuery(sql_query)end_date
-=======
     query_res = sendQuery(sql_query)
     print(sql_query)
     print(query_res)
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
     print("start date is: ", start_date, ", end date=", end_date)    
     # date = datetime.datetime.now()  # the format of this needs to be changed
     # result = sendQuery('select count (distinct Level_0) from tablename where date = {date};'.format(date))
 	# todo: format the sql output to match the answer format
-<<<<<<< HEAD
-    count = 22 #query_res.get("rows")[0]["count"]
-    return {"number_of_active_rig":count}
-=======
     count = query_res.get("rows")[0]["count"]
     # if not args[0].get("period_kwd", None):
     #     count = 201
     return {"number_of_active_rig":count, "optional" : answer}
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
 
 
+def top_producing_fields_func(eng_response):
+    start_date, end_date, date_answer = time_period_calc(eng_response)
+    sql_str = "SELECT field,\"Name_new\", count(distinct well) as count \
+          FROM ( \
+              SELECT * FROM interns_view \
+              WHERE \"Date\" >= '{}' AND \"Date\" < '{}' \
+                ) AS something group by field,\"Name_new\" order by count DESC".format(start_date, end_date)
+    res = sendQuery(sql_str)
+    field_list = res.get("rows")
+    field_list_len = len(field_list)
+    answer = "According to the data, " + date_answer + ", the top producing fields are: "
+    for i in range(10):
+        if i > field_list_len: break
+        fld = field_list[i]
+        answer += fld.get("Name_new", "Unknown name")
+        answer += " has" + fld.get("count", "Unknown name") + " wells "
+    return {'optional' : answer}
 
+        
+
+    
 def product_line_intent_func(*args, **kwargs):
     field_name = args[0].get("field_name", None)
     BigPlayer_name = args[0].get("BigPlayer", None)
-<<<<<<< HEAD
-
-
-
-    date_1 = ' \"Date\" >= \'2019-06-30\' AND \"Date\" < \'2019-07-01\''
-
-=======
     start_date, end_date, tail_answer = time_period_calc(args[0])
 
 
     #date_1 = ' \"Date\" >= \'2019-06-01\' AND \"Date\" < \'2019-07-02\''
     date_1 = '\"Date\" >= \'' +start_date+ '\' AND \"Date\" < \''+ end_date + '\''
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
     if field_name is not None:
         print(field_name + ' is field name')
     else:
@@ -235,14 +206,9 @@ def product_line_intent_func(*args, **kwargs):
     print("&&&")
     resultDic = sendQuery(sql)
     print(resultDic)
-<<<<<<< HEAD
-
-    answer = ' here are sample wells in ' + field_name + ', ' + BigPlayer_name + ' are working on the following wells: '
-=======
     answer = '' 
     answer +=  "According to the data " + tail_answer
     answer += ' here are sample wells in ' + field_name + ', ' + BigPlayer_name + ' are working on the following wells: '
->>>>>>> bd34ed9c1bdcbb3271925b2e20fd217359060e8e
 
     for row in resultDic['rows']:
         short_name = row['well']
@@ -293,7 +259,8 @@ mapper = {
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "ProductionIntent":production_Intent_func
+    "ProductionIntent":production_Intent_func,
+    "TopProducingFieldsIntent": top_producing_fields_func
 }
 
 
