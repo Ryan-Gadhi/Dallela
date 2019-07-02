@@ -22,7 +22,7 @@ class Engine:
             Dynamically loads (imports) all the skills located in the folder Skills
         """
       
-        for folder in os.listdir("interpeter/skills"):
+        for folder in os.listdir("skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
 
             # @Ryan,import a skill module and automaticly executes __init__.py
@@ -119,12 +119,7 @@ if __name__ == "__main__":
     # print(e.compute("what are the active hours for baker hughes"))
     # print(e.compute("what is the product line "))
 
-<<<<<<< HEAD
     # print(e.compute('what is the product line in dammam wells'))
     print(e.compute('what is the most active company rigs'))
-||||||| merged common ancestors
-=======
-    #  print(e.compute('what is the product line in dammam wells'))
-    print(e.compute('what is the number of active rigs'))
->>>>>>> 8a9b78e950abf9841e5ef7fc3533fffa4398f5ca
+
 

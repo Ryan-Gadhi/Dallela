@@ -357,7 +357,7 @@ mapper = {
     "TimeOfOperationIntent": operating_hours_func,
     "ProductionIntent":production_Intent_func,
     "NoneProductiveTimeIntent":non_productive_time_func,
-     "productionEfficiencyIntent":production_efficiency_fuc
+     "productionEfficiencyIntent":production_efficiency_fuc,
     "ProductionIntent": production_Intent_func,
     "MostActiveIntent": most_active_func,
     "RigListerIntent": list_rigs_in_filed_func
