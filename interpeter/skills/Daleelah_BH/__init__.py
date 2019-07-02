@@ -165,12 +165,54 @@ def operating_hours_func(*args, **kwargs):
     return {"time": time}
 
 
+def most_active_func(*args, **kwargs):
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    target_date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+    entries = {'selection': '\"BigPlayer\",count(DISTINCT \"Rigs\") as num ',
+               'table': table,
+               'group': '\"BigPlayer\"'}
+
+    sql = 'select {selection} from {table} group by {group} and '.format(**entries)
+    sql += 'date = {target_date}'.format(target_date=target_date)
+    sql += 'order by num desc limit 1'
+
+    bigplayer = 'BH'  # todo: should be replaced with bottom 2 lines
+    number = 100
+    # result = sendQuery(sql)
+    # result = json.loads(result)
+    # bigplayer, number = result[rows][0][]
+    # print(sql, ' is sql')
+
+    return {"big_player": bigplayer, "number": number}
+
+
+def list_rigs_in_filed_func(*args, **kwargs):
+    entries = {'selection': 'DISTINCT \"Rigs\"',
+               'table': table,
+               'target': ''}
+
+    sql = 'select {selection} from {table} where \"Name_new\"={target}'.format(**entries)
+    sql += 'date = {today}'.format(today=today)
+    sql += 'order by num desc limit 1'
+
+    listOfRigs = 'k k k k  kk'
+    # result = sendQuery(sql)
+    # result = json.loads(result)
+    # for row in result['rows']:
+    #     listOfRigs += ", " + row
+    # print(sql, ' is sql')
+
+    return {"rig_names": listOfRigs}
+
+
 mapper = {
     "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
-    "ProductionIntent":production_Intent_func
+    "ProductionIntent": production_Intent_func,
+    "MostActiveIntent": most_active_func,
+    "RigListerIntent": list_rigs_in_filed_func
 }
 
 
@@ -183,12 +225,12 @@ def sendQuery(sql_string):
     PARAMS = {'q':sql_string}
 
     # sending get request and saving the response as response object
-    r = requests.post(URL,data=PARAMS)
+    # r = requests.post(URL,data=PARAMS)
     # extracting data in json format
-    data = r.json()
+    # data = r.json()
 
     #return data
-    return data
+    # return data
 
 
 

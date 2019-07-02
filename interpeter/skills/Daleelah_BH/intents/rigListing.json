@@ -2,14 +2,15 @@
   "name": "RigListerIntent",
   "entities": [
     {
-      "name": "qustion_keyword5",
+      "name": "qustion_keyword",
       "contents": [
-        "what"
+        "what",
+        "list"
       ],
       "importance": "require"
     },
     {
-      "name": "field_keyword5",
+      "name": "field_keyword",
       "contents": [
         "rigs",
         "fields",
@@ -20,7 +21,7 @@
   ],
   "regex_entities": [
     {
-      "entity_name": "field_name5",
+      "entity_name": "field_name",
       "regex_pattren": ".*",
       "apply_to": [
         "in ",
@@ -30,6 +31,6 @@
     }
   ],
   "answers": [
-    "There {field_keyword5} are {count_of_rigs} located in {field_name5} and are {rig_names}"
+    "The {field_keyword} located in {field_name} are {rig_names}"
   ]
 }
