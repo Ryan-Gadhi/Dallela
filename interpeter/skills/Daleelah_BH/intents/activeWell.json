@@ -3,7 +3,13 @@
     "entities" : [
         {
             "name" : "field_keyword",
+<<<<<<< HEAD
+            "contents": ["rig", "fields", "well", "services"],
+||||||| merged common ancestors
+            "contents": ["rigs", "fields", "wells", "services"],
+=======
             "contents": ["rig", "fields", "wells", "services", "rigs", "bricks", "raids", "bricks", "rings", "ribs", "rib"],
+>>>>>>> 8a9b78e950abf9841e5ef7fc3533fffa4398f5ca
             "importance" : "require"
         },
         {

@@ -14,4 +14,3 @@ jalila
 Gorilla
 delaila
 driver
-delete
