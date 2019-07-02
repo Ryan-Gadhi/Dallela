@@ -1,22 +1,12 @@
 {
-    "name" : "NoneProductiveTimeIntent",
+    "name" : "productionEfficiencyIntent",
     "entities" : [
         {
-            "name" : "production_kwd",
-            "contents": ["production", "yield", "output","productive","loss"],
+            "name" : "eff_kwd",
+            "contents": ["efficiency"],
             "importance" : "require"
-        },
-        {
-            "name" : "failure_kwd",
-            "contents" : ["failure", "not", "non","no"],
-            "importance" : "optionally"
         }
         ,
-        {
-            "name" : "time_kwd",
-            "contents" : ["time", "duration", "period","times"],
-            "importance" : "optionally"
-        },
         {
             "name" : "total_kwd",
             "contents" : ["total", "all"],
@@ -60,7 +50,7 @@
     ],
 
     "answers" : [
-        "the {total_kwd} {failure_kwd} {production_kwd} {time_kwd} for {big_player} is {loss_hours}"
+        "{fancy} the {eff_kwd} for {big_player} {tail_kwd} is {eff_reslut} %"
     ]
 
 }

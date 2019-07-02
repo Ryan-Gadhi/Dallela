@@ -164,14 +164,58 @@ def non_productive_time_func(*args, **kwargs):
     wheration = "where "+q+"BigPlayer"+q+"="+BigPlayerID+" and " + date
 
     sql = selection + formation + wheration
-    #loss_number = sendQuery(sql)
-    loss_number = "2 hours"
+    loss_number = 1
+    #loss_number = sendQuery(sql) # todo: uncomment this line when connected to DB
+    loss_number = str(loss_number)
+    loss_hours = loss_number + " hours"
 
     print(sql)
 
 
     return {"big_player":BigPlayer_name,"failure_kwd":failure_kwd,
-            "time_kwd":time_kwd,"total_kwd" : total_kwd,"loss_number":loss_number}
+            "time_kwd":time_kwd,"total_kwd" : total_kwd,"loss_hours":loss_hours}
+
+def production_efficiency_fuc(*args,**kwargs):
+    response = args[0]
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+    # field name
+    failure_kwd = response.get('failure_kwd', "")
+    BigPlayer_name = response.get("BigPlayer", "baker hughes")
+    total_kwd = response.get("time_kwd", "total")  # may be changed
+    fancy = "according to my calculations,"
+
+    BigPlayerID = BigPlayerDic.get(BigPlayer_name,"BH")
+
+    q = "\""
+    selection = "SELECT "+ "SUM("+q+"OperatingHours"+q+") "
+    formation = "from "+ table + " "
+    wheration = "where "+ q+"BigPlayer"+q+"="+ BigPlayerID+" and "+date+ " "
+
+    sql_1 = selection + formation + wheration
+    working_hours = 20
+    #working_hours = sendQuery(sql_1) # todo: uncomment when connected to the DB
+
+    q = "\""
+    selection = "select "+"SUM("+q+"Hrs"+q+") "
+    formation = "from "+loss_table+ " "
+    wheration = "where "+q+"BigPlayer"+q+"="+BigPlayerID+" and " + date
+
+    sql_2 = selection + formation+ wheration
+    print(sql_2)
+    loss_time = 6
+    #loss_time = sendQuery(sql_2) # todo: uncomment when connected to the DB
+
+    efficiency = loss_time/working_hours
+    efficiency = str (efficiency)
+
+    print(efficiency + ' :is eff')
+
+    efficiency = working_hours
+    print(sql_1)
+
+    return {"total_kwd":total_kwd,"big_player_kwd":BigPlayer_name,"field_name_kwd":''}
+
 
 
 
@@ -272,7 +316,8 @@ mapper = {
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
     "ProductionIntent":production_Intent_func,
-    "NoneProductiveTimeIntent":non_productive_time_func
+    "NoneProductiveTimeIntent":non_productive_time_func,
+     "productionEfficiencyIntent":production_efficiency_fuc
 }
 
 
@@ -291,7 +336,6 @@ def sendQuery(sql_string):
 
     #return data
     return data
-
 
 
 
