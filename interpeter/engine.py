@@ -119,6 +119,6 @@ if __name__ == "__main__":
     # print(e.compute("what are the active hours for baker hughes"))
     # print(e.compute("what is the product line "))
 
-    # print(e.compute('what is the product line in dammam wells'))
-    print(e.compute('what is the most active company rigs'))
+    #  print(e.compute('what is the product line in dammam wells'))
+    print(e.compute('what is the number of active rigs'))
 

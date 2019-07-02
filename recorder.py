@@ -20,4 +20,5 @@ def record(file_name='output.wav'):
     except:
         print('error occured in recorder.py')
     write(file_name, fs, y)  # Save as WAV file
+    #file_name.close() # newly
     # playsound(file_name) # for debuggig
