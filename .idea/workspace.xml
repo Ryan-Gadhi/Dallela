@@ -1,11 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/main_app.py" line="77" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/__init__.1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/NoneProductiveTime.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/ProductionEffeciency.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AudioUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/Handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/Handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/Intent_container.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/Intent_container.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/Intents/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/Intents/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/Intents/adapt_intents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/IntentsGrouper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/IntentsGrouper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager/well_intents.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager/well_intents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager1/adapt_intents.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager1/adapt_intents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Skill/task_manager1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Skill/task_manager1/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/amazon_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/amazon_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/google_gTTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/google_gTTS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/os_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/os_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/plan" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/plan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/variables'.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/variables'.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/voices" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/voices" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discussion/ريجيكس.py" beforeDir="false" afterPath="$PROJECT_DIR$/Discussion/ريجيكس.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/tkinterTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/tkinterTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerConnection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beep.wav" beforeDir="false" afterPath="$PROJECT_DIR$/beep.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beep2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/beep2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bhge.png" beforeDir="false" afterPath="$PROJECT_DIR$/bhge.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/.vscode/.ropeproject/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/.vscode/.ropeproject/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/.vscode/.ropeproject/objectdb" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/.vscode/.ropeproject/objectdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/productLineIntent.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/productLineIntent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/WeatherIntent.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/WeatherIntent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Age" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Age" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Greetings" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Greetings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Joke" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Joke" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/NotRecognized" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Personal" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Personal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Similars" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/Similars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/shorts" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Answers/shorts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Age" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Greetings" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Greetings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Joke" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Joke" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/NotRecognized" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Personal" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Personal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Similars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_HelloSkill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_HelloSkill/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Age" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Age" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Greetings" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Greetings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Joke" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Joke" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Personal" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Personal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Similars" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/Similars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/shorts" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Answers/shorts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Age" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Age" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Greetings" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Greetings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Joke" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Joke" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Personal" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Personal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Similars" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/Similars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/shorts" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/Questions/shorts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/TrivialSkills.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/TrivialSkills.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/AgeIntent.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/AgeIntent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/Greeting.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/Greeting.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/Joke.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/Joke.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/Personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/aleelah_Trvial_Skill/intents/Personal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_engine_expermental.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_engine_expermental.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/recorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triggerWord.py" beforeDir="false" afterPath="$PROJECT_DIR$/triggerWord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wake_up_words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wake_up_words.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +111,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="244" column="64" selection-start-line="244" selection-start-column="64" selection-end-line="244" selection-end-column="64" />
+            <state relative-caret-position="748">
+              <caret line="232" column="16" lean-forward="true" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -33,11 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recorder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-123" />
           </provider>
         </entry>
       </file>
@@ -61,15 +150,25 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/triggerWord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
+            <state relative-caret-position="288">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -89,15 +188,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/productLineIntent.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="29" />
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -174,7 +268,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/Tasks/task_manager1/adapt_intents.py" />
         <option value="$PROJECT_DIR$/Trvial_Skills/Answers/Joke" />
         <option value="$PROJECT_DIR$/Trvial_Skills/TrivialSkills.py" />
@@ -198,7 +291,6 @@
         <option value="$PROJECT_DIR$/GUI/tkinterTest.py" />
         <option value="$PROJECT_DIR$/ServerConnection.py" />
         <option value="$PROJECT_DIR$/Discussion/speaking.py" />
-        <option value="$PROJECT_DIR$/wake_up_words.txt" />
         <option value="$PROJECT_DIR$/Discussion/variables'.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
         <option value="$PROJECT_DIR$/Discussion/tests.py" />
@@ -225,6 +317,8 @@
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json" />
         <option value="$PROJECT_DIR$/interpeter/engine.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
+        <option value="$PROJECT_DIR$/wake_up_words.txt" />
+        <option value="$PROJECT_DIR$/triggerWord.py" />
       </list>
     </option>
   </component>
@@ -428,11 +522,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.AudioUtils" />
       <item itemvalue="Python.audio" />
+      <item itemvalue="Python.AudioUtils" />
+      <item itemvalue="Python.tests" />
       <item itemvalue="Python.engine" />
       <item itemvalue="Python.main_engine_expermental" />
-      <item itemvalue="Python.tests" />
     </list>
     <recent_temporary>
       <list>
@@ -459,7 +553,7 @@
       <workItem from="1561482920274" duration="3833000" />
       <workItem from="1561525420620" duration="4570000" />
       <workItem from="1562063807099" duration="6369000" />
-      <workItem from="1562071791045" duration="1921000" />
+      <workItem from="1562071791045" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="added some intent">
       <created>1561469979606</created>
@@ -482,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561526432517</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="copey Ryan">
+      <created>1562074358589</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562074358589</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29283000" />
+    <option name="totallyTimeSpent" value="29818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +613,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281471" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.20509194" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067025" side_tool="true" weight="0.27439886" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49932975" visible="true" weight="0.33946252" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49932975" visible="true" weight="0.40876946" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3281471" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -551,7 +652,8 @@
     <MESSAGE value="added some intent" />
     <MESSAGE value="added operating hours intent" />
     <MESSAGE value="added most active intent" />
-    <option name="LAST_COMMIT_MESSAGE" value="added most active intent" />
+    <MESSAGE value="copey Ryan" />
+    <option name="LAST_COMMIT_MESSAGE" value="copey Ryan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,13 +671,6 @@
     <SUITE FILE_PATH="coverage/Dallela$main_engine_expermental.coverage" NAME="main_engine_expermental Coverage Results" MODIFIED="1562067159691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/Personal">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Trvial_Skill/Questions/shorts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -826,7 +921,7 @@
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/productLineIntent.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="29" />
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="55" />
         </state>
       </provider>
     </entry>
@@ -837,23 +932,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/recorder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="61" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="61" />
-        </state>
+        <state relative-caret-position="-123" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speaking.py">
@@ -874,24 +955,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="232" column="16" lean-forward="true" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/triggerWord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
+        <state relative-caret-position="288">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+    <entry file="file://$PROJECT_DIR$/ServerConnection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="244" column="64" selection-start-line="244" selection-start-column="64" selection-end-line="244" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="1" column="61" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="61" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

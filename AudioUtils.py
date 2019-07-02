@@ -28,6 +28,7 @@ class AudioUtils:
 
 
 
+<<<<<<< HEAD
     def get_listening_text(self,):
         return self.listening_text
 
@@ -125,6 +126,106 @@ class AudioUtils:
         it checks for woman sound in the local system
         and choose as the default sound output
     
+||||||| merged common ancestors
+=======
+    def get_listening_text(self,):
+        return self.listening_text
+
+    def is_in_wake_words(text):
+        """
+            # this is a temporary method, should be overridden by Tenserflow
+            checks if the said word feels sound like Daleela
+
+        """
+        text = re.search("(\w+)(e|i)(\w+)(a$)", text)
+        if text is not None:
+            return True # add deliver and delhi
+
+        return False
+
+    def listening_Helper(self):
+        """
+            this method:
+                        adds the 2 beep sounds
+                        connects to google's server
+                        for speech recognition
+
+            awake: a boolean value that reflects weather
+            the wake word has been said or not
+        """
+        # if self.current_trial < self.max_trials:
+
+        r = sr.Recognizer()
+        with sr.Microphone() as source:
+            try:
+                print("I am listening :")
+                playsound('beep.wav')
+                input_audio = r.listen(source)
+
+                print("Connecting .. ")
+                playsound('beep2.wav')
+
+                self.listening_text = r.recognize_google(input_audio)
+
+                #print("You said : {}".format(self.listening_text))
+                # self.current_trial = self.max_trials  # stopping the method from re-executing
+
+            except:
+                print(" -- NOT RECOGNIZED -- (In Listening)")
+                # self.current_trial += 1
+                self.listening_text = 'Error_101'
+
+                # if self.max_trial < curr_trial:
+                #     recog_error = 'Error_101'
+                #     skill_found, answer = TrivialSkills.search_for_match(recog_error)
+                #     if skill_found:
+                #         self.sp.say(answer)
+                #     else:
+                #         print('skill not found')
+                #         raise Exception
+
+
+
+    def start_listening(self,awake=None,trials=3):
+        """
+            this method makes a new thread to handle
+            google server connection in the background
+
+            awake: a boolean value that reflects weather
+            the wake word has been said or not
+
+        """
+
+        self.t1 = threading.Thread(target=self.listening_Helper)
+        self.t1.start()
+        return self.t1
+
+    # not
+    def findOS_Sound(self,):
+        """
+            the following is only related to pyttsx3 package
+            it checks for woman sound in the local system
+            and choose as the default
+
+        """
+        os_name = platform.system()
+        name = 'undefined'
+        if os_name == 'Windows':
+            name = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0'
+        elif os_name == 'Darwin':
+            name = 'com.apple.speech.synthesis.voice.samantha'
+        elif os_name == 'Linux':
+            name = 'female3'
+        else:
+            print('os not recognized')
+        return name
+
+    """
+        the following is only related to pyttsx3 package
+        it checks for woman sound in the local system
+        and choose as the default sound output
+    
+>>>>>>> 8a9b78e950abf9841e5ef7fc3533fffa4398f5ca
     """
 
     # not
