@@ -18,7 +18,7 @@ class TriggerWord:
         if self.first_iter:
             self.first_iter = False
         else:
-            time.sleep(0.00001)
+            time.sleep(1)
             #print('sleept')
 
         audio_txt = None
@@ -36,7 +36,7 @@ class TriggerWord:
 
                 try:
                     audio_txt = r.recognize_google(audio)
-                    print(audio_txt)
+                    #print(audio_txt)
                     if self.is_in_wake_words(audio_txt):
                         self.wakeUpWordRecognized = True
                         print('recognized')

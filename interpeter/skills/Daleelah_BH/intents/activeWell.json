@@ -3,7 +3,7 @@
     "entities" : [
         {
             "name" : "field_keyword",
-            "contents": ["rig", "fields", "well", "services", "rigs"],
+            "contents": ["rig", "fields", "wells", "services", "rigs", "bricks", "raids", "bricks", "rings", "ribs", "rib"],
             "importance" : "require"
         },
         {
@@ -42,7 +42,7 @@
     ],
 
     "answers" : [
-        "There are {number_of_active_rig} active rigs"
+        "There are {number_of_active_rig} active rigs {optional}"
     ]
 
 }

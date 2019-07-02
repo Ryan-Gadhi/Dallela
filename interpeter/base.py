@@ -103,8 +103,9 @@ class Answer(ABC):
             (str): a randomly generated response based on some variables (if any)
         """
         random_template = random.choice(self.answers) #e.g: 'The weather in {location} is {deg}{unit}' 
-
-        return random_template.format(**response) #format is a python function, google that for more info
+        answer = random_template.format(**response)
+        print(answer)
+        return answer #format is a python function, google that for more info
 
 
 class Handler(ABC):

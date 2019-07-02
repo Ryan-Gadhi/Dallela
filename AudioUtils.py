@@ -67,7 +67,7 @@ class AudioUtils:
 
                 self.listening_text = r.recognize_google(input_audio)
 
-                print("You said : {}".format(self.listening_text))
+                #print("You said : {}".format(self.listening_text))
                 # self.current_trial = self.max_trials  # stopping the method from re-executing
 
             except:

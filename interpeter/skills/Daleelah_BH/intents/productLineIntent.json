@@ -8,12 +8,38 @@
         },
         {
             "name" : "product_line_keyword",
-            "contents" : ["product line"],
+            "contents" : ["product line", "lions", "product lines"],
             "importance" : "require"
+        }
+        ,
+        {
+            "name" : "quntity_keyword",
+            "contents": ["number", "many", "list"],
+            "importance" : "optionally"
+        }, 
+        {
+            "name" : "period_kwd",
+            "contents" : ["yesterday",
+                "week", " weeks", "month",
+                "months", "day", "days", "year", "years"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "month_kwd",
+            "contents" : ["january", "february",
+                "march", "april", "may",
+                "june", "july", "august", "september", "october", "november", "december"],
+            "importance" : "optionally"
         }
     ],
 
     "regex_entities" : [
+        {
+            "entity_name" : "n_kwd",
+            "regex_pattren": "\\d*",
+            "apply_to" : ["in ", ""],
+            "importance" : "optionally"
+        },
         {
             "entity_name" : "field_name",
             "regex_pattren": "([a-z]|[A-Z])",

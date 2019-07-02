@@ -137,6 +137,10 @@ if __name__ == '__main__':
     sp.womanAudio()
 
 
+    # root= Tk()
+    # gui = GUI.GUI(root,LookForTrigger)
+    # root.mainloop()
+
 
     while True: # always listening
         print('outer')
@@ -180,9 +184,6 @@ if __name__ == '__main__':
 
 
 
-    # root= Tk()
-    # gui = GUI.GUI(root,LookForTrigger)
-    # root.mainloop()
     # not needed #find_skill()
 
 
