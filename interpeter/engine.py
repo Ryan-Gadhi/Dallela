@@ -22,7 +22,7 @@ class Engine:
             Dynamically loads (imports) all the skills located in the folder Skills
         """
       
-        for folder in os.listdir("skills"):
+        for folder in os.listdir("interpeter/skills"):
             if not folder.startswith("Daleelah_"): continue # To avoid any other folder not related to the skills
 
             # @Ryan,import a skill module and automaticly executes __init__.py
