@@ -18,7 +18,7 @@
         }, 
         {
             "name" : "period_kwd",
-            "contents" : ["today", "yesterday",
+            "contents" : ["yesterday",
                 "week", " weeks", "month",
                 "months", "day", "days", "year", "years"],
             "importance" : "optionally"

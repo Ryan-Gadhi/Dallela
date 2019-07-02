@@ -114,7 +114,7 @@ def number_of_active_rigsfunc(*args, **kwargs):
     print(engine_answer)
     start_date, end_date = time_period_calc(args[0])
     sql_query = \
-    "SELECT COUNT(DISTINCT welargsl) FROM {table_name} \
+    "SELECT COUNT(DISTINCT well) FROM {table_name} \
       WHERE \"Date\" >= '{first_date}' AND \"Date\" < '{second_date}'".format(** 
       {
           'table_name' : table,
