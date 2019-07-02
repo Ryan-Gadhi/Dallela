@@ -143,7 +143,8 @@ def number_of_active_rigsfunc(*args, **kwargs):
     return {"number_of_active_rig":count, "optional" : answer}
 
 
-
+def non_productive_time_func(*args, **kwargs):
+    pass
 def product_line_intent_func(*args, **kwargs):
     field_name = args[0].get("field_name", None)
     BigPlayer_name = args[0].get("BigPlayer", None)
