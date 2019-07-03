@@ -22,7 +22,8 @@ BigPlayerDic = {
     'baker hughes': '\'BH\'',
     'baker': '\'BH\'',  # todo: find correct short name
     'BH' : 'baker hughes',
-    '\"BH\"' : 'baker hughes'
+    '\"BH\"' : 'baker hughes',
+    'SLB' : '\'SLB\''
 }
 
 cityDecoder = {
@@ -175,17 +176,20 @@ def non_productive_time_func(*args, **kwargs):
     return {"big_player":BigPlayer_name,"failure_kwd":failure_kwd,
             "time_kwd":time_kwd,"total_kwd" : total_kwd,"loss_hours":loss_hours}
 
+
 def production_efficiency_fuc(*args,**kwargs):
     response = args[0]
     start_date, end_date, tail_answer = time_period_calc(args[0])
     date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+    date = '\"Date\" >= \'2019-01-01\' AND \"Date\" < \'2019-07-04\''
     # field name
     failure_kwd = response.get('failure_kwd', "")
-    BigPlayer_name = response.get("BigPlayer", "baker hughes")
+    BigPlayer_name = response.get("big_player_kwd", "baker hughes")
     total_kwd = response.get("time_kwd", "total")  # may be changed
     fancy = "according to my calculations,"
 
-    BigPlayerID = BigPlayerDic.get(BigPlayer_name,"BH")
+    BigPlayerID = BigPlayerDic.get(BigPlayer_name.upper(),"BH")
+    print(BigPlayerID, ' is id')
 
     q = "\""
     selection = "SELECT "+ "SUM("+q+"OperatingHours"+q+") "
@@ -193,30 +197,54 @@ def production_efficiency_fuc(*args,**kwargs):
     wheration = "where "+ q+"BigPlayer"+q+"="+ BigPlayerID+" and "+date+ " "
 
     sql_1 = selection + formation + wheration
+    print(sql_1," is sql 1")
     working_hours = 20
-    #working_hours = sendQuery(sql_1) # todo: uncomment when connected to the DB
-
+    working_hours = sendQuery(sql_1) # todo: uncomment when connected to the DB
+    print(working_hours)
+    working_hours = working_hours['rows'][0]['sum']
     q = "\""
     selection = "select "+"SUM("+q+"Hrs"+q+") "
     formation = "from "+loss_table+ " "
-    wheration = "where "+q+"BigPlayer"+q+"="+BigPlayerID+" and " + date
+    wheration = "where "+q+"BigPlayer"+q+"="+BigPlayerID+" and " + date + " "
 
     sql_2 = selection + formation+ wheration
     print(sql_2)
     loss_time = 6
-    #loss_time = sendQuery(sql_2) # todo: uncomment when connected to the DB
+    loss_time = sendQuery(sql_2) # todo: uncomment when connected to the DB
+    loss_time = loss_time['rows'][0]['sum']
+    
+    efficiency = (working_hours - loss_time)/working_hours
+    
 
-    efficiency = loss_time/working_hours
-    efficiency = str (efficiency)
 
-    print(efficiency + ' :is eff')
-
-    efficiency = working_hours
+    efficiency *= 100 
     print(sql_1)
 
-    return {"total_kwd":total_kwd,"big_player_kwd":BigPlayer_name,"field_name_kwd":''}
+    efficiency = str (efficiency)
+    if (len(efficiency)> 6):
+        efficiency = efficiency[:6]
+    
+    return {"total_kwd":total_kwd,"big_player_kwd":BigPlayer_name,"field_name_kwd":'',
+    "fancy":"according to my information from the database,","tail_kwd":tail_answer,"eff_reslut":efficiency}
 
 
+def top_producing_fields_func(eng_response):
+    start_date, end_date, date_answer = time_period_calc(eng_response)
+    sql_str = "SELECT field,\"Name_new\", count(distinct well) as count \
+          FROM ( \
+              SELECT * FROM interns_view \
+              WHERE \"Date\" >= '{}' AND \"Date\" < '{}' \
+                ) AS something group by field,\"Name_new\" order by count DESC".format(start_date, end_date)
+    res = sendQuery(sql_str)
+    field_list = res.get("rows")
+    field_list_len = len(field_list)
+    answer = "According to the data, " + date_answer + ", the top producing fields are: "
+    for i in range(10):
+        if i > field_list_len: break
+        fld = field_list[i]
+        answer += fld.get("Name_new", "Unknown name")
+        answer += " has " + fld.get("count", "Unknown name") + " wells, "
+    return {'optional' : answer}
 
 
 def product_line_intent_func(*args, **kwargs):
@@ -313,54 +341,62 @@ def operating_hours_func(*args, **kwargs):
 def most_active_func(*args, **kwargs):
     start_date, end_date, tail_answer = time_period_calc(args[0])
     target_date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
-    entries = {'selection': '\"BigPlayer\",count(DISTINCT \"Rigs\") as num ',
+    text = '\"BigPlayer\",count(DISTINCT \"Rig\") as num '
+    entries = {'selection': text,
                'table': table,
                'group': '\"BigPlayer\"'}
 
-    sql = 'select {selection} from {table} group by {group} and '.format(**entries)
-    sql += 'date = {target_date}'.format(target_date=target_date)
+    sql = 'select {selection} from {table} where '.format(**entries)
+    sql += '{target_date} '.format(target_date=target_date)
+    sql += 'group by {group} '.format(**entries)
     sql += 'order by num desc limit 1'
+    print(sql)
 
-    bigplayer = 'BH'  # todo: should be replaced with bottom 2 lines
+    bigplayer = 'BH'  
     number = 100
-    # result = sendQuery(sql)
-    # result = json.loads(result)
-    # bigplayer, number = result[rows][0][]
-    # print(sql, ' is sql')
+    result = sendQuery(sql)
+    #result = json.loads(result)
+    print(result)
+    bigplayer = result['rows'][0]['BigPlayer']
+    number = result['rows'][0]['num']
+    print(sql, ' is sql')
 
     return {"big_player": bigplayer, "number": number}
 
 
 def list_rigs_in_filed_func(*args, **kwargs):
-    entries = {'selection': 'DISTINCT \"Rigs\"',
+    field_name = "Dammam"
+    field_name = args[0].get("field_name", None)
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    target_date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+    entries = {'selection': 'DISTINCT \"Rig\"',
                'table': table,
-               'target': ''}
+               'target': field_name.lower()}
 
-    sql = 'select {selection} from {table} where \"Name_new\"={target}'.format(**entries)
-    sql += 'date = {today}'.format(today=today)
-    sql += 'order by num desc limit 1'
-
-    listOfRigs = 'k k k k  kk'
-    # result = sendQuery(sql)
-    # result = json.loads(result)
-    # for row in result['rows']:
-    #     listOfRigs += ", " + row
-    # print(sql, ' is sql')
+    sql = 'select {selection} from {table} where lower(\"Name_new\") = \'{target}\' AND '.format(**entries)
+    sql += '{target_date}'.format(target_date=target_date)
+    print(sql)
+    listOfRigs = ''
+    result = sendQuery(sql)
+    print(result)
+    for row in result['rows']:
+        listOfRigs += row['Rig'] + ", "
+    listOfRigs = listOfRigs[:-2]
 
     return {"rig_names": listOfRigs}
 
 
 mapper = {
-    "FieldLocatorIntent": field_locator_intent_func,
+    # "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
     "FieldStatusIntent": product_line_intent_func,
     "TimeOfOperationIntent": operating_hours_func,
     "ProductionIntent":production_Intent_func,
     "NoneProductiveTimeIntent":non_productive_time_func,
-     "productionEfficiencyIntent":production_efficiency_fuc,
-    "ProductionIntent": production_Intent_func,
+    "productionEfficiencyIntent":production_efficiency_fuc,
     "MostActiveIntent": most_active_func,
-    "RigListerIntent": list_rigs_in_filed_func
+    "RigListerIntent": list_rigs_in_filed_func,
+    "TopProducingFieldsIntent": top_producing_fields_func
 }
 
 
