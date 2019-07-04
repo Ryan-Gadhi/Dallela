@@ -32,7 +32,7 @@ def add_entity_to_intent(intent, entity_name, importance):
         if importance == "require":
                 intent.require(entity_name)
         elif importance == "one_of":
-                intent.require(entity_name)
+                intent.one_of(entity_name)
         else:
                 intent.optionally(entity_name)
 
@@ -68,6 +68,7 @@ def load_regex_entities(intent, reg_entities):
     Returns: (list): of parsed regex strings 
     """
     if not reg_entities: return []
+    joined_entities = []
     for reg_entity in reg_entities:
        
         apply_to = reg_entity.get("apply_to", []) #e.g: at, in, around
@@ -80,8 +81,8 @@ def load_regex_entities(intent, reg_entities):
         
         add_entity_to_intent(intent, entity_name, entity_importance)
         
-        joined_entities = [kwd + reg_pattren_named for kwd in apply_to] #e.g: in (?P<Location>.*), at (?P<Location>.*)...
-        joined_entities += [reg_pattren_named + kwd for kwd in apply_to_right] #e.g (?P<Location>[0-9]*) Days, Weeks...
+        joined_entities += [kwd + reg_pattren_named for kwd in apply_to] #e.g: in (?P<Location>.*), at (?P<Location>.*)...
+        joined_entities += [reg_pattren_named + kwd for kwd in apply_to_right] #e.g (?P<Duration>\d*) Days, Weeks...
     return joined_entities
 
 class Answer(ABC):
@@ -104,7 +105,6 @@ class Answer(ABC):
         """
         random_template = random.choice(self.answers) #e.g: 'The weather in {location} is {deg}{unit}' 
         answer = random_template.format(**response)
-        print(answer)
         return answer #format is a python function, google that for more info
 
 

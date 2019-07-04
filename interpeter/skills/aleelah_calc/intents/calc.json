@@ -1,10 +1,10 @@
 
 {
-    "name" : "CalcMultIntent",
+    "name" : "CalcIntent",
     "entities" : [
         {
             "name" : "q_kwd",
-            "contents": ["what is", "calculate", "compute"],
+            "contents": ["calculate", "compute"],
             "importance" : "optionally"
         }
     ],
@@ -12,8 +12,8 @@
     "regex_entities" : [
         {
             "entity_name" : "n_kwd",
-            "regex_pattren": "\\d+(\\s*(multiply|multiplied|by|\\*)\\s*\\d+)+",
-            "apply_to" : [""],
+            "regex_pattren": "\\d+(\\s*(.+)\\s*\\d+)+",
+            "apply_to" : ["what is "],
             "importance" : "require"
         }
     ],

@@ -15,11 +15,18 @@
 
             "regex_entities" : [
                 {
+                    "entity_name" : "number",
+                    "regex_pattren": "\\d*",
+                    "apply_to" : ["for "],
+                    "importance" : "optionally"
+                },
+                {
                     "entity_name" : "location",
-                    "regex_pattren": "\\w*",
+                    "regex_pattren": "\\w+",
                     "apply_to" : ["in "],
-                    "importance" : "require"
+                    "importance" : "optionally"
                 }
+
             ],
 
             "answers" : [
