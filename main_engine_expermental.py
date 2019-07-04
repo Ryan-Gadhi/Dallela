@@ -1,4 +1,4 @@
 from interpeter.engine import Engine
 
 eng = Engine()
-print( eng.compute("efficiency") )
+print( eng.compute("what is the efficiency for baker hughes") )

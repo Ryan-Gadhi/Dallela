@@ -1,5 +1,5 @@
 {
-    "name" : "productionEfficiencyIntent",
+    "name" : "EfficiencyComparisonIntent",
     "entities" : [
         {
             "name" : "eff_kwd",
@@ -8,9 +8,15 @@
         }
         ,
         {
-            "name" : "total_kwd",
-            "contents" : ["total", "all"],
+            "name" : "production_kwd",
+            "contents": ["production", "yield", "output","productive","loss"],
             "importance" : "optionally"
+        }
+        ,
+        {
+            "name" : "compare_kwd",
+            "contents" : ["compare", "better","lower","best","highest","lowest"],
+            "importance" : "require"
         },
         {
             "name" : "period_kwd",
@@ -37,20 +43,26 @@
         },
         {
             "entity_name" : "field_name_kwd",
-            "regex_pattren": "([a-z]|[A-Z])*",
+            "regex_pattren": "([a-z]|[A-Z])"*,
             "apply_to" : ["in "],
             "importance" : "optionally"
         },
         {
-            "entity_name" : "big_player_kwd",
-            "regex_pattren": "([a-z]|[A-Z])",
-            "apply_to" : ["for "],
+            "entity_name" : "big_player1_kwd",
+            "regex_pattren": "([a-z]|[A-Z])*",
+            "apply_to" : ["between "],
+            "importance" : "require"
+        },
+        {
+            "entity_name" : "big_player2_kwd",
+            "regex_pattren": "(.+ and [a-z]|[A-Z])*",
+            "apply_to" : ["between"],
             "importance" : "optionally"
         }
     ],
 
     "answers" : [
-        "{fancy} the {eff_kwd} for {big_player} {tail_kwd} is {eff_reslut} %"
+        "{fancy} {big_player1_kwd} with {eff_bigPlayer_1} is having {compare} than {big_player1_kwd} having {eff_bigPlayer_2}"
     ]
 
 }
