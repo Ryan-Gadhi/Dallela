@@ -1,0 +1,56 @@
+{
+    "name" : "productionEfficiencyIntent",
+    "entities" : [
+        {
+            "name" : "eff_kwd",
+            "contents": ["efficiency"],
+            "importance" : "require"
+        }
+        ,
+        {
+            "name" : "total_kwd",
+            "contents" : ["total", "all"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "period_kwd",
+            "contents" : ["yesterday",
+                "week", " weeks", "month",
+                "months", "day", "days", "year", "years"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "month_kwd",
+            "contents" : ["january", "february",
+                "march", "april", "may",
+                "june", "july", "august", "september", "october", "november", "december"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "n_kwd",
+            "regex_pattren": "\\d*",
+            "apply_to" : ["in ", ""],
+            "importance" : "optionally"
+        },
+        {
+            "entity_name" : "field_name_kwd",
+            "regex_pattren": "([a-z]|[A-Z])*",
+            "apply_to" : ["in "],
+            "importance" : "optionally"
+        },
+        {
+            "entity_name" : "big_player_kwd",
+            "regex_pattren": "([a-z]|[A-Z])",
+            "apply_to" : ["for "],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "{fancy} the {eff_kwd} for {big_player} {tail_kwd} is {eff_reslut} %"
+    ]
+
+}

@@ -1,0 +1,68 @@
+{
+    "name" : "EfficiencyComparisonIntent",
+    "entities" : [
+        {
+            "name" : "eff_kwd",
+            "contents": ["efficiency"],
+            "importance" : "require"
+        }
+        ,
+        {
+            "name" : "production_kwd",
+            "contents": ["production", "yield", "output","productive","loss"],
+            "importance" : "optionally"
+        }
+        ,
+        {
+            "name" : "compare_kwd",
+            "contents" : ["compare", "better","lower","best","highest","lowest"],
+            "importance" : "require"
+        },
+        {
+            "name" : "period_kwd",
+            "contents" : ["yesterday",
+                "week", " weeks", "month",
+                "months", "day", "days", "year", "years"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "month_kwd",
+            "contents" : ["january", "february",
+                "march", "april", "may",
+                "june", "july", "august", "september", "october", "november", "december"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "regex_entities" : [
+        {
+            "entity_name" : "n_kwd",
+            "regex_pattren": "\\d*",
+            "apply_to" : ["in ", ""],
+            "importance" : "optionally"
+        },
+        {
+            "entity_name" : "field_name_kwd",
+            "regex_pattren": "([a-z]|[A-Z])",
+            "apply_to" : ["in "],
+            "importance" : "optionally"
+        },
+        {
+            "entity_name" : "big_player1_kwd",
+            "regex_pattren": "([a-z]|[A-Z])*",
+            "apply_to" : ["between "],
+            "importance" : "require"
+        },
+        {
+            "entity_name" : "big_player2_kwd",
+            "regex_pattren": "(.+ and [a-z]|[A-Z])*",
+            "apply_to" : ["between"],
+            "importance" : "optionally"
+        }
+    ],
+
+    "answers" : [
+        "{fancy} {big_player1_kwd} with {eff_bigPlayer_1} is having {compare} than {big_player1_kwd} having {eff_bigPlayer_2}"
+    ]
+
+}

@@ -185,6 +185,7 @@ if __name__ == '__main__':
 
 
     # not needed #find_skill()
+    #v0.1
 
 
 
