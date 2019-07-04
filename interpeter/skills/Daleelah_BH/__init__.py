@@ -21,7 +21,10 @@ today = date
 BigPlayerDic = {
     'baker hughes': '\'BH\'',
     'baker': '\'BH\'',  # todo: find correct short name
-    'Schulmberger': '\'SLB\''
+    'schlumberger': '\'SLB\'',
+    'halliburton': '\'HAL\'',
+    'weatherford' : 'WTF',
+    'other':'\'OTH\''
 
 }
 
