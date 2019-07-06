@@ -18,7 +18,7 @@ class TriggerWord:
         if self.first_iter:
             self.first_iter = False
         else:
-            time.sleep(0.00001)
+            time.sleep(1)
             #print('sleept')
 
         audio_txt = None
