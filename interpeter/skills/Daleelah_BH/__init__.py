@@ -171,6 +171,7 @@ def number_of_active_rigsfunc(*args, **kwargs):
     return {"number_of_active_rig": count, "optional": answer, "active_thing": active_thing,
             "company_name": 'for ' + companyname}
 
+
 def compare_efficiency_func(*args,**kwargs):
     response = args[0]
     start_date, end_date, tail_answer = time_period_calc(args[0])
@@ -239,6 +240,7 @@ def non_productive_time_func(*args, **kwargs):
     return {"big_player": BigPlayer_name, "failure_kwd": failure_kwd,
             "time_kwd": time_kwd, "total_kwd": total_kwd, "loss_hours": loss_hours}
 
+
 def _get_efficiency(BigPlayerID):
     table = loss_table
     q = "\""
@@ -265,6 +267,7 @@ def _get_efficiency(BigPlayerID):
     efficiency = (working_hours - loss_time) / working_hours
 
     return efficiency
+
 
 def production_efficiency_fuc(*args, **kwargs):
     #todo:  validate _getEffiencey() and replace the redundant code here
@@ -316,8 +319,6 @@ def production_efficiency_fuc(*args, **kwargs):
             "eff_reslut": efficiency}
 
 
-
-
 def top_producing_fields_func(eng_response):
     start_date, end_date, date_answer = time_period_calc(eng_response)
     sql_str = "SELECT field,\"Name_new\", count(distinct well) as count \
@@ -333,8 +334,8 @@ def top_producing_fields_func(eng_response):
         if i > field_list_len: break
         fld = field_list[i]
         answer += fld.get("Name_new", "Unknown name")
-        answer += " has " + fld.get("count", "Unknown name") + " wells, "
-    return {'optional': answer}
+        answer += " has" + fld.get("count", "Unknown name") + " wells "
+    return {'optional' : answer}
 
 
 def product_line_intent_func(*args, **kwargs):

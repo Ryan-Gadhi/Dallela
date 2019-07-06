@@ -1,0 +1,28 @@
+
+{
+    "name" : "CalcIntent",
+    "entities" : [
+        {
+            "name" : "q_kwd",
+            "contents": ["calculate", "compute"],
+            "importance" : "optionally"
+        }
+    ],
+    
+    "regex_entities" : [
+        {
+            "entity_name" : "n_kwd",
+            "regex_pattren": "\\d+(\\s*(.+)\\s*\\d+)+",
+            "apply_to" : ["what is "],
+            "importance" : "require"
+        }
+    ],
+
+    "answers" : [
+        "It is {result}",
+        "That would be {result}",
+        "{n_kwd} equals {result}",
+        "{n_kwd} is {result}"
+    ]
+
+}
