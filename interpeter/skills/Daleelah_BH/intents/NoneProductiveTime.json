@@ -13,11 +13,6 @@
         }
         ,
         {
-            "name" : "time_kwd",
-            "contents" : ["time", "duration", "period","times"],
-            "importance" : "optionally"
-        },
-        {
             "name" : "total_kwd",
             "contents" : ["total", "all"],
             "importance" : "optionally"
@@ -47,13 +42,13 @@
         },
         {
             "entity_name" : "field_name_kwd",
-            "regex_pattren": "([a-z]|[A-Z])",
+            "regex_pattren": "([a-z]|[A-Z])*",
             "apply_to" : ["in "],
             "importance" : "optionally"
         },
         {
             "entity_name" : "big_player_kwd",
-            "regex_pattren": "([a-z]|[A-Z])",
+            "regex_pattren": "([a-z]|[A-Z])*",
             "apply_to" : ["for "],
             "importance" : "optionally"
         }

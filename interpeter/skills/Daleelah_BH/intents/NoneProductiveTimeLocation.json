@@ -1,17 +1,25 @@
 {
-    "name" : "productionEfficiencyIntent",
+    "name" : "LocationOfNoneProductiveTime",
     "entities" : [
         {
-            "name" : "eff_kwd",
-            "contents": ["efficiency"],
+            "name" : "location_kwd",
+            "contents": ["where"],
+            "importance" : "require"
+        }
+        ,
+
+        {
+            "name" : "production_kwd",
+            "contents": ["production", "yield", "output","productive","loss"],
             "importance" : "require"
         }
         ,
         {
-            "name" : "total_kwd",
-            "contents" : ["total", "all"],
+            "name" : "failure_kwd",
+            "contents" : ["failure", "not", "non","no"],
             "importance" : "optionally"
-        },
+        }
+        ,
         {
             "name" : "period_kwd",
             "contents" : ["yesterday",
@@ -36,21 +44,15 @@
             "importance" : "optionally"
         },
         {
-            "entity_name" : "field_name_kwd",
-            "regex_pattren": "([a-z]|[A-Z])*",
-            "apply_to" : ["in "],
-            "importance" : "optionally"
-        },
-        {
             "entity_name" : "big_player_kwd",
             "regex_pattren": "([a-z]|[A-Z])*",
-            "apply_to" : ["for "],
+            "apply_to" : ["for ", "does "],
             "importance" : "optionally"
         }
     ],
 
     "answers" : [
-        "{fancy} the {eff_kwd} for {big_player_kwd} {tail_kwd} is {eff_reslut} %"
+        "{fancy} {tail_kwd}: {big_player_kwd} is having {failure_kwd} {production_kwd} at the following locations {locations}"
     ]
 
 }

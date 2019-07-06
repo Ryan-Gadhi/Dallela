@@ -21,9 +21,11 @@ today = date
 BigPlayerDic = {
     'baker hughes': '\'BH\'',
     'baker': '\'BH\'',  # todo: find correct short name
-    'BH': 'baker hughes',
-    '\"BH\"': 'baker hughes',
-    'SLB': '\'SLB\''
+    'schlumberger': '\'SLB\'',
+    'halliburton': '\'HAL\'',
+    'weatherford' : 'WTF',
+    'other':'\'OTH\''
+
 }
 
 cityDecoder = {
@@ -169,6 +171,45 @@ def number_of_active_rigsfunc(*args, **kwargs):
     return {"number_of_active_rig": count, "optional": answer, "active_thing": active_thing,
             "company_name": 'for ' + companyname}
 
+def compare_efficiency_func(*args,**kwargs):
+    response = args[0]
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+    big_player1_kwd = response.get('big_player1_kwd'.lower(), "Baker Hughes")
+    big_player2_kwd = response.get('big_player2_kwd'.lower(), "others")
+    fancy = "after my calculations, it turns out that"
+
+    big_player1_id = BigPlayerDic.get(big_player1_kwd.lower(), "BH")
+    big_player2_id = BigPlayerDic.get(big_player1_kwd.lower(), None)
+
+
+
+    eff_1 = _get_efficiency(big_player1_id)
+    eff_2 = _get_efficiency(big_player2_id) or None
+    winner = big_player1_kwd  # temp
+    looser = big_player2_kwd
+    compare = "higher"
+
+    if eff_2 is None:
+        for company, _ in BigPlayerDic:
+            if _get_efficiency(company) > eff_1:
+                winner = big_player1_kwd
+                looser = big_player2_kwd
+                compare = "lower"
+                eff_2 = _get_efficiency(company)
+        if(compare == "higher"):
+            eff_2 = " efficiency better than all others"
+    else:
+        if eff_1 < eff_2:
+            winner = big_player2_kwd
+            looser = big_player1_kwd
+            compare = "lower"
+
+
+
+    return {"fancy":fancy , "big_player1_kwd":big_player1_kwd, "big_player2_kwd":big_player2_kwd,
+            "compare":compare, "eff_bigPlayer_1":eff_1,"eff_bigPlayer_1":eff_2}
+
 
 def non_productive_time_func(*args, **kwargs):
     response = args[0]
@@ -198,8 +239,35 @@ def non_productive_time_func(*args, **kwargs):
     return {"big_player": BigPlayer_name, "failure_kwd": failure_kwd,
             "time_kwd": time_kwd, "total_kwd": total_kwd, "loss_hours": loss_hours}
 
+def _get_efficiency(BigPlayerID):
+    table = loss_table
+    q = "\""
+    selection = "SELECT " + "SUM(" + q + "OperatingHours" + q + ") "
+    formation = "from " + table + " "
+    wheration = "where " + q + "BigPlayer" + q + "=" + BigPlayerID + " and " + date + " "
+
+    sql_1 = selection + formation + wheration
+    print(sql_1, " is sql 1")
+    working_hours = sendQuery(sql_1)  # todo: uncomment when connected to the DB
+    print(working_hours)
+    working_hours = working_hours['rows'][0]['sum']
+    q = "\""
+    selection = "select " + "SUM(" + q + "Hrs" + q + ") "
+    formation = "from " + loss_table + " "
+    wheration = "where " + q + "BigPlayer" + q + "=" + BigPlayerID + " and " + date + " "
+
+    sql_2 = selection + formation + wheration
+    print(sql_2)
+    loss_time = 6
+    loss_time = sendQuery(sql_2)  # todo: uncomment when connected to the DB
+    loss_time = loss_time['rows'][0]['sum']
+
+    efficiency = (working_hours - loss_time) / working_hours
+
+    return efficiency
 
 def production_efficiency_fuc(*args, **kwargs):
+    #todo:  validate _getEffiencey() and replace the redundant code here
     response = args[0]
     start_date, end_date, tail_answer = time_period_calc(args[0])
     date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
@@ -220,7 +288,6 @@ def production_efficiency_fuc(*args, **kwargs):
 
     sql_1 = selection + formation + wheration
     print(sql_1, " is sql 1")
-    working_hours = 20
     working_hours = sendQuery(sql_1)  # todo: uncomment when connected to the DB
     print(working_hours)
     working_hours = working_hours['rows'][0]['sum']
@@ -247,6 +314,8 @@ def production_efficiency_fuc(*args, **kwargs):
     return {"total_kwd": total_kwd, "big_player_kwd": BigPlayer_name, "field_name_kwd": '',
             "fancy": "according to my information from the database,", "tail_kwd": tail_answer,
             "eff_reslut": efficiency}
+
+
 
 
 def top_producing_fields_func(eng_response):
@@ -407,6 +476,7 @@ def list_rigs_in_filed_func(*args, **kwargs):
 
     return {"rig_names": listOfRigs}
 
+
 def status_of_well_func(*args, **kwargs):
     well_name = args[0].get("field_name", "DMMM129")
     entries = {'selection': 'DISTINCT \"Rig\"',
@@ -426,6 +496,81 @@ def status_of_well_func(*args, **kwargs):
     return {"answer": answer}
 
 
+def non_productive_location_func(*args, **kwargs):
+    response = args[0]
+    failure_kwd = response.get("failure_kwd","productive")
+    big_player_kwd = response.get("big_player_kwd","baker hughes")
+
+    BigPlayer_name = response.get("big_player_kwd", "baker hughes")
+
+
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+
+
+    BigPlayerID = BigPlayerDic.get(BigPlayer_name, "BH")  # default BH
+
+    q = "\""
+
+    selection = "select count(well),field "
+    formation = "from " + loss_table + " "
+    wheration =  "where " + date + " and " + q+"BigPlayer"+q +"="+big_player_kwd
+    group = " group by field "
+    order = "order by count(well) desc"
+
+
+    sql_1= selection + formation + wheration + group + order
+    # each fields how many non productive wells today
+    print(sql_1 , " is sql_1")
+
+    fancy = "According to the information I have, "
+    locations = ""
+
+    return {"fancy":fancy,"tail_kwd":tail_answer,"locations":locations}
+
+
+def empty_hours_func (*args, **kwargs):
+    print(" in empty hours")
+    response = args[0]
+    print(response)
+    big_player_kwd = response.get("big_player_kwd", "baker hughes")
+    hours_kwd = response.get("hours_kwd")
+    field_name_kwd = response.get("field_name_kwd","\'MRJN\'")
+    field_name_kwd= "\'" + field_name_kwd.upper() + "\'"
+
+    start_date, end_date, tail_answer = time_period_calc(args[0])
+    date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+
+
+    BigPlayerID = BigPlayerDic.get(big_player_kwd, "\'BH\'")  # default BH
+
+    fancy = "according to my calculations"
+    q = "\""
+
+    selection = "select " + "sum(" + q + "Hrs" + q + ")"
+    formation = "from " + loss_table + " "
+    wheration = "where " + date + " and " + q + "BigPlayer" + q + "=" + BigPlayerID
+    location  = " and " + " field =" + field_name_kwd
+    if location is None:
+        location = " "
+
+    sql = selection + formation + wheration + location
+
+    print (sql , " empty hours sql")
+
+    if location is not None:
+        location = "in " + field_name_kwd + " field"
+
+    result = sendQuery(sql)
+    number = result['rows'][0]['sum']
+    number = str(number) + " hours"
+
+
+    return { "fancy": fancy, "timing": tail_answer,
+            "big_player_kwd": big_player_kwd, "result": result,"field_name_kwd":location,
+             "result":number}
+
+
 mapper = {
     # "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
@@ -436,7 +581,10 @@ mapper = {
     "productionEfficiencyIntent": production_efficiency_fuc,
     "MostActiveIntent": most_active_func,
     "RigListerIntent": list_rigs_in_filed_func,
-    "TopProducingFieldsIntent": top_producing_fields_func
+    "TopProducingFieldsIntent": top_producing_fields_func,
+    "LocationOfNoneProductiveTime": non_productive_location_func,
+    "EmptyHoursIntent": empty_hours_func,
+    "StatusOfWellIntent": status_of_well_func
 }
 
 
