@@ -20,7 +20,7 @@ def find_skill(text):
 
     """
     if text is None or text == '':
-        retgit urn None
+        return None
 
     found, answer = TrivialSkills.search_for_match(text)  # this will say if match found
     if found:

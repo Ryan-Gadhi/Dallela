@@ -42,7 +42,7 @@
         },
         {
             "entity_name" : "field_name",
-            "regex_pattren": "([a-z]|[A-Z])",
+            "regex_pattren": "([a-z]|[A-Z])*",
             "apply_to" : ["in "],
             "importance" : "optionally"
         }

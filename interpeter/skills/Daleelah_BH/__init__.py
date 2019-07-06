@@ -112,22 +112,52 @@ def production_Intent_func(*args, **kwargs):
 
 
 def number_of_active_rigsfunc(*args, **kwargs):
+    colomn = args[0].get("field_keyword", None)
+    companyname = args[0].get("company_name", "")
+    print('here +++++++++++++++++++++++++++++++')
+    print(companyname)
+    print('here +++++++++++++++++++++++++++++++')
+    coldic = {
+        "rig": '\"Rig\"',
+        "rigs": '\"Rig\"',
+        "wells": 'well',
+        "wellbore": 'wellbore',
+        "wellbores": 'wellbore',
+        "fields": 'field',
+        "services": '\"Service\"',
+        "product line": '\"ProdLine\"',
+        "product lines": '\"ProdLine\"',
+    }
+
+    select_SQL = coldic.get(colomn, '\"Rig\"')  # get the name of the wanted column through the dic and defulte is rig
+    company_name = BigPlayerDic.get(companyname, "")  # get the name of the wanted company through the dic and the defulte is all
+    where_SQL = ""
+
+    if select_SQL == '\"Rig\"':
+        active_thing = 'rigs'
+    else:
+        active_thing = colomn
+    if company_name != "":
+        where_SQL = ' AND \"BigPlayer\" = ' + company_name
+
+
     print("active rigs intent function executed!")
     # import datetime
     engine_answer = args[0].get('field_keyword', None)
     print(engine_answer)
     start_date, end_date, answer = time_period_calc(args[0])
     sql_query = \
-        "SELECT COUNT(DISTINCT well) FROM {table_name} \
+        "SELECT COUNT(DISTINCT {select_SQL}) FROM {table_name} \
           WHERE \"Date\" >= '{first_date}' AND \"Date\" < '{second_date}'".format(**
                                                                                           {
                                                                                               'table_name': table,
                                                                                               'first_date': start_date,
                                                                                               'second_date': end_date,
+                                                                                              'select_SQL': select_SQL,
                                                                                           })
-
-    query_res = sendQuery(sql_query)
+    sql_query += where_SQL
     print(sql_query)
+    query_res = sendQuery(sql_query)
     print(query_res)
     print("start date is: ", start_date, ", end date=", end_date)
     # date = datetime.datetime.now()  # the format of this needs to be changed
@@ -136,7 +166,8 @@ def number_of_active_rigsfunc(*args, **kwargs):
     count = query_res.get("rows")[0]["count"]
     # if not args[0].get("period_kwd", None):
     #     count = 201
-    return {"number_of_active_rig": count, "optional": answer}
+    return {"number_of_active_rig": count, "optional": answer, "active_thing": active_thing,
+            "company_name": 'for ' + companyname}
 
 
 def non_productive_time_func(*args, **kwargs):
@@ -327,6 +358,10 @@ def operating_hours_func(*args, **kwargs):
 
 def most_active_func(*args, **kwargs):
     start_date, end_date, tail_answer = time_period_calc(args[0])
+    MA = args[0].get("MostActiveIntent", None)
+    order = "desc"
+    if MA in ["least", "lowest",  "min"]:
+        order = "asc"
     target_date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
     text = '\"BigPlayer\",count(DISTINCT \"Rig\") as num '
     entries = {'selection': text,
@@ -336,7 +371,7 @@ def most_active_func(*args, **kwargs):
     sql = 'select {selection} from {table} where '.format(**entries)
     sql += '{target_date} '.format(target_date=target_date)
     sql += 'group by {group} '.format(**entries)
-    sql += 'order by num desc limit 1'
+    sql += 'order by num {order} limit 1'.format(order=order)
     print(sql)
 
     bigplayer = 'BH'
@@ -371,6 +406,24 @@ def list_rigs_in_filed_func(*args, **kwargs):
     listOfRigs = listOfRigs[:-2]
 
     return {"rig_names": listOfRigs}
+
+def status_of_well_func(*args, **kwargs):
+    well_name = args[0].get("field_name", "DMMM129")
+    entries = {'selection': 'DISTINCT \"Rig\"',
+               'table': table}
+
+    sql = 'select {selection} from {table} where lower(\"Name_new\") = \'{target}\' AND '.format(**entries)
+    print(sql)
+
+    result = sendQuery(sql)
+    print(result)
+
+    if result['rowCount'] == 0:
+        answer = "the are no activety on " + well_name
+    else:
+        print('')
+
+    return {"answer": answer}
 
 
 mapper = {
