@@ -100,8 +100,9 @@ def time_period_calc(response):
     elif period in ['day', 'days']:
         start_date = start_date - relativedelta(days=+n_period)
         answer = str(n_period) + " " + period + " ago"
-
-    end_date = start_date + datetime.timedelta(days=1)
+    
+    if period:
+        end_date = start_date + datetime.timedelta(days=1)
 
     print(start_date, end_date)
     return str(start_date), str(end_date), answer
@@ -375,6 +376,15 @@ def product_line_intent_func(*args, **kwargs):
 
 
 def opr_lost_hrs_func(eng_res):
+    big_player = ('big_player' in eng_res) * "\"BigPlayer\" =" + eng_res.get("big_player", '')
+    start_date, end_date, answer_date = time_period_calc(eng_res)
+    
+    res = sendQuery("SELECT * FROM npt_table_v0 WHERE \
+    '{}' \
+    AND \"Date\" >= '{}' AND \"Date\" < '{}'").format(
+    big_player, start_date, end_date
+    )
+    
     return {'time': '5 ', 'time_unit':'hours', 'optional':'Ahmed: '}
 def operating_hours_func(eng_res):
     field_name = eng_res.get("field_name", 'HMYM')

@@ -10,18 +10,39 @@
             "name" : "lost_keyword",
             "contents": ["lost", "empty", "non-productive", "non productive"],
             "importance" : "require"
-        }],
+        },
+        {
+            "name" : "period_kwd",
+            "contents" : ["yesterday",
+                "week", " weeks", "month",
+                "months", "day", "days", "year", "years"],
+            "importance" : "optionally"
+        },
+        {
+            "name" : "month_kwd",
+            "contents" : ["january", "february",
+                "march", "april", "may",
+                "june", "july", "august", "september", "october", "november", "december"],
+            "importance" : "optionally"
+        }
+    ],
 "regex_entities" : [
     {
         "entity_name" : "product_line",
-        "regex_pattren": "\\w+",
+        "regex_pattren": "[a-zA-Z]+",
         "apply_to" : ["in "],
         "importance" : "optionally"
     },
         {
             "entity_name" : "big_player",
-            "regex_pattren": "\\w+",
+            "regex_pattren": "[a-zA-Z]+",
             "apply_to" : ["for "],
+            "importance" : "optionally"
+        },
+        {
+            "entity_name" : "n_kwd",
+            "regex_pattren": "\\d*",
+            "apply_to" : [""],
             "importance" : "optionally"
         }
        
