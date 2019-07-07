@@ -23,8 +23,7 @@ BigPlayerDic = {
     'baker': '\'BH\'',  # todo: find correct short name
     'schlumberger': '\'SLB\'',
     'halliburton': '\'HAL\'',
-    'weatherford' : 'WTF',
-    'other':'\'OTH\''
+    'weatherford' : '\'WTF\''
 
 }
 
@@ -176,7 +175,8 @@ def compare_efficiency_func(*args,**kwargs):
     response = args[0]
     start_date, end_date, tail_answer = time_period_calc(args[0])
     date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
-    big_player1_kwd = response.get('big_player1_kwd'.lower(), "Baker Hughes")
+
+    big_player1_kwd = response.get('big_player1_kwd'.lower(), "baker hughes")
     big_player2_kwd = response.get('big_player2_kwd'.lower(), "others")
     fancy = "after my calculations, it turns out that"
 
@@ -185,27 +185,30 @@ def compare_efficiency_func(*args,**kwargs):
 
 
 
-    eff_1 = _get_efficiency(big_player1_id)
-    eff_2 = _get_efficiency(big_player2_id) or None
+    eff_1 = _get_efficiency(big_player1_id, response=response)
+    eff_2 = _get_efficiency(big_player2_id, response=response) or None
     winner = big_player1_kwd  # temp
     looser = big_player2_kwd
     compare = "higher"
 
-    if eff_2 is None:
-        for company, _ in BigPlayerDic:
-            if _get_efficiency(company) > eff_1:
-                winner = big_player1_kwd
-                looser = big_player2_kwd
+    if eff_2 is None: # compare to all big players
+        for company in BigPlayerDic:
+            companyID = BigPlayerDic[company]
+            if _get_efficiency(companyID) > eff_1:
+                winner = big_player2_kwd
+                looser = big_player1_kwd
                 compare = "lower"
-                eff_2 = _get_efficiency(company)
-        if(compare == "higher"):
-            eff_2 = " efficiency better than all others"
+                eff_2 = _get_efficiency(companyID)
+        if compare == "higher":  # no body is better than player_1
+            eff_2 = " better than all others big player's "
     else:
         if eff_1 < eff_2:
             winner = big_player2_kwd
             looser = big_player1_kwd
             compare = "lower"
 
+    eff_1 = str(eff_1)
+    eff_2 = str(eff_2)
 
 
     return {"fancy":fancy , "big_player1_kwd":big_player1_kwd, "big_player2_kwd":big_player2_kwd,
@@ -241,7 +244,15 @@ def non_productive_time_func(*args, **kwargs):
             "time_kwd": time_kwd, "total_kwd": total_kwd, "loss_hours": loss_hours}
 
 
-def _get_efficiency(BigPlayerID):
+def _get_efficiency(BigPlayerID,response,passed_date = None):
+
+    date = None
+    if passed_date is None:
+        start_date, end_date, tail_answer = time_period_calc(response)
+        date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+    else:
+        date = passed_date
+
     table = loss_table
     q = "\""
     selection = "SELECT " + "SUM(" + q + "OperatingHours" + q + ") "
@@ -249,10 +260,10 @@ def _get_efficiency(BigPlayerID):
     wheration = "where " + q + "BigPlayer" + q + "=" + BigPlayerID + " and " + date + " "
 
     sql_1 = selection + formation + wheration
-    print(sql_1, " is sql 1")
+
     working_hours = sendQuery(sql_1)  # todo: uncomment when connected to the DB
-    print(working_hours)
     working_hours = working_hours['rows'][0]['sum']
+
     q = "\""
     selection = "select " + "SUM(" + q + "Hrs" + q + ") "
     formation = "from " + loss_table + " "
@@ -260,7 +271,6 @@ def _get_efficiency(BigPlayerID):
 
     sql_2 = selection + formation + wheration
     print(sql_2)
-    loss_time = 6
     loss_time = sendQuery(sql_2)  # todo: uncomment when connected to the DB
     loss_time = loss_time['rows'][0]['sum']
 

@@ -16,3 +16,6 @@ print( eng.compute("what is the efficiency for baker hughes") )
 #
 # print( eng.compute("What is the weather for 123 in tokyo") )
 
+print( eng.compute("what is the efficiency for baker hughes") )
+
+print( eng.compute("campare the efficincy for baker hughes to that of weatherford") )
