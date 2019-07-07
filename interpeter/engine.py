@@ -105,7 +105,6 @@ class Engine:
         if correct_intenets: # if there is intents that matches the user's text
             best_intent = max(correct_intenets, key=lambda intent: intent['confidence']) # gets the highest intent
             best_intent_handler = self.__get_correct_handler(best_intent)
-            print(best_intent)
             return best_intent_handler.execute(best_intent) # running handler's function
             # print(json.dumps(best_intent, indent=4))
 

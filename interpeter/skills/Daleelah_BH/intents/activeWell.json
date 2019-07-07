@@ -38,6 +38,12 @@
             "regex_pattren": "\\d*",
             "apply_to" : ["in ", ""],
             "importance" : "optionally"
+        },
+        {
+            "entity_name" : "big_player",
+            "regex_pattren": "\\w+",
+            "apply_to" : ["for "],
+            "importance" : "optionally"
         }
     ],
 

@@ -1,0 +1,34 @@
+{
+    "name" : "LostOperationIntent",
+    "entities" : [
+        {
+            "name" : "hr_keyword",
+            "contents": ["hour", "hours", "time", "times"],
+            "importance" : "require"
+        },
+        {
+            "name" : "lost_keyword",
+            "contents": ["lost", "empty", "non-productive", "non productive"],
+            "importance" : "require"
+        }],
+"regex_entities" : [
+    {
+        "entity_name" : "product_line",
+        "regex_pattren": "\\w+",
+        "apply_to" : ["in "],
+        "importance" : "optionally"
+    },
+        {
+            "entity_name" : "big_player",
+            "regex_pattren": "\\w+",
+            "apply_to" : ["for "],
+            "importance" : "optionally"
+        }
+       
+    ],
+
+    "answers" : [
+        "{optional}{time}{time_unit}"
+    ]
+
+}

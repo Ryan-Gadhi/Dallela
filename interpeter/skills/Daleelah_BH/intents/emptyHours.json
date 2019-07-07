@@ -3,7 +3,7 @@
     "entities" : [
         {
             "name" : "question_kwd",
-            "contents": ["how many","how","what are"],
+            "contents": ["how","what are"],
             "importance" : "require"
         }
         ,

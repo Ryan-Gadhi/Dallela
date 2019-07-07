@@ -1,0 +1,40 @@
+{
+    "name" : "ActiveOperationIntent",
+    "entities" : [
+        {
+            "name" : "active_keyword",
+            "contents": ["operating", "operate", "working"],
+            "importance" : "require"
+        },
+        {
+            "name" : "hr_keyword",
+            "contents": ["hour", "hours"],
+            "importance" : "require"
+        },
+        {
+            "name" : "lost_keyword",
+            "contents": ["lost", "empty", "non-productive", "non productive"],
+            "importance" : "optionally"
+        }],
+"regex_entities" : [
+        
+        {
+            "entity_name" : "field_name",
+            "regex_pattren": "\\w+",
+            "apply_to" : ["in ", "at "],
+            "importance" : "optionally"
+        },
+
+        {
+            "entity_name" : "big_player",
+            "regex_pattren": "\\w+",
+            "apply_to" : ["for "],
+            "importance" : "require"
+        }
+    ],
+
+    "answers" : [
+        "The {active_keyword} for {big_player} is {time}"
+    ]
+
+}

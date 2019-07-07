@@ -137,7 +137,7 @@ class Handler(ABC):
     
 
 
-
+        print(modified_response)
         return( # printable
         self.answer.format_response(modified_response)
         )

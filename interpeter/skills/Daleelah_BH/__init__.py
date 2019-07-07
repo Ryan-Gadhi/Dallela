@@ -374,24 +374,21 @@ def product_line_intent_func(*args, **kwargs):
     return {"answer": answer}
 
 
-def operating_hours_func(*args, **kwargs):
-    field_name = args[0].get("field_name", None)
-    BigPlayer = args[0].get("big_player1", None)
+def opr_lost_hrs_func(eng_res):
+    return {'time': '5 ', 'time_unit':'hours', 'optional':'Ahmed: '}
+def operating_hours_func(eng_res):
+    field_name = eng_res.get("field_name", 'HMYM')
+    big_player = eng_res.get("big_player", 'bh')
 
-    if (field_name is not None):
-        pass
-    else:
-        field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
+    #entries = {'selection': '(OperatingHours-24)',
+    #           'table': table,
+     #          'field': field_name,
+      #         'column': 'field',
+       #        'BigPlayer': BigPlayerDic[BigPlayer]}
 
-    entries = {'selection': '(OperatingHours-24)',
-               'table': table,
-               'field': field_name,
-               'column': 'field',
-               'BigPlayer': BigPlayerDic[BigPlayer]}
-
-    sql = 'select {selection} from {table} where {column} = {field} and ' \
-          '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
-    sql += 'date = {today}'.format(today=today)
+    #sql = 'select {selection} from {table} where {column} = {field} and ' \
+     #     '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
+    #sql += 'date = {today}'.format(today=today)
 
     result = '15'  # todo: should be replaced with bottom 2 lines
     # result = sendQuery(sql)
@@ -530,7 +527,8 @@ mapper = {
     "RigListerIntent": list_rigs_in_filed_func,
     "TopProducingFieldsIntent": top_producing_fields_func,
     "LocationOfNoneProductiveTime":non_productive_location_func,
-    "EmptyHoursIntent": empty_hours_func
+    "EmptyHoursIntent": empty_hours_func,
+    "LostOperationIntent": opr_lost_hrs_func
 }
 
 
