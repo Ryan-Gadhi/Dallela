@@ -31,38 +31,26 @@
                 "march", "april", "may",
                 "june", "july", "august", "september", "october", "november", "december"],
             "importance" : "optionally"
+        },
+        {
+            "name" : "big_player2_kwd",
+            "contents": ["baker hughes", "schlumberger", "halliburton","weatherford","others","all others"],
+            "importance" : "optionally"
         }
     ],
 
     "regex_entities" : [
-        {
-            "entity_name" : "n_kwd",
-            "regex_pattren": "\\d*",
-            "apply_to" : ["in ", ""],
-            "importance" : "optionally"
-        },
-        {
-            "entity_name" : "field_name_kwd",
-            "regex_pattren": "([a-z]|[A-Z])"*,
-            "apply_to" : ["in "],
-            "importance" : "optionally"
-        },
+
         {
             "entity_name" : "big_player1_kwd",
             "regex_pattren": "([a-z]|[A-Z])*",
-            "apply_to" : ["between "],
+            "apply_to" : ["between ","for "],
             "importance" : "require"
-        },
-        {
-            "entity_name" : "big_player2_kwd",
-            "regex_pattren": "(.+ and [a-z]|[A-Z])*",
-            "apply_to" : ["between"],
-            "importance" : "optionally"
         }
     ],
 
     "answers" : [
-        "{fancy} {big_player1_kwd} with {eff_bigPlayer_1} is having {compare} than {big_player1_kwd} having {eff_bigPlayer_2}"
+        "{fancy} {big_player1_kwd} with {eff_bigPlayer_1} is having {compare} efficiency than {big_player1_kwd} having {eff_bigPlayer_2} efficiency"
     ]
 
 }
