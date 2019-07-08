@@ -376,14 +376,16 @@ def product_line_intent_func(*args, **kwargs):
 
 
 def opr_lost_hrs_func(eng_res):
-    big_player = ('big_player' in eng_res) * "\"BigPlayer\" =" + eng_res.get("big_player", '')
+    big_player = ('big_player' in eng_res) * "\"BigPlayer\" ='{}'".format( eng_res.get("big_player", '') )
     start_date, end_date, answer_date = time_period_calc(eng_res)
-    
-    res = sendQuery("SELECT * FROM npt_table_v0 WHERE \
-    '{}' \
-    AND \"Date\" >= '{}' AND \"Date\" < '{}'").format(
-    big_player, start_date, end_date
-    )
+    sql_str = "SELECT * FROM npt_table_v0 WHERE \
+    {} \
+    AND \"Date\" >= '{}' AND \"Date\" < '{}'".format(
+    big_player, start_date, end_date)
+    print(sql_str)
+    res = sendQuery(sql_str)
+
+    print(res)
     
     return {'time': '5 ', 'time_unit':'hours', 'optional':'Ahmed: '}
 def operating_hours_func(eng_res):
