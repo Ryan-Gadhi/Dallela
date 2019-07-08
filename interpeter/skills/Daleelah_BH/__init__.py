@@ -637,6 +637,7 @@ def sendQuery(sql_string):
 
 # You can create a skill both with a json or manually
 
+
 class fieldLocatorSkill(Skill):  # @Ryan, recom: having a skill passed is confusing. since it is not used
     def __init__(self):
         super().__init__()
