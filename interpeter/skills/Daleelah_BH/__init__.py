@@ -96,8 +96,9 @@ def time_period_calc(response):
     elif period in ['day', 'days']:
         start_date = start_date - relativedelta(days=+n_period)
         answer = str(n_period) + " " + period + " ago"
-
-    end_date = start_date + datetime.timedelta(days=1)
+    
+    if period:
+        end_date = start_date + datetime.timedelta(days=1)
 
     print(start_date, end_date)
     return str(start_date), str(end_date), answer
@@ -114,7 +115,7 @@ def production_Intent_func(*args, **kwargs):
 
 def number_of_active_rigsfunc(*args, **kwargs):
     colomn = args[0].get("field_keyword", None)
-    companyname = args[0].get("company_name", "")
+    companyname = args[0].get("big_player", "")
     print('here +++++++++++++++++++++++++++++++')
     print(companyname)
     print('here +++++++++++++++++++++++++++++++')
@@ -409,24 +410,32 @@ def product_line_intent_func(*args, **kwargs):
     return {"answer": answer}
 
 
-def operating_hours_func(*args, **kwargs):
-    field_name = args[0].get("field_name", None)
-    BigPlayer = args[0].get("big_player1", None)
+def opr_lost_hrs_func(eng_res):
+    big_player = ('big_player' in eng_res) * "\"BigPlayer\" =" + eng_res.get("big_player", '')
+    start_date, end_date, answer_date = time_period_calc(eng_res)
+    
+    res = sendQuery("SELECT * FROM npt_table_v0 WHERE \
+    '{}' \
+    AND \"Date\" >= '{}' AND \"Date\" < '{}'").format(
+    big_player, start_date, end_date
+    )
+    
+    return {'time': '5 ', 'time_unit':'hours', 'optional':'Ahmed: '}
 
-    if (field_name is not None):
-        pass
-    else:
-        field_name = 'HMYM'  # default val. todo: should be changed to shortcuts only
 
-    entries = {'selection': '(OperatingHours-24)',
-               'table': table,
-               'field': field_name,
-               'column': 'field',
-               'BigPlayer': BigPlayerDic[BigPlayer]}
+def operating_hours_func(eng_res):
+    field_name = eng_res.get("field_name", 'HMYM')
+    big_player = eng_res.get("big_player", 'bh')
 
-    sql = 'select {selection} from {table} where {column} = {field} and ' \
-          '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
-    sql += 'date = {today}'.format(today=today)
+    #entries = {'selection': '(OperatingHours-24)',
+    #           'table': table,
+     #          'field': field_name,
+      #         'column': 'field',
+       #        'BigPlayer': BigPlayerDic[BigPlayer]}
+
+    #sql = 'select {selection} from {table} where {column} = {field} and ' \
+     #     '\"BigPlayer\" = {BigPlayer} and '.format(**entries)
+    #sql += 'date = {today}'.format(today=today)
 
     result = '15'  # todo: should be replaced with bottom 2 lines
     # result = sendQuery(sql)
@@ -602,7 +611,10 @@ mapper = {
     "TopProducingFieldsIntent": top_producing_fields_func,
     "LocationOfNoneProductiveTime": non_productive_location_func,
     "EmptyHoursIntent": empty_hours_func,
-    "StatusOfWellIntent": status_of_well_func
+    "StatusOfWellIntent": status_of_well_func,
+    "LocationOfNoneProductiveTime":non_productive_location_func,
+    "LostOperationIntent": opr_lost_hrs_func
+
 }
 
 
