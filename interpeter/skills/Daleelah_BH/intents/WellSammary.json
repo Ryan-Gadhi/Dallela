@@ -1,23 +1,26 @@
 {
-    "name" : "EfficiencyComparisonIntent",
+    "name" : "WellDetailSummaryIntent",
     "entities" : [
         {
-            "name" : "eff_kwd",
-            "contents": ["efficiency"],
-            "importance" : "require"
-        }
-        ,
-        {
-            "name" : "production_kwd",
-            "contents": ["production", "yield", "output","productive","loss"],
+            "name" : "well_kwd",
+            "contents": ["well"],
             "importance" : "optionally"
         }
         ,
         {
-            "name" : "compare_kwd",
-            "contents" : ["compare", "better","lower","best","highest","lowest"],
+            "name" : "summary_kwd",
+            "contents": ["summary", "all info","summarize"],
             "importance" : "require"
-        },
+        }
+        ,
+        {
+            "name" : "detailed_kwd",
+            "contents": ["detailed", "precise","long answer","details"],
+            "importance" : "require"
+
+        }
+        ,
+
         {
             "name" : "period_kwd",
             "contents" : ["yesterday",
@@ -41,15 +44,18 @@
 
     "regex_entities" : [
         {
-            "entity_name" : "big_player1_kwd",
-            "regex_pattren": "([a-z]|[A-Z])*",
-            "apply_to" : ["between ","for "],
+            "entity_name" : "well_name",
+            "regex_pattren": "([a-z]|[A-Z])*_\\d*",
+            "apply_to" : ["about ","for "],
             "importance" : "require"
         }
+
+
+
     ],
 
     "answers" : [
-        "{fancy} {big_player1_kwd} with {eff_bigPlayer_1} is having {compare} efficiency than {big_player1_kwd} having {eff_bigPlayer_2} efficiency"
+        "{fancy}, the detailed information for {well_name} {what_day}: {well_name} current activity is {phase}, its hole section is {hole_section_rmt}. Additionally {fancy2} its current depth is {current_depth_rmt} and there are a number of {well_bore_num} wellbores in that well. {what_day}, the work started at depth {start_depth} and ended at depth {end_depth} {so_basically}"
     ]
 
 }

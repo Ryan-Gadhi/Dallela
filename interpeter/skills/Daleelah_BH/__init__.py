@@ -581,6 +581,63 @@ def empty_hours_func (*args, **kwargs):
             "big_player_kwd": big_player_kwd, "result": result,"field_name_kwd":location,
              "result":number}
 
+def well_detial_summary_func(*args, **kwargs):
+    response = args[0]
+
+    well_name = response.get('well_name')
+    hole_section_rmt = '###?'
+    fancy2 = 'according to the data i have'
+    fancy = 'from the information i have'
+
+    current_depth_rmt = ''
+    table = 'hazard_table_v1'
+    start_date, end_date, tail_answer = time_period_calc(response)
+    date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
+
+    q = '\"'
+    s1 = 'htable_SummaryofOperation'
+    s2 = ''
+    s3 = ''
+
+    k = ','
+
+    # sql for num of wellbore:
+    # todo: select count(wellbore) from hazard_table_v1 where  well like 'ABHD_121' and "Date" ='2019-07-07'
+
+    table = 'hazard_table_v1'
+    selection = 'select ' + 'count(wellbore)'
+    formation = 'from ' + table
+    wheration = 'where '+ date + 'and ' + 'well ' + '=' + well_name
+
+
+    sql_1 = selection + formation + wheration
+    welbore_count = sendQuery(sql_1)
+
+    table = 'hazard_table_v1'
+    q = '\"'
+    column = 'mod_htable_From'
+    selection = 'select ' + 'max('+ q+column+q +'),' + 'min('+ q+column+q +'),'
+    formation = 'from ' + table
+    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name
+
+    sql_2 = selection + formation + wheration
+
+    peroid = sendQuery(sql_2)
+    # todo: from period extract start_time and end_time
+
+
+
+
+
+
+    return {"activity_rmt":asctivity_rmt, "hole_section_rmt":hole_section_rmt,
+            "fancy2":fancy2, "fancy":fancy,
+            "current_depth_rmt":current_depth_rmt,"what_day":what_day
+            "phase":phase,"well_bore_num":well_bore_num,"start_dept":start_depth
+            ,"end_depth":end_depth,"so_basically":so_basically}
+
+
+
 
 mapper = {
     # "FieldLocatorIntent": field_locator_intent_func,
