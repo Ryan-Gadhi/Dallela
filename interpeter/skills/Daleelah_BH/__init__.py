@@ -490,10 +490,13 @@ def list_rigs_in_filed_func(*args, **kwargs):
 
 def status_of_well_func(*args, **kwargs):
     well_name = args[0].get("field_name", "DMMM129")
-    entries = {'selection': 'DISTINCT \"Rig\"',
-               'table': table}
+    well_name = well_name[0:3] + "_" + well_name[3:]
+    entries = {'selection': '\"htable_To\", \"htable_Phase\", \"Hole_depth_End\", \"Date\"',
+               'table': 'public.hazard_table_v1',
+               'where': 'lower(well) = lower(well_name) and \"Date\" is not null',
+               'order_by': '\"Date\" Desc limit 1'}
 
-    sql = 'select {selection} from {table} where lower(\"Name_new\") = \'{target}\' AND '.format(**entries)
+    sql = 'select {selection} from {table} where {where} order by {order_by}'.format(**entries)
     print(sql)
 
     result = sendQuery(sql)
@@ -502,7 +505,11 @@ def status_of_well_func(*args, **kwargs):
     if result['rowCount'] == 0:
         answer = "the are no activety on " + well_name
     else:
-        print('')
+        ans = result['rows'][0]
+        time = ans["htable_To"]
+        time = time[0:2] + ":" + time[2:]
+        answer = "The last up date was in " + time + " " + {"Date"} + " and is drilling secter " +\
+                 {"htable_Phase"} + " reched depth of " + {"Hole_depth_End"} + " feets".format(ans)
 
     return {"answer": answer}
 

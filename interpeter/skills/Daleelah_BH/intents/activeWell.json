@@ -3,7 +3,7 @@
     "entities" : [
         {
             "name" : "field_keyword",
-            "contents": ["rig", "fields", "wells","wellbore", "wellbores", "services", "rigs", "bricks", "raids", "bricks", "rings", "ribs", "rib","product line", "product lines"],
+            "contents": ["rig", "fields", "wells", "services", "rigs", "bricks", "raids", "bricks", "rings", "ribs", "rib"],
             "importance" : "require"
         },
         {
@@ -29,11 +29,6 @@
                 "march", "april", "may",
                 "june", "july", "august", "september", "october", "november", "december"],
             "importance" : "optionally"
-        },
-        {
-            "name" : "company_name",
-            "contents" : ["baker"],
-            "importance" : "optionally"
         }
     ],
     
@@ -43,12 +38,17 @@
             "regex_pattren": "\\d*",
             "apply_to" : ["in "],
             "importance" : "optionally"
+        },
+          {
+            "entity_name" : "bigpalyer",
+            "regex_pattren": "\\w+",
+            "apply_to" : ["for "],
+            "importance" : "optionally"
         }
-
     ],
 
     "answers" : [
-        "There are {number_of_active_rig} active {active_thing} {optional} {company_name}"
+        "There are {number_of_active_rig} active rigs {optional}"
     ]
 
 }

@@ -29,11 +29,7 @@ def find_skill(text):
     if not found:
         print(' ### Request not found in trivial skills')
 
-        original_dir = os.getcwd()
-        os.chdir(os.getcwd() + '/interpeter/')
-
         engine = Engine()
-        os.chdir(original_dir)
 
         answer = engine.compute(text)
 
@@ -133,50 +129,52 @@ if __name__ == '__main__':
 
     sp = Speaking()
     sp.womanAudio()
+    sp.say("The last up date was in " + "13:40" + " " + "today" + " and is drilling secter " +\
+                  " reched depth of "+ " feets")
 
     # root= Tk()
     # gui = GUI.GUI(root,LookForTrigger)
     # root.mainloop()
 
-    while True:  # always listening
-        print('outer')
-        tr = TriggerWord()
-        tr.recognize()
-
-        while not tr.is_awake():
-            pass
-            # time.sleep(2)
-            # print(' ***')
-            # tr.threads_life()
-            # print(' ### ')
-
-        counter = 0
-        limit = 2
-        if tr.is_awake() == True:
-            while True:  # do while style
-                print('inner')
-                if counter >= limit:
-                    output_text = find_skill('Sleep_101')
-                    sp.say(output_text)
-                    break
-
-                input_text = listen()
-
-                if input_text == 'Error_101':
-                    counter += 1
-                    error_text = find_skill(input_text)
-                    sp.say(error_text)
-
-                else:
-                    answer = find_skill(input_text)
-                    print('entered')
-                    if answer == 'Error_101':
-                        counter += 1
-                        output_text = find_skill(answer)
-                        sp.say(output_text)
-                    else:
-                        sp.say(answer)
-                        break
+    # while True:  # always listening
+    #     print('outer')
+    #     tr = TriggerWord()
+    #     tr.recognize()
+    #
+    #     while not tr.is_awake():
+    #         pass
+    #         # time.sleep(2)
+    #         # print(' ***')
+    #         # tr.threads_life()
+    #         # print(' ### ')
+    #
+    #     counter = 0
+    #     limit = 2
+    #     if tr.is_awake() == True:
+    #         while True:  # do while style
+    #             print('inner')
+    #             if counter >= limit:
+    #                 output_text = find_skill('Sleep_101')
+    #                 sp.say(output_text)
+    #                 break
+    #
+    #             input_text = listen()
+    #
+    #             if input_text == 'Error_101':
+    #                 counter += 1
+    #                 error_text = find_skill(input_text)
+    #                 sp.say(error_text)
+    #
+    #             else:
+    #                 answer = find_skill(input_text)
+    #                 print('entered')
+    #                 if answer == 'Error_101':
+    #                     counter += 1
+    #                     output_text = find_skill(answer)
+    #                     sp.say(output_text)
+    #                 else:
+    #                     sp.say(answer)
+    #                     break
 
     # not needed #find_skill()
 
