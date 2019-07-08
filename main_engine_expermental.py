@@ -3,7 +3,7 @@ from interpeter.engine import Engine
 eng = Engine()
 
 
-print( eng.compute("how many active rigs today") )
+print( eng.compute("efficiency") )
 # print( eng.compute("show me the most producing fields today") )
 # print(eng.compute("many active wellbore from baker "))
 #

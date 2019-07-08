@@ -591,49 +591,73 @@ def well_detial_summary_func(*args, **kwargs):
 
     current_depth_rmt = ''
     table = 'hazard_table_v1'
-    start_date, end_date, tail_answer = time_period_calc(response)
+    start_date, end_date, what_day = time_period_calc(response)
     date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
-
+    
     q = '\"'
-    s1 = 'htable_SummaryofOperation'
-    s2 = ''
-    s3 = ''
-
-    k = ','
-
-    # sql for num of wellbore:
-    # todo: select count(wellbore) from hazard_table_v1 where  well like 'ABHD_121' and "Date" ='2019-07-07'
-
     table = 'hazard_table_v1'
+    
+    
+    # sql for num of wellbore:
     selection = 'select ' + 'count(wellbore)'
     formation = 'from ' + table
     wheration = 'where '+ date + 'and ' + 'well ' + '=' + well_name
 
-
     sql_1 = selection + formation + wheration
     welbore_count = sendQuery(sql_1)
 
-    table = 'hazard_table_v1'
-    q = '\"'
+
     column = 'mod_htable_From'
     selection = 'select ' + 'max('+ q+column+q +'),' + 'min('+ q+column+q +'),'
     formation = 'from ' + table
     wheration = 'where date ='+ date + 'and ' + 'well =' + well_name
 
     sql_2 = selection + formation + wheration
-
-    peroid = sendQuery(sql_2)
+    period = sendQuery(sql_2)
+    start_time = '0000'
+    end_time = '2030'
     # todo: from period extract start_time and end_time
 
+    
+    column = q+'htable_Hole_depth:Start'+q
+    selection = 'select ' + column
+    formation = 'from ' + table
+    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name \
+                + ' and ' + q+'mod_htable_From'+q + '=' + start_time
+    sql_3 = selection + formation + wheration
+    start_depth = sendQuery(sql_3)
+  
+    
+    column = q+'Hole_depth_End'+q
+    selection = 'select ' + column
+    formation = 'from ' + table
+    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name \
+                + ' and ' + q+'mod_htable_From'+q + '=' + end_date
+    sql_4 = selection + formation + wheration
+    end_depth = sendQuery(sql_4)
+    
+
+    column = q+'htable_Phase'+q
+    selection = 'select ' + column
+    formation = 'from ' + table
+    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name \
+                + ' and ' + q+'mod_htable_From'+q + '=' + end_date
+    sql_5 = selection + formation + wheration
+    phase = sendQuery(sql_5)
+          
+    
+    so_basically = None
+    if start_date == end_date:
+        so_basically = 'so basically, there was no additional drilling in the well'
+    else:
+        so_basically = 'so basically, the extra depth drilled is ' + str(abs(int(start_depth)-int(end_depth)))
+    
 
 
-
-
-
-    return {"activity_rmt":asctivity_rmt, "hole_section_rmt":hole_section_rmt,
+    return {hole_section_rmt : "hole_section_rmt",
             "fancy2":fancy2, "fancy":fancy,
-            "current_depth_rmt":current_depth_rmt,"what_day":what_day
-            "phase":phase,"well_bore_num":well_bore_num,"start_dept":start_depth
+            "what_day":what_day,
+            "phase":phase,"well_bore_num":welbore_count,"start_dept":start_depth
             ,"end_depth":end_depth,"so_basically":so_basically}
 
 
