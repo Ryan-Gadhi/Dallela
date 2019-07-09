@@ -39,6 +39,6 @@ class Speaking:
         print(self)
         try:
             self.engine.setProperty('voice', name)
+            self.engine.setProperty('rate', 150) 
         except():
             print('specified sound not found in the local system!')
-

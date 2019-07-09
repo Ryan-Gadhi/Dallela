@@ -17,7 +17,7 @@
                 {
                     "entity_name" : "number",
                     "regex_pattren": "\\d*",
-                    "apply_to" : ["for "],
+                    "apply_to" : ["in "],
                     "importance" : "optionally"
                 },
                 {

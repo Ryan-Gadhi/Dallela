@@ -47,7 +47,6 @@ def field_locator_intent_func(*args, **kwargs):
 
 
 def time_period_calc(response):
-    print(response)
     monthes = {
         'january': 1,
         'february': 2,
@@ -116,8 +115,10 @@ def production_Intent_func(*args, **kwargs):
 def number_of_active_rigsfunc(*args, **kwargs):
     colomn = args[0].get("field_keyword", None)
     companyname = args[0].get("big_player", "")
+    field = args[0].get("field", "")
     print('here +++++++++++++++++++++++++++++++')
     print(companyname)
+    print(field)
     print('here +++++++++++++++++++++++++++++++')
     coldic = {
         "rig": '\"Rig\"',
@@ -139,9 +140,16 @@ def number_of_active_rigsfunc(*args, **kwargs):
         active_thing = 'rigs'
     else:
         active_thing = colomn
-    if company_name != "":
-        where_SQL = ' AND \"BigPlayer\" = ' + company_name
 
+    if company_name != "":
+        where_SQL += ' AND \"BigPlayer\" = ' + company_name
+        companyname ='for ' + companyname
+    
+    if select_SQL != 'field':
+        where_SQL += "AND lower(field) = \'" + field +"\'"
+        field = "in " + field
+    
+    print(where_SQL+"::::::::::::::::::::::::::::::::::::::::::::")
 
     print("active rigs intent function executed!")
     # import datetime
@@ -169,7 +177,7 @@ def number_of_active_rigsfunc(*args, **kwargs):
     # if not args[0].get("period_kwd", None):
     #     count = 201
     return {"number_of_active_rig": count, "optional": answer, "active_thing": active_thing,
-            "company_name": 'for ' + companyname}
+            "optional": companyname, "field":field}
 
 
 def compare_efficiency_func(*args,**kwargs):
@@ -476,8 +484,7 @@ def most_active_func(*args, **kwargs):
 
 
 def list_rigs_in_filed_func(*args, **kwargs):
-    field_name = "Dammam"
-    field_name = args[0].get("field_name", None)
+    field_name = args[0].get("field_name", "Dammam")
     start_date, end_date, tail_answer = time_period_calc(args[0])
     target_date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
     entries = {'selection': 'DISTINCT \"Rig\"',
@@ -498,11 +505,14 @@ def list_rigs_in_filed_func(*args, **kwargs):
 
 
 def status_of_well_func(*args, **kwargs):
-    well_name = args[0].get("field_name", "DMMM129")
-    well_name = well_name[0:3] + "_" + well_name[3:]
+    well_name = args[0].get('well_name','DMMM129')
+    well_name = well_name[0:4] + "_" + well_name[4:]
+    print("++++++++++++++++++++++++++++++++++++++")
+    print(well_name)
+    print("++++++++++++++++++++++++++++++++++++++")
     entries = {'selection': '\"htable_To\", \"htable_Phase\", \"Hole_depth_End\", \"Date\"',
                'table': 'public.hazard_table_v1',
-               'where': 'lower(well) = lower(well_name) and \"Date\" is not null',
+               'where': 'lower(well) = lower( \'' + well_name + '\') and \"Date\" is not null',
                'order_by': '\"Date\" Desc limit 1'}
 
     sql = 'select {selection} from {table} where {where} order by {order_by}'.format(**entries)
@@ -517,8 +527,9 @@ def status_of_well_func(*args, **kwargs):
         ans = result['rows'][0]
         time = ans["htable_To"]
         time = time[0:2] + ":" + time[2:]
-        answer = "The last up date was in " + time + " " + {"Date"} + " and is drilling secter " +\
-                 {"htable_Phase"} + " reched depth of " + {"Hole_depth_End"} + " feets".format(ans)
+        Date = ans["Date"][:10]
+        answer = ("The last up date was in " + time + " " + Date + " and is drilling secter \
+                 {htable_Phase}  reched depth of  {Hole_depth_End} feets").format(**ans)
 
     return {"answer": answer}
 

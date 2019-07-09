@@ -129,8 +129,7 @@ if __name__ == '__main__':
 
     sp = Speaking()
     sp.womanAudio()
-    sp.say("The last up date was in " + "13:40" + " " + "today" + " and is drilling secter " +\
-                  " reched depth of "+ " feets")
+    sp.say("The last up date was in 07:00 2019-02-11 and is drilling secter   EOW  reched depth of  15801 feets")
 
     # root= Tk()
     # gui = GUI.GUI(root,LookForTrigger)

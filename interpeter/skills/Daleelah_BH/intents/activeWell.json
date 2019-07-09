@@ -35,8 +35,8 @@
     "regex_entities" : [
         {
             "entity_name" : "n_kwd",
-            "regex_pattren": "\\d*",
-            "apply_to" : ["in "],
+            "regex_pattren": "\\d+",
+            "apply_to" : [""],
             "importance" : "optionally"
         },
         {
@@ -44,11 +44,17 @@
             "regex_pattren": "\\w+",
             "apply_to" : ["for "],
             "importance" : "optionally"
+        },
+        {
+            "entity_name" : "field",
+            "regex_pattren": "(\\S)+",
+            "apply_to" : ["in "],
+            "importance" : "optionally"
         }
     ],
 
     "answers" : [
-        "There are {number_of_active_rig} active rigs {optional}"
+        "There are {number_of_active_rig} active rigs {optional} {field}"
     ]
 
 }

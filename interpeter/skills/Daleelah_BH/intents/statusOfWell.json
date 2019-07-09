@@ -25,7 +25,7 @@
       "entity_name": "well_name",
       "regex_pattren": "\\w+",
       "apply_to": [
-        "in "
+        "of "
       ],
       "importance": "require"
     }
