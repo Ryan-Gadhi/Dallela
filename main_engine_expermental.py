@@ -2,7 +2,7 @@ from interpeter.engine import Engine
 
 eng = Engine()
 
-print( eng.compute("how many active rigs for baker in DMMM in 2017") )
+print( eng.compute("show the activity on the well dmmm129") )
 
 # print( eng.compute("What is the weather for 123 in tokyo") )
 #

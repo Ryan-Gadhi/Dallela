@@ -36,6 +36,18 @@ operationDecoder = {
     'OTH': "Other"
 }
 
+coldic = {
+        "rig": '\"Rig\"',
+        "rigs": '\"Rig\"',
+        "wells": 'well',
+        "wellbore": 'wellbore',
+        "wellbores": 'wellbore',
+        "fields": 'field',
+        "services": '\"Service\"',
+        "product line": '\"ProdLine\"',
+        "product lines": '\"ProdLine\"',
+}
+
 
 def field_locator_intent_func(*args, **kwargs):
     sql = ('select operatingHours from {table} where '.format(table))
@@ -120,17 +132,6 @@ def number_of_active_rigsfunc(*args, **kwargs):
     print(companyname)
     print(field)
     print('here +++++++++++++++++++++++++++++++')
-    coldic = {
-        "rig": '\"Rig\"',
-        "rigs": '\"Rig\"',
-        "wells": 'well',
-        "wellbore": 'wellbore',
-        "wellbores": 'wellbore',
-        "fields": 'field',
-        "services": '\"Service\"',
-        "product line": '\"ProdLine\"',
-        "product lines": '\"ProdLine\"',
-    }
 
     select_SQL = coldic.get(colomn, '\"Rig\"')  # get the name of the wanted column through the dic and defulte is rig
     company_name = BigPlayerDic.get(companyname, "")  # get the name of the wanted company through the dic and the defulte is all
@@ -609,6 +610,41 @@ def empty_hours_func (*args, **kwargs):
              "result":number}
 
 
+def activity_rig_func(*args, **kwargs):
+    rig = args[0].get("inpt_name", "rig 910Tq")
+    rig = rig.split()
+    place = coldic.get(rig [0],"well")
+    place_name = rig[1]
+    if place == "well":
+        place_name = place_name[0:4] + '_' + place_name[4:]
+    text = '\"Name_new\",\"CategoryName\",well,\"Date\"'
+    entries = {'selection': text,
+               'table': table,
+               'where': 'lower(' + place + ') = \'' + place_name + '\'',
+                'order': '\"Date\" desc'}
+
+    sql = 'select {selection} from {table} where {where}'.format(**entries)
+    sql += 'order by {order} limit 1'.format(**entries)
+    print(sql)
+
+    result = sendQuery(sql)
+    print(result)
+
+    ans = result['rows'][0]
+    
+    field = ans['Name_new'] + ans['well'][4:]
+    CategoryName = ans['CategoryName']
+    Date = ans['Date'][:10]
+    answer = "The last update on the " + place + " was in " + Date
+    if place !="well":
+        answer += " and it is on the well " + field
+    answer += " doing " +  CategoryName
+
+
+    return {"answer":answer }
+
+
+
 mapper = {
     # "FieldLocatorIntent": field_locator_intent_func,
     "NumberOfActiveRigsIntent": number_of_active_rigsfunc,
@@ -624,7 +660,8 @@ mapper = {
     "EmptyHoursIntent": empty_hours_func,
     "StatusOfWellIntent": status_of_well_func,
     "LocationOfNoneProductiveTime":non_productive_location_func,
-    "LostOperationIntent": opr_lost_hrs_func
+    "LostOperationIntent": opr_lost_hrs_func,
+    "ActivityRigIntent": activity_rig_func
 
 }
 
