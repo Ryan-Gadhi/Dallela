@@ -589,61 +589,84 @@ def well_detial_summary_func(*args, **kwargs):
     fancy2 = 'according to the data i have'
     fancy = 'from the information i have'
 
-    current_depth_rmt = ''
     table = 'hazard_table_v1'
     start_date, end_date, what_day = time_period_calc(response)
     date = '\"Date\" >= \'' + start_date + '\' AND \"Date\" < \'' + end_date + '\''
     
     q = '\"'
     table = 'hazard_table_v1'
+    k = '\''
+
+
+    selection = 'select ' + '\"Date\"'
+    formation = ' from ' + table
+    wheration = ' where ' + ' lower(well) ' + '=' +k+well_name+k
+    orderby = ' order by "Date" desc limit 1 '
+
+    sql_0 = selection + formation + wheration + orderby
+    date = sendQuery(sql_0)
+    print(sql_0, ' is sql_0')
+    print(date, ' date is YY')
+    date = date['rows'][0]['Date']
+    time_index = date.index('T')
+    date = date[:time_index]
+    date = '\'' + date +'\''
+    #date = '\'2019-02-12\''
+    date = '\"Date\"= ' + date
     
+    print(date,' is date')
+
     
     # sql for num of wellbore:
     selection = 'select ' + 'count(wellbore)'
-    formation = 'from ' + table
-    wheration = 'where '+ date + 'and ' + 'well ' + '=' + well_name
+    formation = ' from ' + table
+    wheration = ' where '+ date + 'and ' + ' lower(well) ' + '=' + k+well_name+k
 
     sql_1 = selection + formation + wheration
-    welbore_count = sendQuery(sql_1)
+    welbore_count = sendQuery(sql_1)['rows'][0]['count']
 
 
     column = 'mod_htable_From'
     selection = 'select ' + 'max('+ q+column+q +'),' + 'min('+ q+column+q +'),'
-    formation = 'from ' + table
-    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name
+    formation = ' from ' + table
+    wheration = 'where '+ date + 'and ' + 'lower(well) = ' + k+well_name+k
 
     sql_2 = selection + formation + wheration
     period = sendQuery(sql_2)
     start_time = '0000'
     end_time = '2030'
+    sq = '\''
     # todo: from period extract start_time and end_time
 
-    
     column = q+'htable_Hole_depth:Start'+q
     selection = 'select ' + column
-    formation = 'from ' + table
-    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name \
-                + ' and ' + q+'mod_htable_From'+q + '=' + start_time
+    formation = ' from ' + table
+    wheration = ' where '+ date+ ' and ' + ' lower(well) =' + k+well_name+k 
+                # + ' and ' + q+'mod_htable_From'+q + '=' + k +  start_time + k
     sql_3 = selection + formation + wheration
-    start_depth = sendQuery(sql_3)
+    print(sql_3 , ' is sql 3')
+    start_depth = sendQuery(sql_3)['rows'][0]['htable_Hole_depth:Start']
+    print(start_depth,' is the start depth')
   
-    
     column = q+'Hole_depth_End'+q
-    selection = 'select ' + column
-    formation = 'from ' + table
-    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name \
-                + ' and ' + q+'mod_htable_From'+q + '=' + end_date
+    selection = ' select ' + column
+    formation = ' from ' + table
+    wheration = ' where'+ date + ' and ' + ' lower(well) =' + k+well_name+k 
+                # + ' and ' + q+'mod_htable_From'+q + '=' + k +end_date + k
     sql_4 = selection + formation + wheration
-    end_depth = sendQuery(sql_4)
+    end_depth = sendQuery(sql_4)['rows'][0]['Hole_depth_End']
+    print(end_depth, ' end_depth')
     
 
     column = q+'htable_Phase'+q
     selection = 'select ' + column
-    formation = 'from ' + table
-    wheration = 'where date ='+ date + 'and ' + 'well =' + well_name \
-                + ' and ' + q+'mod_htable_From'+q + '=' + end_date
+    formation = ' from ' + table
+    wheration = ' where '+ date + ' and ' + ' lower(well) =' + k+well_name+k 
+                # + ' and ' + q+'mod_htable_From'+q + '=' + end_date
     sql_5 = selection + formation + wheration
-    phase = sendQuery(sql_5)
+    print(sql_5 , ' is sql_5')
+    phase = sendQuery(sql_5)['rows'][0]['htable_Phase']
+    print(phase, ' is phase')
           
     
     so_basically = None
@@ -654,10 +677,11 @@ def well_detial_summary_func(*args, **kwargs):
     
 
 
-    return {hole_section_rmt : "hole_section_rmt",
+    return {
+            "hole_section_rmt":'a very nice hole section',
             "fancy2":fancy2, "fancy":fancy,
             "what_day":what_day,
-            "phase":phase,"well_bore_num":welbore_count,"start_dept":start_depth
+            "phase":phase,"well_bore_num":welbore_count,"start_depth":start_depth
             ,"end_depth":end_depth,"so_basically":so_basically}
 
 
@@ -676,7 +700,8 @@ mapper = {
     "TopProducingFieldsIntent": top_producing_fields_func,
     "LocationOfNoneProductiveTime": non_productive_location_func,
     "EmptyHoursIntent": empty_hours_func,
-    "StatusOfWellIntent": status_of_well_func
+    "StatusOfWellIntent": status_of_well_func,
+    "WellDetailSummaryIntent":well_detial_summary_func
 }
 
 

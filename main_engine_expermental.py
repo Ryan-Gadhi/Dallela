@@ -3,7 +3,8 @@ from interpeter.engine import Engine
 eng = Engine()
 
 
-print( eng.compute("efficiency") )
+print( eng.compute("detailed summary for QTIF_224") )
+
 # print( eng.compute("show me the most producing fields today") )
 # print(eng.compute("many active wellbore from baker "))
 #

@@ -55,7 +55,7 @@
     ],
 
     "answers" : [
-        "{fancy}, the detailed information for {well_name} {what_day}: {well_name} current activity is {phase}, its hole section is {hole_section_rmt}. Additionally {fancy2} its current depth is {current_depth_rmt} and there are a number of {well_bore_num} wellbores in that well. {what_day}, the work started at depth {start_depth} and ended at depth {end_depth} {so_basically}"
+        "{fancy}, the detailed information for {well_name} {what_day}: {well_name} current activity is {phase}, its hole section is {hole_section_rmt}. Additionally {fancy2} its current depth is {end_depth} and there are a number of {well_bore_num} wellbores in that well. {what_day}, the work started at depth {start_depth} and ended at depth {end_depth} {so_basically}"
     ]
 
 }
