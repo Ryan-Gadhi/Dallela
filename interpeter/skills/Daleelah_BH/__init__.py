@@ -420,16 +420,19 @@ def product_line_intent_func(*args, **kwargs):
 
 
 def opr_lost_hrs_func(eng_res):
-    big_player = ('big_player' in eng_res) * "\"BigPlayer\" =" + eng_res.get("big_player", '')
+    big_player = ('big_player' in eng_res) * "\"BigPlayer\" ='{}' AND".format( eng_res.get("big_player", '').upper() )
     start_date, end_date, answer_date = time_period_calc(eng_res)
+    sql_str = "SELECT sum(\"CumHrs\") FROM npt_table_v0 \
+               WHERE {} \
+               \"Date\" >= '{}' AND \"Date\" < '{}'".format(
+        big_player, start_date, end_date)
+    print(sql_str)
+    res = 'it is ' + str(sendQuery(sql_str).get('rows')[0]['sum'])
+    if not res:
+        res = "Can't get that"
+    print('the result is ', res)
     
-    res = sendQuery("SELECT * FROM npt_table_v0 WHERE \
-    '{}' \
-    AND \"Date\" >= '{}' AND \"Date\" < '{}'").format(
-    big_player, start_date, end_date
-    )
-    
-    return {'time': '5 ', 'time_unit':'hours', 'optional':'Ahmed: '}
+    return {'answer': res}
 
 
 def operating_hours_func(eng_res):

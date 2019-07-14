@@ -49,7 +49,7 @@
     ],
 
     "answers" : [
-        "{optional}{time}{time_unit}"
+        "{answer}"
     ]
 
 }

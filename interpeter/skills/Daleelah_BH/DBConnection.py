@@ -67,5 +67,5 @@ class PWDBConnection:
         return
 
 pwd = PWDBConnection()
-sqlRes = pd.read_sql_query('select * from interns_view limit 10', pwd.engine)
-print(sqlRes)
+sqlRes = pd.read_sql_query("select count(*) from interns_view where \"Company\"='SUW' ", pwd.engine)
+print(type(sqlRes))

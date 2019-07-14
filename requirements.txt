@@ -1,7 +1,15 @@
-Pillow >= 6.0.0
-PyAudio >= 0.2.11
-SpeechRecognition >= 3.8.1
-adapt-parser >=0.3.3
-pip>= 19.1.1
-pyttsx3 >= 2.71
-requests >= 2.22.0
+pyttsx==1.1
+pyxdg==0.25
+requests==2.22.0
+SecretStorage==2.3.1
+service-identity==16.0.0
+simplejson==3.16.0
+singledispatch==3.4.0.3
+six==1.12.0
+SpeechRecognition==3.8.1
+Twisted==17.9.0
+urllib3==1.25.3
+wcwidth==0.1.7
+wit==5.1.0
+wrapt==1.10.11
+zope.interface==4.3.2
