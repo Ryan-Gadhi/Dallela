@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1635539-cfea-489c-94e2-db8b4ce2f3cc" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/WellSammary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_engine_expermental.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_engine_expermental.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.wav" beforeDir="false" afterPath="$PROJECT_DIR$/output.wav" afterDir="false" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,10 +19,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="BHGE" />
-  </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_engine_expermental.py">
@@ -176,6 +183,94 @@
         </entry>
       </file>
     </leaf>
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.5651365">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="711">
+                  <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#436#617#0" />
+                    <element signature="e#633#688#0" />
+                    <element signature="e#708#730#0" />
+                    <element signature="e#785#1038#0" />
+                    <element signature="e#1107#1370#0" />
+                    <element signature="e#1543#1926#0" />
+                    <element signature="e#2020#2092#0" />
+                    <element signature="e#3036#3297#0" />
+                    <element signature="e#3352#6054#0" />
+                    <element signature="e#3582#3875#0" />
+                    <element signature="e#4576#4707#0" />
+                    <element signature="e#4808#5375#0" />
+                    <element signature="e#5553#5627#0" />
+                    <element signature="e#5848#5889#0" />
+                    <element signature="e#5923#6054#0" />
+                    <element signature="e#6106#7692#0" />
+                    <element signature="e#6906#7325#0" />
+                    <element signature="e#6947#7198#0" />
+                    <element signature="e#7048#7198#0" />
+                    <element signature="e#7344#7465#0" />
+                    <element signature="e#7374#7465#0" />
+                    <element signature="e#7526#7692#0" />
+                    <element signature="e#7746#8810#0" />
+                    <element signature="e#8668#8810#0" />
+                    <element signature="e#8880#10005#0" />
+                    <element signature="e#8928#9078#0" />
+                    <element signature="e#10060#11999#0" />
+                    <element signature="e#11785#11999#0" />
+                    <element signature="e#12051#12858#0" />
+                    <element signature="e#12132#12392#0" />
+                    <element signature="e#12643#12825#0" />
+                    <element signature="e#13331#13458#0" />
+                    <element signature="e#13580#13607#0" />
+                    <element signature="e#13926#14144#0" />
+                    <element signature="e#14565#14914#0" />
+                    <element signature="e#14995#15863#0" />
+                    <element signature="e#15247#15437#0" />
+                    <element signature="e#15449#15559#0" />
+                    <element signature="e#15697#15722#0" />
+                    <element signature="e#15909#16898#0" />
+                    <element signature="e#16265#16356#0" />
+                    <element signature="e#16951#17693#0" />
+                    <element signature="e#17193#17302#0" />
+                    <element signature="e#17742#18187#0" />
+                    <element signature="e#17805#17869#0" />
+                    <element signature="e#18245#19230#0" />
+                    <element signature="e#19277#20600#0" />
+                    <element signature="e#20440#20600#0" />
+                    <element signature="e#20612#21301#0" />
+                    <element signature="e#21335#21740#0" />
+                    <element signature="e#21391#21436#0" />
+                    <element signature="e#21908#22143#0" />
+                    <element signature="e#21936#22143#0" />
+                    <element signature="e#22166#22269#0" />
+                    <element signature="e#22303#22324#0" />
+                    <element signature="e#22325#22326#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/WellSammary.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="644">
+                  <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -233,6 +328,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/app.py" />
+        <option value="$PROJECT_DIR$/DB_Skill/task_manager/Intents/active_intents.py" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
         <option value="$PROJECT_DIR$/Discussion/google_gTTS.py" />
         <option value="$PROJECT_DIR$/Discussion/voices" />
         <option value="$PROJECT_DIR$/Discussion/amazon_reader.py" />
@@ -272,6 +372,7 @@
         <option value="$PROJECT_DIR$/triggerWord.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/EfficiencyCompare.json" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/rigListing.json" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/main_app.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/emptyHours.json" />
@@ -284,20 +385,27 @@
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json" />
         <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/main_engine_expermental.py" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/WellSammary.json" />
+        <option value="$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="125" />
-    <option name="width" value="1440" />
-    <option name="height" value="775" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="y" value="-180" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -330,22 +438,97 @@
               <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Daleelah_BH" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="intents" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+              <item name="skills" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+              <item name="skills" type="462c0819:PsiDirectoryNode" />
+              <item name="Daleelah_BH" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BHGE" type="462c0819:PsiDirectoryNode" />
+              <item name="interpeter" type="462c0819:PsiDirectoryNode" />
+              <item name="skills" type="462c0819:PsiDirectoryNode" />
+              <item name="Daleelah_BH" type="462c0819:PsiDirectoryNode" />
+              <item name="intents" type="462c0819:PsiDirectoryNode" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="ProjectPane" />
+=======
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Daleelah_BH" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="BHGE" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="interpeter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="skills" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Daleelah_BH" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="intents" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/projectx/Desktop/BHGE/interpeter/skills/Trvial_Skill/TrivialSkills.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -375,7 +558,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_engine_expermental">
+  <component name="RunManager" selected="Python.audio">
     <configuration name="audio" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Dallela" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -383,7 +566,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/PythonPractice/venv/bin/python" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../PythonPractice/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -443,15 +626,15 @@
       <method v="2" />
     </configuration>
     <configuration name="main_engine_expermental" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Dallela" />
+      <module name="BHGE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../PythonPractice/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -471,7 +654,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/PythonPractice/venv/bin/python" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../PythonPractice/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Discussion" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -495,10 +678,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.audio" />
         <item itemvalue="Python.main_engine_expermental" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.engine" />
-        <item itemvalue="Python.audio" />
         <item itemvalue="Python.tests" />
       </list>
     </recent_temporary>
@@ -594,6 +777,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.1930295" />
@@ -602,16 +786,33 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3847242" />
+=======
+    <frame x="1440" y="-180" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4958932" visible="true" weight="0.14164004" />
+      <window_info id="Structure" order="1" sideWeight="0.50410676" side_tool="true" weight="0.16219063" />
+      <window_info id="Favorites" order="2" sideWeight="0.50309026" side_tool="true" weight="0.08530806" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.14356436" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34950495" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20509194" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.20509194" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067025" side_tool="true" weight="0.27439886" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49932975" visible="true" weight="0.55304104" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932975" weight="0.3299363" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="R Packages" />
+      <window_info anchor="right" id="R Graphics" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -670,6 +871,11 @@
     <SUITE FILE_PATH="coverage/Dallela$main_engine_expermental.coverage" NAME="main_engine_expermental Coverage Results" MODIFIED="1562568316192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/adapt/intent.py" />
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/numberOfNearstOffset.josn" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_WeatherSkill/intents/WeatherIntent.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -681,55 +887,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#1#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldStatus.json" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="347" selection-start-line="347" selection-end-line="347" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/dateutil/relativedelta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/adapters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="515" selection-start-line="515" selection-end-line="515" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="354" selection-start-line="354" selection-end-line="354" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/__init__.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/dateutil/relativedelta.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/requests/adapters.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/decoder.py" />
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/Production.json" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#7182#7188#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/.___init__.py" />
     <entry file="file://G:/Dallela/interpeter/skills/Daleelah_BH/__init__.py" />
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/ProductionEffeciency.py" />
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/NoneProductiveTime.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/operatingHours.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocatorD.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/fieldLocator.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/DatabaseConnection">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -738,14 +937,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/EfficiencyComparison.json" />
     <entry file="file://$PROJECT_DIR$/GoogleSTT.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="31" column="33" selection-end-line="185" />
         </state>
       </provider>
     </entry>
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -765,22 +968,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
           <caret line="167" selection-start-line="167" selection-end-line="167" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wake_up_words.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/interpeter/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-936">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     <entry file="file://$PROJECT_DIR$/interpeter/engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="734">
           <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,21 +995,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestingGlobalSpeaking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/interpeter/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -812,6 +1011,10 @@
           </folding>
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/speaking.py">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -845,6 +1048,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recorder.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="106">
           <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding>
@@ -901,11 +1105,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+=======
+        <state relative-caret-position="288">
+          <caret line="19" column="11" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/EfficiencyCompare.json">
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/activeWell.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/productLineIntent.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="157">
           <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
         </state>
@@ -943,11 +1159,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="48" selection-end-column="9" />
+=======
+        <state relative-caret-position="378">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/productLineIntent.json">
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/statusOfWell.json" />
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/rigListing.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/mostActive.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/topProducingFields.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="135">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
         </state>
@@ -974,18 +1213,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+=======
+        <state relative-caret-position="-606">
+          <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/EfficiencyCompare.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/production_efficiency.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_engine_expermental.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/intents/WellSammary.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interpeter/skills/Daleelah_BH/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-1629">
           <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+=======
+        <state relative-caret-position="711">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
           <folding>
             <element signature="e#436#617#0" />
             <element signature="e#633#688#0" />
             <element signature="e#708#730#0" />
             <element signature="e#785#1038#0" />
+<<<<<<< HEAD
             <element signature="e#0#46#1" />
             <element signature="e#1077#3007#0" />
             <element signature="e#1107#1370#0" />
@@ -1054,6 +1331,60 @@
             <element signature="e#22694#22797#0" />
             <element signature="e#22831#22852#0" />
             <element signature="e#22853#22854#0" />
+=======
+            <element signature="e#1107#1370#0" />
+            <element signature="e#1543#1926#0" />
+            <element signature="e#2020#2092#0" />
+            <element signature="e#3036#3297#0" />
+            <element signature="e#3352#6054#0" />
+            <element signature="e#3582#3875#0" />
+            <element signature="e#4576#4707#0" />
+            <element signature="e#4808#5375#0" />
+            <element signature="e#5553#5627#0" />
+            <element signature="e#5848#5889#0" />
+            <element signature="e#5923#6054#0" />
+            <element signature="e#6106#7692#0" />
+            <element signature="e#6906#7325#0" />
+            <element signature="e#6947#7198#0" />
+            <element signature="e#7048#7198#0" />
+            <element signature="e#7344#7465#0" />
+            <element signature="e#7374#7465#0" />
+            <element signature="e#7526#7692#0" />
+            <element signature="e#7746#8810#0" />
+            <element signature="e#8668#8810#0" />
+            <element signature="e#8880#10005#0" />
+            <element signature="e#8928#9078#0" />
+            <element signature="e#10060#11999#0" />
+            <element signature="e#11785#11999#0" />
+            <element signature="e#12051#12858#0" />
+            <element signature="e#12132#12392#0" />
+            <element signature="e#12643#12825#0" />
+            <element signature="e#13331#13458#0" />
+            <element signature="e#13580#13607#0" />
+            <element signature="e#13926#14144#0" />
+            <element signature="e#14565#14914#0" />
+            <element signature="e#14995#15863#0" />
+            <element signature="e#15247#15437#0" />
+            <element signature="e#15449#15559#0" />
+            <element signature="e#15697#15722#0" />
+            <element signature="e#15909#16898#0" />
+            <element signature="e#16265#16356#0" />
+            <element signature="e#16951#17693#0" />
+            <element signature="e#17193#17302#0" />
+            <element signature="e#17742#18187#0" />
+            <element signature="e#17805#17869#0" />
+            <element signature="e#18245#19230#0" />
+            <element signature="e#19277#20600#0" />
+            <element signature="e#20440#20600#0" />
+            <element signature="e#20612#21301#0" />
+            <element signature="e#21335#21740#0" />
+            <element signature="e#21391#21436#0" />
+            <element signature="e#21908#22143#0" />
+            <element signature="e#21936#22143#0" />
+            <element signature="e#22166#22269#0" />
+            <element signature="e#22303#22324#0" />
+            <element signature="e#22325#22326#0" />
+>>>>>>> b3c801cfbe29f55735884b3a0a3a3d2638a360c0
           </folding>
         </state>
       </provider>
